@@ -1,5 +1,6 @@
 # ---- build stage ----
 FROM node:20-alpine AS builder
+RUN apk add --no-cache openssl
 WORKDIR /app
 
 COPY package.json ./
@@ -16,6 +17,7 @@ RUN cd apps/api && npx prisma generate && npm run build
 
 # ---- runtime stage ----
 FROM node:20-alpine AS runner
+RUN apk add --no-cache openssl
 WORKDIR /app
 
 RUN addgroup -S app && adduser -S app -G app
