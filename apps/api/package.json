@@ -1,0 +1,26 @@
+{
+  "name": "@sbrchecks/api",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "prisma": {
+    "schema": "../../db/prisma/schema.prisma"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.16.0",
+    "@sbrchecks/shared": "*",
+    "fastify": "^4.28.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "prisma": "^5.16.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.5.0"
+  }
+}
