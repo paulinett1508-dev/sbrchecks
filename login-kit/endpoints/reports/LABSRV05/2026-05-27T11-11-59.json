@@ -1,0 +1,44 @@
+{
+  "hostname": "LABSRV05",
+  "ip": "192.86.221.218",
+  "fqdn": "labsrv05.labsobralnet.ind",
+  "started_at": "2026-05-27T11:11:59.861202",
+  "modules": {
+    "bluepex-health": {
+      "exit_code": 0,
+      "stderr": null,
+      "data": {
+        "module": "bluepex-health",
+        "timestamp": "2026-05-27T11:13:36.4562755-03:00",
+        "hostname": "LABSRV05",
+        "installed": true,
+        "install_path": "C:\\Program Files\\Bluepex Security Solutions\\Bluepex Endpoint",
+        "agent_version": "2.4.5.0",
+        "service": {
+          "name": "simagent",
+          "display": "BluePex Endpoint",
+          "status": "Running",
+          "start_type": "Automatic"
+        },
+        "need_restart": 1,
+        "log": {
+          "path": "C:\\ProgramData\\Bluepex\\BluePexEP.log",
+          "exists": true,
+          "last_published": "2026-05-27 11:13:14",
+          "minutes_since_publish": 0,
+          "conn_errors_recent": 39
+        },
+        "alerts": [
+          {
+            "severity": "warn",
+            "msg": "NeedRestart=1 — serviço BluePex congelado (aguardando reinício)"
+          },
+          {
+            "severity": "warn",
+            "msg": "39 erros de conexão no log recente (possível bloqueio firewall/AV ou DNS)"
+          }
+        ]
+      }
+    }
+  }
+}

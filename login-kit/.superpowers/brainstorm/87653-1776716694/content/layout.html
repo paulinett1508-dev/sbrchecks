@@ -1,0 +1,102 @@
+<h2>Qual layout para o explorador de arquivos?</h2>
+<p class="subtitle">Escolha a estrutura visual que melhor serve os usuários do domínio</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="display:flex;height:160px;background:#1a1a2e;border-radius:6px;overflow:hidden;font-size:11px;">
+        <div style="width:38%;background:#16213e;padding:10px;border-right:1px solid #0f3460;">
+          <div style="color:#e94560;font-weight:bold;margin-bottom:8px;">📁 FINANCEIRO</div>
+          <div style="color:#aaa;padding:3px 0 3px 10px;">📁 2024</div>
+          <div style="color:#fff;background:#0f3460;padding:3px 6px;border-radius:3px;margin:2px 0 2px 10px;">📁 2025</div>
+          <div style="color:#aaa;padding:3px 0 3px 20px;font-size:10px;">📁 Janeiro</div>
+          <div style="color:#aaa;padding:3px 0 3px 20px;font-size:10px;">📁 Fevereiro</div>
+        </div>
+        <div style="flex:1;padding:10px;">
+          <div style="color:#aaa;font-size:10px;margin-bottom:8px;border-bottom:1px solid #333;padding-bottom:4px;">📂 FINANCEIRO / 2025 / Fevereiro</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
+            <div style="background:#0f3460;padding:6px;border-radius:4px;color:#ccc;font-size:10px;">📄 Relatorio.xlsx</div>
+            <div style="background:#0f3460;padding:6px;border-radius:4px;color:#ccc;font-size:10px;">📄 DRE.pdf</div>
+            <div style="background:#0f3460;padding:6px;border-radius:4px;color:#ccc;font-size:10px;">📁 Notas</div>
+            <div style="background:#0f3460;padding:6px;border-radius:4px;color:#ccc;font-size:10px;">📄 Fluxo.xlsx</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Explorer clássico</h3>
+      <p>Árvore de pastas à esquerda, conteúdo à direita. Familiar para usuários Windows. Bom para estruturas profundas.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="display:flex;flex-direction:column;height:160px;background:#1a1a2e;border-radius:6px;overflow:hidden;font-size:11px;">
+        <div style="background:#16213e;padding:8px 12px;border-bottom:1px solid #0f3460;display:flex;align-items:center;gap:6px;">
+          <span style="color:#e94560;">FINANCEIRO</span>
+          <span style="color:#555;">›</span>
+          <span style="color:#aaa;">2025</span>
+          <span style="color:#555;">›</span>
+          <span style="color:#fff;">Fevereiro</span>
+        </div>
+        <div style="flex:1;padding:10px;overflow:hidden;">
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+            <div style="background:#0f3460;padding:8px 4px;border-radius:4px;text-align:center;color:#ccc;">
+              <div style="font-size:20px;">📁</div>
+              <div style="font-size:9px;margin-top:3px;">Janeiro</div>
+            </div>
+            <div style="background:#0f3460;padding:8px 4px;border-radius:4px;text-align:center;color:#ccc;">
+              <div style="font-size:20px;">📄</div>
+              <div style="font-size:9px;margin-top:3px;">Relatorio.xlsx</div>
+            </div>
+            <div style="background:#0f3460;padding:8px 4px;border-radius:4px;text-align:center;color:#ccc;">
+              <div style="font-size:20px;">📄</div>
+              <div style="font-size:9px;margin-top:3px;">DRE.pdf</div>
+            </div>
+            <div style="background:#0f3460;padding:8px 4px;border-radius:4px;text-align:center;color:#ccc;">
+              <div style="font-size:20px;">📄</div>
+              <div style="font-size:9px;margin-top:3px;">Fluxo.xlsx</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Navegação por breadcrumb</h3>
+      <p>Uma pasta por vez, ícones grandes, breadcrumb no topo. Estilo Google Drive. Mais limpo, melhor em telas menores.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="display:flex;flex-direction:column;height:160px;background:#1a1a2e;border-radius:6px;overflow:hidden;font-size:11px;">
+        <div style="background:#16213e;padding:8px 12px;border-bottom:1px solid #0f3460;display:flex;align-items:center;gap:6px;">
+          <span style="color:#e94560;">FINANCEIRO</span>
+          <span style="color:#555;">›</span>
+          <span style="color:#fff;">2025</span>
+          <span style="color:#aaa;margin-left:auto;font-size:10px;">🔍 buscar...</span>
+        </div>
+        <div style="flex:1;padding:8px;overflow:hidden;">
+          <div style="background:#0f3460;padding:5px 8px;border-radius:3px;color:#ccc;margin-bottom:3px;display:flex;justify-content:space-between;">
+            <span>📁 Janeiro</span><span style="color:#555;">—</span>
+          </div>
+          <div style="background:#0f3460;padding:5px 8px;border-radius:3px;color:#ccc;margin-bottom:3px;display:flex;justify-content:space-between;">
+            <span>📁 Fevereiro</span><span style="color:#555;">—</span>
+          </div>
+          <div style="background:#16213e;padding:5px 8px;border-radius:3px;color:#e94560;margin-bottom:3px;display:flex;justify-content:space-between;">
+            <span>📄 Relatorio.xlsx</span><span style="color:#555;">42KB</span>
+          </div>
+          <div style="background:#16213e;padding:5px 8px;border-radius:3px;color:#aaa;display:flex;justify-content:space-between;">
+            <span>📄 DRE.pdf</span><span style="color:#555;">1.2MB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Lista com busca</h3>
+      <p>Visão de lista densa com busca integrada e tamanho dos arquivos. Bom para quem sabe o que procura. Estilo file manager técnico.</p>
+    </div>
+  </div>
+
+</div>

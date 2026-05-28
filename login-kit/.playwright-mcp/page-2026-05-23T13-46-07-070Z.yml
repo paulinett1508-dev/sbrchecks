@@ -1,0 +1,22 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - link [ref=e5] [cursor=pointer]:
+      - /url: http://www.tp-link.com/support/
+    - generic [ref=e7]:
+      - generic [ref=e11]:
+        - textbox "Senha" [ref=e18]: "@cesso06597"
+        - generic [ref=e19]:
+          - button "Efetuar o login" [active] [ref=e21] [cursor=pointer]
+          - generic [ref=e22]: Log in com TP-Link ID
+      - generic [ref=e24]:
+        - text: EX141
+        - generic [ref=e25] [cursor=pointer]: Aplicativo
+        - generic [ref=e26]: AX1500 Dual Band Wi-Fi 6 Router
+  - generic [ref=e32]:
+    - generic [ref=e33]:
+      - link [ref=e34] [cursor=pointer]:
+        - /url: javascript:void(0);
+      - generic [ref=e39]: Apenas um dispositivo pode fazer login de uma vez. Deseja continuar e forçar o outro dispositivo sair?
+    - generic [ref=e41]:
+      - button "Cancelar" [ref=e43] [cursor=pointer]
+      - button "Efetuar o login" [ref=e45] [cursor=pointer]

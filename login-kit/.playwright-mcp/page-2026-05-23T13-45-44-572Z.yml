@@ -1,0 +1,13 @@
+- generic [ref=e2]:
+  - link [ref=e5] [cursor=pointer]:
+    - /url: http://www.tp-link.com/support/
+  - generic [ref=e7]:
+    - generic [ref=e11]:
+      - textbox "Senha" [active] [ref=e18]
+      - generic [ref=e19]:
+        - button "Efetuar o login" [ref=e21] [cursor=pointer]
+        - generic [ref=e22]: Log in com TP-Link ID
+    - generic [ref=e24]:
+      - text: EX141
+      - generic [ref=e25] [cursor=pointer]: Aplicativo
+      - generic [ref=e26]: AX1500 Dual Band Wi-Fi 6 Router

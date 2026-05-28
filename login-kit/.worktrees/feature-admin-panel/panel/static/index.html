@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LABSRVFILES — Admin Panel</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <span class="topbar-logo">◈ LABSRVFILES</span>
+    <span class="topbar-host">192.86.221.213 · labsobralnet.ind</span>
+    <div id="svcDots" class="svc-dots"></div>
+  </div>
+  <div class="topbar-right">
+    <span id="clock" class="clock"></span>
+    <span id="topUser" class="top-user"></span>
+    <button class="btn-logout" onclick="logout()">Sair</button>
+  </div>
+</div>
+
+<div class="layout">
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <div class="nav-section">MONITORAMENTO</div>
+    <div class="nav-item" data-page="dashboard">
+      <span class="nav-icon">▣</span> Dashboard
+    </div>
+    <div class="nav-item" data-page="discos">
+      <span class="nav-icon">◫</span> Discos
+    </div>
+    <div class="nav-item" data-page="servicos">
+      <span class="nav-icon">◎</span> Serviços
+    </div>
+    <div class="nav-item" data-page="conexoes">
+      <span class="nav-icon">◈</span> Conexões SMB
+    </div>
+
+    <div class="nav-section">SAMBA</div>
+    <div class="nav-item" data-page="shares">
+      <span class="nav-icon">◧</span> Shares
+    </div>
+    <div class="nav-item" data-page="usuarios">
+      <span class="nav-icon">◉</span> Usuários AD
+    </div>
+    <div class="nav-item" data-page="logs">
+      <span class="nav-icon">◑</span> Logs Samba
+    </div>
+
+    <div class="nav-section">OPERAÇÕES</div>
+    <div class="nav-item" data-page="migracao">
+      <span class="nav-icon">◐</span> Migração GDrive
+    </div>
+    <div class="nav-item" data-page="backup">
+      <span class="nav-icon">◒</span> Backup
+    </div>
+
+    <div class="nav-section">SISTEMA</div>
+    <div class="nav-item" data-page="admin">
+      <span class="nav-icon">◆</span> Admin Config
+    </div>
+    <div class="nav-item" data-page="terminal" id="navTerminal" style="display:none">
+      <span class="nav-icon">▶</span> Terminal
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main id="main" class="main">
+    <div class="loading">Carregando...</div>
+  </main>
+</div>
+
+<!-- AUDIT MODAL -->
+<div class="modal-bg" id="auditModal">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title" id="auditTitle">Auditoria</div>
+        <div class="modal-sub" id="auditSub"></div>
+      </div>
+      <button class="btn-sm" onclick="document.getElementById('auditModal').classList.remove('open')">✕ Fechar</button>
+    </div>
+    <div class="cards-row" style="margin-bottom:16px">
+      <div class="stat-card green" style="flex:1">
+        <div class="stat-label">ACESSOS</div>
+        <div class="stat-value green" id="auditAcessos">0</div>
+      </div>
+      <div class="stat-card blue" style="flex:1">
+        <div class="stat-label">MODIFICAÇÕES</div>
+        <div class="stat-value blue" id="auditMods">0</div>
+      </div>
+      <div class="stat-card purple" style="flex:1">
+        <div class="stat-label">UPLOADS</div>
+        <div class="stat-value purple" id="auditUploads">0</div>
+      </div>
+      <div class="stat-card yellow" style="flex:1">
+        <div class="stat-label">NEGADOS</div>
+        <div class="stat-value yellow" id="auditNegados">0</div>
+      </div>
+    </div>
+    <div class="panel-title" style="margin-bottom:8px">TIMELINE</div>
+    <div id="auditTimeline"></div>
+    <div style="margin-top:16px;display:flex;gap:8px">
+      <button class="btn-sm primary" onclick="exportAudit('csv')">⬇ Exportar CSV</button>
+      <button class="btn-sm" onclick="exportAudit('html')">⬇ Exportar HTML</button>
+    </div>
+  </div>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

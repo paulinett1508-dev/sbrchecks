@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Branding Mockup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Ubuntu', sans-serif; background: #060d1a; color: #fff; padding: 32px; min-height: 100vh; }
+    h2 { text-align:center; font-size:1.1rem; color:#94a3b8; margin-bottom:8px; font-weight:400; }
+    p.sub { text-align:center; font-size:.8rem; color:#4a5568; margin-bottom:32px; }
+
+    .options { display:flex; gap:24px; justify-content:center; flex-wrap:wrap; }
+
+    .option {
+      width:320px; border:2px solid #1e293b; border-radius:20px; overflow:hidden;
+      cursor:pointer; transition:border-color .2s, transform .2s;
+      background:#0d1b2a;
+    }
+    .option:hover { border-color:#e76327; transform:translateY(-3px); }
+    .option.selected { border-color:#e76327; box-shadow:0 0 0 4px rgba(231,99,39,.15); }
+
+    .opt-label {
+      background:#1e293b; padding:8px 16px; font-size:11px;
+      letter-spacing:1px; color:#64748b; text-align:center;
+    }
+    .option.selected .opt-label { background:#e76327; color:#fff; }
+
+    /* shared login card preview styles */
+    .preview { padding:0; }
+    .card-header-prev {
+      background:#ff6501;
+      display:flex; align-items:center; justify-content:center;
+      padding:24px 20px; gap:14px;
+    }
+    .card-header-prev svg { width:52px; height:52px; flex-shrink:0; }
+    .card-body-prev {
+      padding:20px 24px 24px;
+      background:rgba(255,255,255,.055);
+      backdrop-filter:blur(40px);
+      display:flex; flex-direction:column; align-items:center; gap:10px;
+    }
+    .brand-title { font-size:1.05rem; font-weight:700; color:#fff; letter-spacing:-.01em; text-align:center; }
+    .brand-sub { font-size:.7rem; color:rgba(255,255,255,.45); text-align:center; letter-spacing:.02em; }
+    .divider { width:100%; height:1px; background:rgba(255,255,255,.08); }
+    .h2-prev { font-size:1.15rem; font-weight:700; color:#fff; }
+    .subtitle-prev { font-size:.72rem; color:rgba(255,255,255,.45); }
+    .mock-input {
+      width:100%; padding:9px 12px;
+      background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12);
+      border-radius:8px; color:rgba(255,255,255,.4); font-size:.8rem;
+      margin-top:6px;
+    }
+    .btn-prev {
+      width:100%; padding:10px; margin-top:4px;
+      background:linear-gradient(135deg,#e76327,#c0392b);
+      color:#fff; border:none; border-radius:10px;
+      font-size:.85rem; font-weight:600; opacity:.7;
+    }
+
+    /* ─ icon sets ─ */
+    .icon-pair { display:flex; align-items:center; gap:10px; }
+    .icon-pair svg { width:52px; height:52px; }
+    .icon-single svg { width:64px; height:64px; }
+  </style>
+</head>
+<body>
+  <h2>Branding da tela de login</h2>
+  <p class="sub">Clique para selecionar a opção preferida</p>
+
+  <div class="options">
+
+    <!-- OPÇÃO A: ícones separados no header + nome completo -->
+    <div class="option" id="opt-a" onclick="select('a')">
+      <div class="opt-label">A — Dois ícones + nome completo</div>
+      <div class="preview">
+        <div class="card-header-prev">
+          <div class="icon-pair">
+            <!-- Server/Files icon -->
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="10" width="48" height="13" rx="4" fill="rgba(255,255,255,0.9)"/>
+              <circle cx="50" cy="16.5" r="2.5" fill="#e76327"/>
+              <circle cx="43" cy="16.5" r="2.5" fill="#e76327"/>
+              <rect x="8" y="27" width="48" height="13" rx="4" fill="rgba(255,255,255,0.75)"/>
+              <circle cx="50" cy="33.5" r="2.5" fill="rgba(255,255,255,0.4)"/>
+              <rect x="8" y="44" width="48" height="13" rx="4" fill="rgba(255,255,255,0.55)"/>
+              <circle cx="50" cy="50.5" r="2.5" fill="rgba(255,255,255,0.4)"/>
+            </svg>
+            <div style="color:rgba(255,255,255,0.5);font-size:20px;font-weight:300">&amp;</div>
+            <!-- AD / Directory icon -->
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="14" r="8" fill="rgba(255,255,255,0.9)"/>
+              <circle cx="14" cy="46" r="7" fill="rgba(255,255,255,0.75)"/>
+              <circle cx="50" cy="46" r="7" fill="rgba(255,255,255,0.75)"/>
+              <line x1="32" y1="22" x2="32" y2="36" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+              <line x1="32" y1="36" x2="14" y2="46" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+              <line x1="32" y1="36" x2="50" y2="46" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body-prev">
+          <div class="brand-title">LABSRVFILES &amp; LABSRV05</div>
+          <div class="brand-sub">Active Directory — Laboratório Sobral</div>
+          <div class="divider"></div>
+          <div class="h2-prev">Entre na sua conta</div>
+          <div class="subtitle-prev">Acesso restrito à equipe TI</div>
+          <div class="mock-input">Usuário do AD</div>
+          <div class="mock-input">Senha</div>
+          <button class="btn-prev">Entrar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPÇÃO B: ícone único combinado + nome elegante -->
+    <div class="option" id="opt-b" onclick="select('b')">
+      <div class="opt-label">B — Ícone combinado + nome split</div>
+      <div class="preview">
+        <div class="card-header-prev" style="flex-direction:column;gap:10px">
+          <!-- Combined server+shield icon -->
+          <svg viewBox="0 0 80 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- server stack -->
+            <rect x="4" y="8" width="44" height="11" rx="3" fill="rgba(255,255,255,0.9)"/>
+            <circle cx="42" cy="13.5" r="2" fill="#e76327"/>
+            <rect x="4" y="23" width="44" height="11" rx="3" fill="rgba(255,255,255,0.7)"/>
+            <circle cx="42" cy="28.5" r="2" fill="rgba(255,255,255,0.4)"/>
+            <rect x="4" y="38" width="44" height="11" rx="3" fill="rgba(255,255,255,0.5)"/>
+            <!-- folder icon -->
+            <path d="M52 26 L52 56 L76 56 L76 30 L64 30 L60 26 Z" fill="rgba(255,255,255,0.85)"/>
+            <rect x="52" y="32" width="24" height="2" rx="1" fill="rgba(0,0,0,0.2)"/>
+            <rect x="52" y="38" width="20" height="2" rx="1" fill="rgba(0,0,0,0.15)"/>
+            <rect x="52" y="44" width="16" height="2" rx="1" fill="rgba(0,0,0,0.1)"/>
+          </svg>
+          <div style="display:flex;align-items:center;gap:8px">
+            <div style="font-size:.75rem;color:rgba(255,255,255,.9);font-weight:700;letter-spacing:1px">LABSRVFILES</div>
+            <div style="font-size:.65rem;color:rgba(255,255,255,.4)">+</div>
+            <div style="font-size:.75rem;color:rgba(255,255,255,.7);font-weight:400;letter-spacing:1px">LABSRV05</div>
+          </div>
+        </div>
+        <div class="card-body-prev">
+          <div class="brand-title" style="font-size:.95rem">Servidor de Arquivos &amp; AD</div>
+          <div class="brand-sub">Laboratório Sobral — Gestão Centralizada</div>
+          <div class="divider"></div>
+          <div class="h2-prev">Entre na sua conta</div>
+          <div class="subtitle-prev">Acesso restrito à equipe TI</div>
+          <div class="mock-input">Usuário do AD</div>
+          <div class="mock-input">Senha</div>
+          <button class="btn-prev">Entrar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPÇÃO C: minimalista, texto em destaque -->
+    <div class="option" id="opt-c" onclick="select('c')">
+      <div class="opt-label">C — Minimalista, texto em destaque</div>
+      <div class="preview">
+        <div class="card-header-prev" style="flex-direction:column;gap:8px;padding:20px">
+          <div style="display:flex;gap:12px;align-items:center">
+            <!-- HDD/storage icon -->
+            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+              <rect x="2" y="8" width="32" height="20" rx="5" fill="rgba(255,255,255,0.9)"/>
+              <circle cx="26" cy="18" r="4" fill="#e76327"/>
+              <circle cx="26" cy="18" r="2" fill="rgba(255,255,255,0.9)"/>
+              <rect x="6" y="14" width="12" height="2" rx="1" fill="rgba(0,0,0,0.2)"/>
+              <rect x="6" y="19" width="8" height="2" rx="1" fill="rgba(0,0,0,0.15)"/>
+            </svg>
+            <div style="color:rgba(255,255,255,.35);font-size:18px">/</div>
+            <!-- AD users icon -->
+            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+              <circle cx="14" cy="12" r="5" fill="rgba(255,255,255,0.85)"/>
+              <path d="M4 28 C4 22 8 19 14 19 C20 19 24 22 24 28" stroke="rgba(255,255,255,0.85)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <circle cx="26" cy="14" r="4" fill="rgba(255,255,255,0.55)"/>
+              <path d="M22 28 C23 25 25 23 28 23 C31 23 33 25 33 28" stroke="rgba(255,255,255,0.5)" stroke-width="2" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div style="text-align:center">
+            <div style="font-size:.9rem;font-weight:700;color:#fff;letter-spacing:.05em">LABSRVFILES</div>
+            <div style="font-size:.65rem;color:rgba(255,255,255,.5);letter-spacing:.08em;margin-top:2px">&amp; LABSRV05 (AD)</div>
+          </div>
+        </div>
+        <div class="card-body-prev">
+          <div class="brand-title" style="font-size:.95rem">Gestão de Arquivos e Identidades</div>
+          <div class="brand-sub">Laboratório Sobral</div>
+          <div class="divider"></div>
+          <div class="h2-prev">Entre na sua conta</div>
+          <div class="subtitle-prev">Acesso restrito à equipe TI</div>
+          <div class="mock-input">Usuário do AD</div>
+          <div class="mock-input">Senha</div>
+          <button class="btn-prev">Entrar</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function select(id) {
+      document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+      document.getElementById('opt-' + id).classList.add('selected');
+      if (window.parent && window.parent.__brainstorm) {
+        window.parent.__brainstorm.select(id);
+      }
+      try {
+        const ev = { type: 'click', choice: id, timestamp: Date.now() };
+        fetch('/__brainstorm/event', { method: 'POST', body: JSON.stringify(ev), headers: { 'Content-Type': 'application/json' } }).catch(() => {});
+      } catch(e) {}
+    }
+  </script>
+</body>
+</html>

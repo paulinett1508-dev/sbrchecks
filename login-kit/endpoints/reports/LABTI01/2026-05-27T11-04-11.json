@@ -1,0 +1,40 @@
+{
+  "hostname": "LABTI01",
+  "ip": "192.86.221.181",
+  "fqdn": "labti01.labsobralnet.ind",
+  "started_at": "2026-05-27T11:04:11.536414",
+  "modules": {
+    "bluepex-health": {
+      "exit_code": 0,
+      "stderr": null,
+      "data": {
+        "module": "bluepex-health",
+        "timestamp": "2026-05-27T11:04:12.8928178-03:00",
+        "hostname": "LABTI01",
+        "installed": true,
+        "install_path": "C:\\Program Files\\Bluepex Security Solutions\\Bluepex Endpoint",
+        "agent_version": "2.4.5.0",
+        "service": {
+          "name": "simagent",
+          "display": "BluePex Endpoint",
+          "status": "Running",
+          "start_type": "Automatic"
+        },
+        "need_restart": 1,
+        "log": {
+          "path": "C:\\ProgramData\\Bluepex\\BluePexEP.log",
+          "exists": true,
+          "last_published": "2026-05-27 10:58:07",
+          "minutes_since_publish": 6,
+          "conn_errors_recent": 6
+        },
+        "alerts": [
+          {
+            "severity": "warn",
+            "msg": "NeedRestart=1 — serviço BluePex congelado (aguardando reinício)"
+          }
+        ]
+      }
+    }
+  }
+}

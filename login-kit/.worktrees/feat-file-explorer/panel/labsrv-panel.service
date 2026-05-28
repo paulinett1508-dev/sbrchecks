@@ -1,0 +1,15 @@
+[Unit]
+Description=LABSRVFILES Admin Panel
+After=network.target sssd.service smbd.service
+
+[Service]
+Type=simple
+User=admin
+WorkingDirectory=/opt/labsrv-panel
+ExecStart=/usr/bin/python3 -m uvicorn main:app --host 0.0.0.0 --port 8080
+Restart=always
+RestartSec=5
+Environment=PYTHONPATH=/opt/labsrv-panel
+
+[Install]
+WantedBy=multi-user.target

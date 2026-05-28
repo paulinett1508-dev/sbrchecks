@@ -1,0 +1,15 @@
+[Unit]
+Description=Lab Sobral File Explorer
+After=network.target sssd.service
+
+[Service]
+Type=simple
+User=admin
+WorkingDirectory=/opt/labsrv-files
+ExecStart=/opt/labsrv-files/venv/bin/python -m uvicorn main:app --host 0.0.0.0 --port 8081 --workers 1
+Restart=on-failure
+RestartSec=5
+Environment=PYTHONPATH=/opt/labsrv-files
+
+[Install]
+WantedBy=multi-user.target

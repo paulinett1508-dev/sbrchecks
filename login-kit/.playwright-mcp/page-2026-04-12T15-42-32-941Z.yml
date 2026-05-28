@@ -1,0 +1,194 @@
+- generic [active] [ref=e1]:
+  - heading "Duas novas funcionalidades" [level=2] [ref=e2]
+  - paragraph [ref=e3]: Ações sobre usuários conectados + gestão de admins do painel
+  - generic [ref=e4]:
+    - generic [ref=e5]: 1 — CONEXÕES ATIVAS COM AÇÕES (tela Conexões / Logs)
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e8]: SESSÕES ATIVAS AGORA
+        - generic [ref=e9]:
+          - generic [ref=e10]: JS
+          - generic [ref=e11]:
+            - generic [ref=e12]: João Silva
+            - generic [ref=e13]: Departamento Financeiro · joao.silva@labsobralnet.ind
+            - generic [ref=e14]:
+              - generic [ref=e15]: 📁 FINANCEIRO
+              - generic [ref=e16]: 192.86.221.45
+              - generic [ref=e17]: 2h 14m conectado
+          - generic [ref=e18]:
+            - button "🔍 Auditar" [ref=e19] [cursor=pointer]
+            - button "⏏ Desconectar" [ref=e20] [cursor=pointer]
+        - generic [ref=e21]:
+          - generic [ref=e22]: MC
+          - generic [ref=e23]:
+            - generic [ref=e24]: Maria Costa
+            - generic [ref=e25]: Recursos Humanos · maria.costa@labsobralnet.ind
+            - generic [ref=e26]:
+              - generic [ref=e27]: 📁 RECURSOS_HUMANOS
+              - generic [ref=e28]: 192.86.221.67
+              - generic [ref=e29]: 1h 12m conectado
+          - generic [ref=e30]:
+            - button "🔍 Auditar" [ref=e31] [cursor=pointer]
+            - button "⏏ Desconectar" [ref=e32] [cursor=pointer]
+        - generic [ref=e33]:
+          - generic [ref=e34]: CM
+          - generic [ref=e35]:
+            - generic [ref=e36]: Carlos Mendes ⚠ acesso negado recente
+            - generic [ref=e37]: Industrial · carlos.mendes@labsobralnet.ind
+            - generic [ref=e38]:
+              - generic [ref=e39]: 📁 INDUSTRIAL
+              - generic [ref=e40]: 192.86.221.102
+              - generic [ref=e41]: 18m conectado
+          - generic [ref=e42]:
+            - button "🔍 Auditar" [ref=e43] [cursor=pointer]
+            - button "⏏ Desconectar" [ref=e44] [cursor=pointer]
+      - generic [ref=e45]:
+        - generic [ref=e46]: 🔍 AUDITORIA PONTUAL
+        - generic [ref=e47]: João Silva
+        - generic [ref=e48]: joao.silva@labsobralnet.ind · Financeiro · Hoje
+        - generic [ref=e49]:
+          - generic [ref=e50]:
+            - generic [ref=e51]: "47"
+            - generic [ref=e52]: ARQUIVOS ACESSADOS
+          - generic [ref=e53]:
+            - generic [ref=e54]: "12"
+            - generic [ref=e55]: MODIFICAÇÕES
+          - generic [ref=e56]:
+            - generic [ref=e57]: "3"
+            - generic [ref=e58]: UPLOADS
+          - generic [ref=e59]:
+            - generic [ref=e60]: "1"
+            - generic [ref=e61]: ACESSO NEGADO
+        - generic [ref=e62]:
+          - generic [ref=e63]: LINHA DO TEMPO — HOJE
+          - generic [ref=e64]:
+            - generic [ref=e65]: 14:31:52
+            - generic [ref=e66]: LOGIN
+            - generic [ref=e67]: Conectado de 192.86.221.45 · share FINANCEIRO
+          - generic [ref=e68]:
+            - generic [ref=e69]: 14:28:10
+            - generic [ref=e70]: WRITE
+            - generic [ref=e71]: Editou DRE_Abril_2026.xlsx (18.4 KB)
+          - generic [ref=e72]:
+            - generic [ref=e73]: 13:55:04
+            - generic [ref=e74]: DENIED
+            - generic [ref=e75]: Tentou acessar DIRETORIAS/ — sem permissão
+          - generic [ref=e76]:
+            - generic [ref=e77]: 13:40:22
+            - generic [ref=e78]: READ
+            - generic [ref=e79]: Abriu Relatorio_Q1_2026.pdf (2.1 MB)
+          - generic [ref=e80]:
+            - generic [ref=e81]: 09:02:18
+            - generic [ref=e82]: LOGIN
+            - generic [ref=e83]: 1ª sessão do dia · 5h 30m de atividade total
+        - generic [ref=e84]:
+          - generic [ref=e85] [cursor=pointer]: ⬇ Exportar CSV
+          - generic [ref=e86] [cursor=pointer]: 📋 Exportar PDF
+          - generic [ref=e87] [cursor=pointer]: ⏏ Desconectar agora
+  - generic [ref=e88]:
+    - generic [ref=e89]: 2 — ADMIN CONFIG (tela de configuração do painel)
+    - generic [ref=e90]:
+      - generic [ref=e91]:
+        - generic [ref=e92]: ADMINS DO PAINEL
+        - generic [ref=e93]:
+          - generic [ref=e94]: PM
+          - generic [ref=e95]:
+            - generic [ref=e96]:
+              - generic [ref=e97]: Paulinete Miranda
+              - generic [ref=e98]: Super Admin
+            - generic [ref=e99]: pmiranda@labsobralnet.ind · LABSOBRALNET\Administradores
+        - generic [ref=e101]:
+          - generic [ref=e102]: GJ
+          - generic [ref=e103]:
+            - generic [ref=e104]:
+              - generic [ref=e105]: Glayber Junco
+              - generic [ref=e106]: Operador
+            - generic [ref=e107]: gjunco@labsobralnet.ind · LABSOBRALNET\Administradores
+        - generic [ref=e109]:
+          - generic [ref=e110]: FG
+          - generic [ref=e111]:
+            - generic [ref=e112]:
+              - generic [ref=e113]: Fguedes
+              - generic [ref=e114]: Somente Leitura
+            - generic [ref=e115]: fguedes@labsobralnet.ind · LABSOBRALNET\Administradores
+        - generic [ref=e117] [cursor=pointer]: + Adicionar admin — busca no AD
+        - generic [ref=e118]:
+          - strong [ref=e119]: "🔗 Fonte: Active Directory"
+          - text: Admins do painel são membros de
+          - strong [ref=e120]: LABSOBRALNET\Administradores
+          - text: .
+          - text: "Futuramente: migrar para grupo"
+          - strong [ref=e121]: LABSOBRALNET\TI
+          - text: quando criado no AD.
+      - generic [ref=e122]:
+        - generic [ref=e123]: PERMISSÕES POR PAPEL
+        - generic [ref=e124]:
+          - generic [ref=e125]: Super Admin
+          - generic [ref=e126]:
+            - generic [ref=e127]:
+              - generic [ref=e128]: ✓
+              - text: Ver tudo
+            - generic [ref=e129]:
+              - generic [ref=e130]: ✓
+              - text: Restart serviços
+            - generic [ref=e131]:
+              - generic [ref=e132]: ✓
+              - text: Desconectar users
+            - generic [ref=e133]:
+              - generic [ref=e134]: ✓
+              - text: Terminal web
+            - generic [ref=e135]:
+              - generic [ref=e136]: ✓
+              - text: Gerenciar admins
+            - generic [ref=e137]:
+              - generic [ref=e138]: ✓
+              - text: Exportar logs
+        - generic [ref=e139]:
+          - generic [ref=e140]: Operador
+          - generic [ref=e141]:
+            - generic [ref=e142]:
+              - generic [ref=e143]: ✓
+              - text: Ver tudo
+            - generic [ref=e144]:
+              - generic [ref=e145]: ✓
+              - text: Restart serviços
+            - generic [ref=e146]:
+              - generic [ref=e147]: ✓
+              - text: Desconectar users
+            - generic [ref=e148]:
+              - generic [ref=e149]: ✗
+              - text: Terminal web
+            - generic [ref=e150]:
+              - generic [ref=e151]: ✗
+              - text: Gerenciar admins
+            - generic [ref=e152]:
+              - generic [ref=e153]: ✓
+              - text: Exportar logs
+        - generic [ref=e154]:
+          - generic [ref=e155]: Somente Leitura
+          - generic [ref=e156]:
+            - generic [ref=e157]:
+              - generic [ref=e158]: ✓
+              - text: Ver tudo
+            - generic [ref=e159]:
+              - generic [ref=e160]: ✗
+              - text: Restart serviços
+            - generic [ref=e161]:
+              - generic [ref=e162]: ✗
+              - text: Desconectar users
+            - generic [ref=e163]:
+              - generic [ref=e164]: ✗
+              - text: Terminal web
+            - generic [ref=e165]:
+              - generic [ref=e166]: ✗
+              - text: Gerenciar admins
+            - generic [ref=e167]:
+              - generic [ref=e168]: ✓
+              - text: Exportar logs
+        - generic [ref=e169]:
+          - generic [ref=e170]: LOG DE AÇÕES DOS ADMINS (últimas)
+          - generic [ref=e171]:
+            - generic [ref=e172]: 14:30 pmiranda reiniciou smbd
+            - generic [ref=e173]: 13:45 gjunco auditou joao.silva
+            - generic [ref=e174]: 11:22 pmiranda desconectou carlos.mendes
+            - generic [ref=e175]: 09:05 gjunco login no painel

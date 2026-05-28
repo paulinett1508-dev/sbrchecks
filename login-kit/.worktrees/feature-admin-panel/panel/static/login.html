@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>LABSRVFILES — Login</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#0d1117; color:#e6edf3; font-family:'Segoe UI',system-ui,sans-serif;
+       display:flex; align-items:center; justify-content:center; height:100vh; }
+.box { background:#161b22; border:1px solid #30363d; border-radius:12px; padding:40px; width:340px; }
+.logo { color:#58a6ff; font-size:18px; font-weight:700; letter-spacing:1px; margin-bottom:4px; }
+.sub { color:#8b949e; font-size:12px; margin-bottom:28px; }
+label { font-size:11px; color:#8b949e; letter-spacing:0.5px; display:block; margin-bottom:4px; }
+input { width:100%; background:#0d1117; border:1px solid #30363d; border-radius:6px;
+        padding:9px 12px; color:#e6edf3; font-size:13px; margin-bottom:14px; outline:none; }
+input:focus { border-color:#58a6ff; }
+button { width:100%; background:#1f6feb; color:white; border:none; border-radius:6px;
+         padding:10px; font-size:14px; cursor:pointer; font-weight:600; }
+button:hover { background:#388bfd; }
+.err { color:#f85149; font-size:12px; margin-top:12px; display:none; }
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="logo">◈ LABSRVFILES</div>
+  <div class="sub">192.86.221.213 · Painel Admin</div>
+  <label>USUÁRIO</label>
+  <input type="text" id="u" placeholder="admin" autocomplete="username">
+  <label>SENHA</label>
+  <input type="password" id="p" placeholder="••••••••" autocomplete="current-password">
+  <button onclick="doLogin()">Entrar</button>
+  <div class="err" id="err"></div>
+</div>
+<script>
+async function doLogin() {
+  const r = await fetch('/api/login', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({username: document.getElementById('u').value,
+                          password: document.getElementById('p').value})
+  });
+  if (r.ok) {
+    window.location.href = '/';
+  } else {
+    const d = await r.json();
+    const el = document.getElementById('err');
+    el.textContent = d.detail || 'Erro ao autenticar';
+    el.style.display = 'block';
+  }
+}
+document.addEventListener('keydown', e => { if (e.key === 'Enter') doLogin(); });
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+{
+  "hostname": "LABSRV05",
+  "ip": "192.86.221.218",
+  "fqdn": "labsrv05.labsobralnet.ind",
+  "started_at": "2026-05-26T09:23:09.160986",
+  "modules": {
+    "network": {
+      "exit_code": 0,
+      "stderr": null,
+      "data": {
+        "module": "network",
+        "timestamp": "2026-05-26T09:24:32.5823359-03:00",
+        "hostname": "LABSRV05",
+        "gateway": "192.86.221.5",
+        "checks": [
+          {
+            "name": "gateway",
+            "target": "192.86.221.5",
+            "type": "ping",
+            "ok": true,
+            "latency_ms": 0,
+            "detail": null
+          },
+          {
+            "name": "ad_dc",
+            "target": "labsrv05.labsobralnet.ind",
+            "type": "ping",
+            "ok": true,
+            "latency_ms": 0,
+            "detail": null
+          },
+          {
+            "name": "fileserver",
+            "target": "192.86.221.213",
+            "type": "ping",
+            "ok": true,
+            "latency_ms": 0,
+            "detail": null
+          },
+          {
+            "name": "internet_dns",
+            "target": "8.8.8.8",
+            "type": "ping",
+            "ok": true,
+            "latency_ms": 36,
+            "detail": null
+          },
+          {
+            "name": "dns_resolve_dc",
+            "target": "labsrv05.labsobralnet.ind",
+            "type": "dns",
+            "ok": true,
+            "latency_ms": null,
+            "detail": "192.86.221.218"
+          },
+          {
+            "name": "dns_resolve_nexus",
+            "target": "nexus.labsobralnet.ind",
+            "type": "dns",
+            "ok": true,
+            "latency_ms": null,
+            "detail": "192.86.221.213"
+          },
+          {
+            "name": "smb_fileserver",
+            "target": "192.86.221.213",
+            "type": "tcp",
+            "ok": true,
+            "latency_ms": null,
+            "detail": null
+          },
+          {
+            "name": "smb_dc",
+            "target": "192.86.221.218",
+            "type": "tcp",
+            "ok": true,
+            "latency_ms": null,
+            "detail": null
+          },
+          {
+            "name": "winrm_self",
+            "target": "LABSRV05",
+            "type": "tcp",
+            "ok": true,
+            "latency_ms": null,
+            "detail": null
+          }
+        ],
+        "alerts": []
+      }
+    }
+  }
+}

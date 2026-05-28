@@ -1,0 +1,27 @@
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - link [ref=e5] [cursor=pointer]:
+      - /url: http://www.tp-link.com/support/
+    - list [ref=e8]:
+      - listitem [ref=e9] [cursor=pointer]:
+        - generic [ref=e10]: Configuração Rápida
+      - listitem [ref=e11] [cursor=pointer]:
+        - generic [ref=e12]: Básico
+      - listitem [ref=e13] [cursor=pointer]:
+        - generic [ref=e14]: Avançado
+    - generic [ref=e18] [cursor=pointer]: Portugués
+    - generic [ref=e21]:
+      - link "Sair" [ref=e22] [cursor=pointer]:
+        - /url: javascript:void(0);
+        - generic [ref=e24]: Sair
+      - link "Reiniciar" [ref=e25] [cursor=pointer]:
+        - /url: javascript:void(0);
+        - generic [ref=e27]: Reiniciar
+      - link "Atualização" [ref=e28] [cursor=pointer]:
+        - /url: javascript:void(0);
+        - generic [ref=e30]: Atualização
+  - generic [ref=e37]:
+    - text: a
+    - generic [ref=e38] [cursor=pointer]: Aplicativo
+    - link "Suporte" [ref=e40] [cursor=pointer]:
+      - /url: http://www.tp-link.com/support/

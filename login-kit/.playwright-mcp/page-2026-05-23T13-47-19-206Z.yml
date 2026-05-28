@@ -1,0 +1,177 @@
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - link [ref=e5] [cursor=pointer]:
+      - /url: http://www.tp-link.com/support/
+    - list [ref=e8]:
+      - listitem [ref=e9] [cursor=pointer]:
+        - generic [ref=e10]: Configuração Rápida
+      - listitem [ref=e11] [cursor=pointer]:
+        - generic [ref=e12]: Básico
+      - listitem [ref=e13] [cursor=pointer]:
+        - generic [ref=e14]: Avançado
+    - generic [ref=e18] [cursor=pointer]: Portugués
+    - generic [ref=e21]:
+      - link "Sair" [ref=e22] [cursor=pointer]:
+        - /url: javascript:void(0);
+        - generic [ref=e24]: Sair
+      - link "Reiniciar" [ref=e25] [cursor=pointer]:
+        - /url: javascript:void(0);
+        - generic [ref=e27]: Reiniciar
+      - link "Atualização" [ref=e28] [cursor=pointer]:
+        - /url: javascript:void(0);
+        - generic [ref=e30]: Atualização
+  - generic [ref=e43]:
+    - generic [ref=e44]:
+      - textbox "Procurar" [ref=e48]
+      - list [ref=e278]:
+        - listitem [ref=e279]:
+          - link "Status" [ref=e280] [cursor=pointer]:
+            - /url: javascript:void(0);
+            - generic [ref=e282]: Status
+        - listitem [ref=e283]:
+          - link "Modo de Operação" [ref=e284] [cursor=pointer]:
+            - /url: javascript:void(0);
+            - generic [ref=e286]: Modo de Operação
+        - listitem [ref=e287]:
+          - link "Rede" [ref=e288] [cursor=pointer]:
+            - /url: javascript:void(0);
+            - generic [ref=e290]: Rede
+          - text: "- - - - -"
+        - listitem [ref=e291]:
+          - link "Wireless" [ref=e292] [cursor=pointer]:
+            - /url: javascript:void(0);
+            - generic [ref=e294]: Wireless
+          - text: "- - - - - - -"
+        - listitem [ref=e295]:
+          - link "Rede de Convidados" [ref=e296] [cursor=pointer]:
+            - /url: javascript:void(0);
+            - generic [ref=e298]: Rede de Convidados
+        - listitem [ref=e299]:
+          - link "Encaminhamento NAT" [ref=e300] [cursor=pointer]:
+            - /url: javascript:void(0);
+            - generic [ref=e302]: Encaminhamento NAT
+          - text: "- - - - -"
+        - listitem [ref=e303]:
+          - link "Controle de Pais" [ref=e304] [cursor=pointer]:
+            - /url: javascript:void(0);
+            - generic [ref=e306]: Controle de Pais
+        - listitem [ref=e307]:
+          - link "QoS" [ref=e308] [cursor=pointer]:
+            - /url: javascript:void(0);
+            - generic [ref=e310]: QoS
+        - listitem [ref=e311]:
+          - link "Segurança" [ref=e312] [cursor=pointer]:
+            - /url: javascript:void(0);
+            - generic [ref=e314]: Segurança
+          - text: "- - - - -"
+        - listitem [ref=e315]:
+          - link "VPN" [ref=e316] [cursor=pointer]:
+            - /url: javascript:void(0);
+            - generic [ref=e318]: VPN
+          - text: "- - - -"
+        - listitem [ref=e319]:
+          - link "Ferramentas de Sistema" [ref=e320] [cursor=pointer]:
+            - /url: javascript:void(0);
+            - generic [ref=e322]: Ferramentas de Sistema
+          - text: "- - - - - - - - -"
+    - link [ref=e324] [cursor=pointer]:
+      - /url: javascript:void(0)
+  - generic [ref=e32]:
+    - generic [ref=e35]:
+      - generic [ref=e325]:
+        - generic [ref=e327]:
+          - heading "Internet" [level=4] [ref=e328]: Internet
+          - generic [ref=e330]:
+            - generic [ref=e331] [cursor=pointer]: IPv4
+            - text: "|"
+            - generic [ref=e332] [cursor=pointer]: IPv6
+          - generic [ref=e334]:
+            - generic [ref=e335]:
+              - generic [ref=e336]: "Nome de Interface WAN:"
+              - textbox [ref=e337]: ipoe_0_0_d
+            - generic [ref=e338]:
+              - generic [ref=e339]: "Endereço MAC:"
+              - textbox [ref=e340]: DC:62:79:2D:E6:0A
+            - generic [ref=e341]:
+              - generic [ref=e342]: "Endereço IP:"
+              - textbox [ref=e343]: 0.0.0.0
+            - generic [ref=e344]:
+              - generic [ref=e345]: "Máscara de sub-rede:"
+              - textbox [ref=e346]: 0.0.0.0
+            - generic [ref=e347]:
+              - generic [ref=e348]: "Gateway Padrão:"
+              - textbox [ref=e349]: 0.0.0.0
+            - generic [ref=e350]:
+              - generic [ref=e351]: "DNS Primário:"
+              - textbox [ref=e352]: 0.0.0.0
+            - generic [ref=e353]:
+              - generic [ref=e354]: "DNS Secundário:"
+              - textbox [ref=e355]: 0.0.0.0
+            - generic [ref=e356]:
+              - generic [ref=e357]: "Tipo de conexão:"
+              - textbox [ref=e358]: IP Dinâmico
+            - generic [ref=e359]:
+              - generic [ref=e360]: "Tempo de Atividade:"
+              - textbox [ref=e361]: 0 dias 00:00:00
+        - generic [ref=e366]:
+          - heading "Wireless" [level=4] [ref=e367]: Wireless
+          - generic [ref=e370]:
+            - generic [ref=e371] [cursor=pointer]: 2.4GHz
+            - text: "|"
+            - generic [ref=e372] [cursor=pointer]: 5GHz
+          - generic [ref=e374]:
+            - generic [ref=e375]:
+              - generic [ref=e376]: "Nome da Rede (SSID):"
+              - textbox [ref=e377]: SBR-TI
+            - generic [ref=e378]:
+              - generic [ref=e379]: "Rádio Wireless:"
+              - textbox [ref=e380]: Ligado
+            - generic [ref=e381]:
+              - generic [ref=e382]: "Modo:"
+              - textbox [ref=e383]: 802.11bgn misto
+            - generic [ref=e384]:
+              - generic [ref=e385]: "Largura do Canal:"
+              - textbox [ref=e386]: Auto
+            - generic [ref=e387]:
+              - generic [ref=e388]: "Canal:"
+              - textbox [ref=e389]: Auto(6)
+            - generic [ref=e390]:
+              - generic [ref=e391]: "Endereço MAC:"
+              - textbox [ref=e392]: DC:62:79:2D:E6:09
+      - generic [ref=e393]:
+        - generic [ref=e395]:
+          - heading "LAN" [level=4] [ref=e396]: LAN
+          - generic [ref=e398]:
+            - generic [ref=e399] [cursor=pointer]: IPv4
+            - text: "|"
+            - generic [ref=e400] [cursor=pointer]: IPv6
+          - generic [ref=e402]:
+            - generic [ref=e403]:
+              - generic [ref=e404]: "Endereço MAC:"
+              - textbox [ref=e405]: DC:62:79:2D:E6:09
+            - generic [ref=e406]:
+              - generic [ref=e407]: "Endereço IP:"
+              - textbox [ref=e408]: 192.86.221.251
+            - generic [ref=e409]:
+              - generic [ref=e410]: "Máscara de sub-rede:"
+              - textbox [ref=e411]: 255.255.255.0
+            - generic [ref=e412]:
+              - generic [ref=e413]: "DHCP:"
+              - textbox [ref=e414]: Ligado
+        - generic [ref=e419]:
+          - heading "Performance" [level=4] [ref=e420]: Performance
+          - generic [ref=e423]:
+            - generic [ref=e424]: Tempo Total do Sistema:0 dias 22:56:16
+            - generic [ref=e425]: Carga da CPU
+            - generic [ref=e429]:
+              - paragraph
+              - generic [ref=e432]: 9%
+            - generic [ref=e433]: Memória Utilizada
+            - generic [ref=e437]:
+              - paragraph
+              - generic [ref=e440]: 47%
+    - generic [ref=e37]:
+      - text: Versão de firmware:1.3.0 3.1.0 v608a.0 Build 231215 Rel.30544n Versão de Hardware:EX141 v1.0 00000000
+      - generic [ref=e38] [cursor=pointer]: Aplicativo
+      - link "Suporte" [ref=e40] [cursor=pointer]:
+        - /url: http://www.tp-link.com/support/

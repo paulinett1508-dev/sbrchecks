@@ -1,0 +1,242 @@
+{
+  "hostname": "LABTI01",
+  "ip": "192.86.221.181",
+  "fqdn": "labti01.labsobralnet.ind",
+  "started_at": "2026-05-27T07:24:59.133603",
+  "modules": {
+    "ransomware": {
+      "exit_code": 0,
+      "stderr": "Acesso negado\nAcesso negado\nAcesso negado",
+      "data": {
+        "module": "ransomware",
+        "timestamp": "2026-05-27T07:46:06.1238890-03:00",
+        "hostname": "LABTI01",
+        "scanned_roots": [
+          "C:\\Users",
+          "D:\\",
+          "G:\\",
+          "I:\\",
+          "J:\\"
+        ],
+        "total_hits": 84,
+        "phobos_hits": 0,
+        "by_extension": [
+          {
+            "ext": "enc",
+            "count": 82
+          },
+          {
+            "ext": "java",
+            "count": 2
+          }
+        ],
+        "sample": [
+          {
+            "path": "C:\\Users\\pmiranda\\.antigravity\\extensions\\vscjava.vscode-java-dependency-0.27.0-universal\\templates\\invisible-project\\src\\App.java",
+            "ext": "java",
+            "size_kb": 0.1,
+            "modified": "2026-01-26T08:05:56.8032898-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\.antigravity\\extensions\\vscjava.vscode-maven-0.45.1-universal\\resources\\maven-wrapper\\.mvn\\wrapper\\MavenWrapperDownloader.java",
+            "ext": "java",
+            "size_kb": 4.8,
+            "modified": "2026-01-26T08:06:12.5229017-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\ascii.enc",
+            "ext": "enc",
+            "size_kb": 1.1,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\big5.enc",
+            "ext": "enc",
+            "size_kb": 92.2,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\cns11643.enc",
+            "ext": "enc",
+            "size_kb": 96.3,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\cp1250.enc",
+            "ext": "enc",
+            "size_kb": 1.1,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\cp1251.enc",
+            "ext": "enc",
+            "size_kb": 1.1,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\cp1252.enc",
+            "ext": "enc",
+            "size_kb": 1.1,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\cp1253.enc",
+            "ext": "enc",
+            "size_kb": 1.1,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\cp1254.enc",
+            "ext": "enc",
+            "size_kb": 1.1,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\cp1255.enc",
+            "ext": "enc",
+            "size_kb": 1.1,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\cp1256.enc",
+            "ext": "enc",
+            "size_kb": 1.1,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\cp1257.enc",
+            "ext": "enc",
+            "size_kb": 1.1,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\cp1258.enc",
+            "ext": "enc",
+            "size_kb": 1.1,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\cp437.enc",
+            "ext": "enc",
+            "size_kb": 1.1,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\cp737.enc",
+            "ext": "enc",
+            "size_kb": 1.1,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\cp775.enc",
+            "ext": "enc",
+            "size_kb": 1.1,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\cp850.enc",
+            "ext": "enc",
+            "size_kb": 1.1,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\cp852.enc",
+            "ext": "enc",
+            "size_kb": 1.1,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\cp855.enc",
+            "ext": "enc",
+            "size_kb": 1.1,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\cp857.enc",
+            "ext": "enc",
+            "size_kb": 1.1,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\cp860.enc",
+            "ext": "enc",
+            "size_kb": 1.1,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\cp861.enc",
+            "ext": "enc",
+            "size_kb": 1.1,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\cp862.enc",
+            "ext": "enc",
+            "size_kb": 1.1,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\tcl\\tcl8.6\\encoding\\cp863.enc",
+            "ext": "enc",
+            "size_kb": 1.1,
+            "modified": "2025-02-04T16:38:38.0000000-03:00",
+            "phobos": false
+          }
+        ],
+        "ransom_notes": [
+          "C:\\Users\\pauli\\OneDrive\\Documentos\\Vuze Downloads\\Adobe Photoshop Portable CS6\\ReadMe!.txt",
+          "C:\\Users\\pmiranda\\.antigravity\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\libs\\debugpy\\_vendored\\pydevd\\pydevd_attach_to_process\\README.txt",
+          "C:\\Users\\pmiranda\\.antigravity\\extensions\\ms-python.debugpy-2025.18.0-win32-x64\\bundled\\libs\\debugpy\\_vendored\\pydevd\\_pydevd_frame_eval\\vendored\\README.txt",
+          "C:\\Users\\pmiranda\\.antigravity\\extensions\\redhat.java-1.52.0-win32-x64\\jre\\21.0.9-win32-x86_64\\conf\\security\\policy\\README.txt",
+          "C:\\Users\\pmiranda\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\libs\\debugpy\\_vendored\\pydevd\\pydevd_attach_to_process\\README.txt",
+          "C:\\Users\\pmiranda\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\libs\\debugpy\\_vendored\\pydevd\\_pydevd_frame_eval\\vendored\\README.txt",
+          "C:\\Users\\pmiranda\\AppData\\Local\\npm-cache\\_npx\\2778af9cee32ff87\\node_modules\\mysql2\\typings\\mysql\\info.txt",
+          "C:\\Users\\pmiranda\\AppData\\Local\\pnpm\\store\\v10\\projects\\2eb8dd0dd655990b68e268c10aba8475\\.vercel\\README.txt",
+          "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\idlelib\\Icons\\README.txt",
+          "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\idlelib\\idle_test\\README.txt",
+          "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\idlelib\\README.txt",
+          "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\_core\\tests\\data\\umath-validation-set-README.txt",
+          "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\README.txt",
+          "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\test\\leakers\\README.txt",
+          "C:\\Users\\pmiranda\\Downloads\\IDENTIDADE VISUAL - FLORIANO RUN-20260320T184211Z-3-001\\IDENTIDADE VISUAL - FLORIANO RUN\\FONTES\\HES DEAD JIM\\readme.txt",
+          "C:\\Users\\pmiranda\\Downloads\\IDENTIDADE VISUAL - FLORIANO RUN-20260320T184211Z-3-001\\IDENTIDADE VISUAL - FLORIANO RUN\\FONTES\\OSWALD\\README.txt",
+          "C:\\Users\\pmiranda\\Downloads\\rclone-v1.73.4-windows-amd64\\rclone-v1.73.4-windows-amd64\\README.txt"
+        ],
+        "alerts": [
+          {
+            "severity": "critical",
+            "msg": "84 arquivo(s) com extensão de ransomware encontrados"
+          },
+          {
+            "severity": "warn",
+            "msg": "17 possível(is) nota(s) de resgate"
+          }
+        ]
+      }
+    }
+  }
+}

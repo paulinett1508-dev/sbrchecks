@@ -1,0 +1,12 @@
+{
+  "hostname": "LABTI01",
+  "ip": "192.86.221.181",
+  "fqdn": "labti01.labsobralnet.ind",
+  "started_at": "2026-05-27T06:46:36.872693",
+  "modules": {
+    "ransomware": {
+      "error": "Módulo não retornou JSON em labti01.labsobralnet.ind. stderr: Acesso negado",
+      "exit_code": -1
+    }
+  }
+}

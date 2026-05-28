@@ -1,0 +1,88 @@
+<h2>Explorador de Arquivos — Layout</h2>
+<p class="subtitle">Como deve ser a experiência de navegação de arquivos?</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>A — Árvore + Conteúdo</h3>
+      <p>Painel esquerdo com árvore de shares/pastas. Painel direito lista o conteúdo. Clássico estilo Windows Explorer.</p>
+      <div style="margin-top:12px;background:#0d1117;border-radius:6px;overflow:hidden;border:1px solid #30363d;font-size:12px">
+        <div style="background:#161b22;padding:6px 10px;color:#58a6ff;font-size:11px;border-bottom:1px solid #30363d">EXPLORADOR DE ARQUIVOS</div>
+        <div style="display:flex;height:160px">
+          <div style="width:38%;background:#0d1117;border-right:1px solid #30363d;padding:8px;color:#c9d1d9;overflow:auto">
+            <div style="color:#3fb950">▶ CONTABILIDADE</div>
+            <div style="padding-left:12px;color:#8b949e">▶ 2024</div>
+            <div style="padding-left:12px;color:#8b949e">▶ 2025</div>
+            <div style="color:#c9d1d9">▶ FINANCEIRO</div>
+            <div style="color:#c9d1d9">▶ INDUSTRIAL</div>
+            <div style="color:#c9d1d9">▶ RECURSOS_HUMANOS</div>
+            <div style="color:#c9d1d9">▷ TI</div>
+          </div>
+          <div style="flex:1;padding:8px;color:#c9d1d9">
+            <div style="color:#8b949e;font-size:11px;margin-bottom:6px">CONTABILIDADE / 2025 &nbsp;›</div>
+            <div style="display:flex;align-items:center;gap:8px;padding:4px;border-radius:4px;background:#161b22;margin-bottom:2px">📁 <span>Janeiro</span></div>
+            <div style="display:flex;align-items:center;gap:8px;padding:4px;border-radius:4px;margin-bottom:2px">📁 <span>Fevereiro</span></div>
+            <div style="display:flex;align-items:center;gap:8px;padding:4px">📄 <span>balancete_mar.xlsx</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>B — Breadcrumb + Grid</h3>
+      <p>Navegação por breadcrumb no topo. Conteúdo em grid de cards. Mais moderno, sem painel lateral.</p>
+      <div style="margin-top:12px;background:#0d1117;border-radius:6px;overflow:hidden;border:1px solid #30363d;font-size:12px">
+        <div style="background:#161b22;padding:6px 10px;color:#58a6ff;font-size:11px;border-bottom:1px solid #30363d">EXPLORADOR DE ARQUIVOS</div>
+        <div style="padding:8px">
+          <div style="color:#8b949e;font-size:11px;margin-bottom:8px">🏠 Shares › CONTABILIDADE › 2025 › Janeiro</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px">
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:4px;padding:8px;text-align:center">📁<div style="color:#c9d1d9;font-size:11px;margin-top:4px">NFs</div></div>
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:4px;padding:8px;text-align:center">📁<div style="color:#c9d1d9;font-size:11px;margin-top:4px">Balancetes</div></div>
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:4px;padding:8px;text-align:center">📄<div style="color:#c9d1d9;font-size:11px;margin-top:4px">report.xlsx</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>C — Split: Shares + Arquivos</h3>
+      <p>Linha superior: cards dos shares com saúde. Ao clicar num share, abre o explorador abaixo com árvore. Combina saúde + navegação numa tela só.</p>
+      <div style="margin-top:12px;background:#0d1117;border-radius:6px;overflow:hidden;border:1px solid #30363d;font-size:12px">
+        <div style="background:#161b22;padding:6px 10px;color:#58a6ff;font-size:11px;border-bottom:1px solid #30363d">EXPLORADOR DE ARQUIVOS</div>
+        <div style="padding:8px">
+          <div style="display:flex;gap:6px;margin-bottom:8px">
+            <div style="flex:1;background:#1c2128;border:1px solid #3fb950;border-radius:4px;padding:6px;font-size:11px">
+              <div style="color:#3fb950">● CONTABILIDADE</div>
+              <div style="color:#8b949e">SSD · 42% · 0 sess</div>
+            </div>
+            <div style="flex:1;background:#161b22;border:1px solid #30363d;border-radius:4px;padding:6px;font-size:11px">
+              <div style="color:#c9d1d9">FINANCEIRO</div>
+              <div style="color:#8b949e">SSD · 67% · 2 sess</div>
+            </div>
+            <div style="flex:1;background:#161b22;border:1px solid #30363d;border-radius:4px;padding:6px;font-size:11px">
+              <div style="color:#c9d1d9">INDUSTRIAL</div>
+              <div style="color:#8b949e">HDD · 31% · 0 sess</div>
+            </div>
+          </div>
+          <div style="display:flex;height:90px;border:1px solid #30363d;border-radius:4px;overflow:hidden">
+            <div style="width:35%;border-right:1px solid #30363d;padding:6px;color:#c9d1d9">
+              <div style="color:#3fb950">▶ 2024</div>
+              <div style="color:#3fb950">▼ 2025</div>
+              <div style="padding-left:10px;color:#8b949e">▶ Janeiro</div>
+            </div>
+            <div style="flex:1;padding:6px;color:#8b949e;font-size:11px">
+              📁 NFs &nbsp; 📁 Balancetes &nbsp; 📄 report.xlsx
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<p class="subtitle" style="margin-top:16px">Clique para selecionar — ou combine no terminal.</p>

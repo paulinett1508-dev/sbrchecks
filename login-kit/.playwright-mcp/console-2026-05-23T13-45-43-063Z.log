@@ -1,0 +1,16 @@
+[    1382ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://192.86.221.251/:0
+[    1383ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://192.86.221.251/:0
+[    1383ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://192.86.221.251/:0
+[    1383ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://192.86.221.251/:0
+[   33877ms] SyntaxError: Failed to execute 'insertBefore' on 'Node': Invalid or unexpected token
+    at v.script (http://192.86.221.251/js/gdprProxy.js:100:20)
+    at Object.uiFormat (http://192.86.221.251/js/gdprProxy.js:889:19)
+    at Object.<anonymous> (http://192.86.221.251/js/gdprProxy.js:681:31)
+    at l (http://192.86.221.251/js/jquery-1.8.3.min.js:2:16996)
+    at Object.add (http://192.86.221.251/js/jquery-1.8.3.min.js:2:17310)
+    at Object._ajaxSetup (http://192.86.221.251/js/gdprProxy.js:665:45)
+    at Object.cgi (http://192.86.221.251/js/gdprProxy.js:753:39)
+    at http://192.86.221.251/:1603:34
+    at HTMLButtonElement.<anonymous> (http://192.86.221.251/:1678:17)
+    at HTMLButtonElement.dispatch (http://192.86.221.251/js/jquery-1.8.3.min.js:2:38053)
+[   33919ms] [WARNING] The value "1200px" for key "width" was truncated to its numeric prefix. @ http://192.86.221.251/:6
