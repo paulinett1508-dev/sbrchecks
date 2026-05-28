@@ -1,0 +1,1533 @@
+{
+  "hostname": "LABSRV05",
+  "ip": "192.86.221.218",
+  "fqdn": "labsrv05.labsobralnet.ind",
+  "started_at": "2026-05-26T07:57:09.936581",
+  "modules": {
+    "av-suspects": {
+      "exit_code": 0,
+      "stderr": null,
+      "data": {
+        "module": "av-suspects",
+        "timestamp": "2026-05-26T07:59:26.6108553-03:00",
+        "hostname": "LABSRV05",
+        "defender": {
+          "unavailable": true,
+          "reason": "Não foi possível executar o método extrínseco."
+        },
+        "temp_executables": [
+          {
+            "path": "C:\\Windows\\Temp\\BluePexViewerUpdate\\Desktop\\Bluepex_Viewer_Desktop.exe",
+            "size_kb": 218.88,
+            "modified": "2022-02-03T10:07:12.0000000-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\BluePexViewerUpdate\\Desktop\\createdump.exe",
+            "size_kb": 56.22,
+            "modified": "2021-11-17T14:59:20.0000000-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\BluePexViewerUpdate\\Bluepex_Viewer_Agent.exe",
+            "size_kb": 218.88,
+            "modified": "2022-02-03T10:04:56.0000000-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\BluePexViewerUpdate\\createdump.exe",
+            "size_kb": 56.22,
+            "modified": "2021-11-17T14:59:20.0000000-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_230919152234_10992\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2023-09-19T12:22:34.2105971-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_231009182347_7496\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2023-10-09T15:23:47.7721765-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_231030172304_12920\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2023-10-30T14:23:04.9907341-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_231120162827_8020\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2023-11-20T13:28:27.1527959-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_231121172739_6592\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2023-11-21T14:27:39.8975097-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_231124172734_5004\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2023-11-24T14:27:34.0815830-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_231129222925_5684\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2023-11-29T19:29:25.9105703-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_231202005041_6072\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2023-12-01T21:50:41.5039767-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_231203225029_2536\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2023-12-03T19:50:29.3213658-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_231212225743_8856\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2023-12-12T19:57:43.2709288-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_231213195653_5284\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2023-12-13T16:56:53.7851921-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_231214215713_7648\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2023-12-14T18:57:13.7438562-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_231215175648_10052\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2023-12-15T14:56:48.6266319-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_231218185657_10232\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2023-12-18T15:56:57.0850709-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_240103235649_5408\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2024-01-03T20:56:49.7384000-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_240104195708_4752\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2024-01-04T16:57:08.4185944-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_240111210237_6324\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2024-01-11T18:02:37.8631947-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_240123200208_15228\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2024-01-23T17:02:08.9369802-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_240201180241_2516\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2024-02-01T15:02:41.6592766-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_240209200238_1908\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2024-02-09T17:02:38.2639513-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_240222190226_21120\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2024-02-22T16:02:26.4455156-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_240311160152_81368\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2024-03-11T13:01:52.5644185-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_240401200408_140444\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2024-04-01T17:04:08.9393842-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_240422220232_142248\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2024-04-22T19:02:32.7252120-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_240424210312_136364\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2024-04-24T18:03:12.9588627-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_240520161420_9384\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2024-05-20T13:14:20.8472921-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_240605182125_9276\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2024-06-05T15:21:25.2997923-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_240617232657_4380\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2024-06-17T20:26:57.7375657-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_240708162742_7792\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2024-07-08T13:27:42.6512518-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_240722133251_1260\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2024-07-22T10:32:51.2217944-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_240805163316_4536\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2024-08-05T13:33:16.5500084-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_240808163533_12236\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2024-08-08T13:35:33.2808267-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_240826173903_12680\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2024-08-26T14:39:03.2187917-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_240916134544_4728\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2024-09-16T10:45:44.7027764-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_241007154513_4960\\UpdaterSetup.exe",
+            "size_kb": 8708.38,
+            "modified": "2024-10-07T12:45:13.9997130-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_241028145023_10420\\UpdaterSetup.exe",
+            "size_kb": 8708.38,
+            "modified": "2024-10-28T11:50:23.9530617-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_241118195622_12564\\UpdaterSetup.exe",
+            "size_kb": 9979.88,
+            "modified": "2024-11-18T16:56:22.9357132-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_241211170215_3968\\UpdaterSetup.exe",
+            "size_kb": 9979.88,
+            "modified": "2024-12-11T14:02:15.9667590-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\GoogleUpdateSetup_250113170155_4580\\UpdaterSetup.exe",
+            "size_kb": 9979.88,
+            "modified": "2025-01-13T14:01:55.3069119-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\ad_home_size.ps1",
+            "size_kb": 0.85,
+            "modified": "2026-05-15T19:32:07.7305085-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\ad_query.ps1",
+            "size_kb": 1.29,
+            "modified": "2026-05-19T11:21:48.4407867-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\ad_query2.ps1",
+            "size_kb": 1.38,
+            "modified": "2026-05-19T11:23:22.3143194-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\audit_smousinho.ps1",
+            "size_kb": 0.58,
+            "modified": "2026-05-19T07:29:26.3485794-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\audit_yferreira.ps1",
+            "size_kb": 0.8,
+            "modified": "2026-05-19T07:35:58.2003535-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\bump_mkt_gpo.ps1",
+            "size_kb": 0.93,
+            "modified": "2026-05-19T07:56:29.7159694-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check-backup-share.ps1",
+            "size_kb": 0.77,
+            "modified": "2026-05-20T10:57:45.3190822-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check-disk-letter-map.ps1",
+            "size_kb": 1.24,
+            "modified": "2026-05-20T11:18:56.9887267-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check-disk3-smart.ps1",
+            "size_kb": 0.68,
+            "modified": "2026-05-20T11:12:08.0806031-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check-drives-gdesvio.ps1",
+            "size_kb": 2.34,
+            "modified": "2026-05-20T09:43:36.8953035-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check-drives-unc.ps1",
+            "size_kb": 1.18,
+            "modified": "2026-05-20T09:56:41.9201508-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check-gdisk-health.ps1",
+            "size_kb": 0.89,
+            "modified": "2026-05-20T11:09:58.9247105-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check-gpo-drives.ps1",
+            "size_kb": 1.52,
+            "modified": "2026-05-20T09:31:31.6652866-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check-ini.ps1",
+            "size_kb": 0.75,
+            "modified": "2026-05-20T09:26:41.3208877-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check-nfs-export.ps1",
+            "size_kb": 0.64,
+            "modified": "2026-05-20T11:28:13.8992146-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check-smart-reason.ps1",
+            "size_kb": 0.71,
+            "modified": "2026-05-20T11:38:48.5642655-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check-suprimentos-issues.ps1",
+            "size_kb": 0.79,
+            "modified": "2026-05-20T09:59:44.4972382-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check-suprimentos.ps1",
+            "size_kb": 0.77,
+            "modified": "2026-05-20T09:30:58.1822851-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check-sysvol-gpos.ps1",
+            "size_kb": 1.71,
+            "modified": "2026-05-20T09:45:57.1669617-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check-sysvol2.ps1",
+            "size_kb": 1.24,
+            "modified": "2026-05-20T09:55:44.3260033-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check_dns_213.ps1",
+            "size_kb": 0.62,
+            "modified": "2026-05-19T08:16:09.7552515-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check_gpo.ps1",
+            "size_kb": 1.42,
+            "modified": "2026-05-21T14:43:13.8918667-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check_gpo2.ps1",
+            "size_kb": 1.56,
+            "modified": "2026-05-21T14:45:25.6757555-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check_gpo_contab.ps1",
+            "size_kb": 0.27,
+            "modified": "2026-05-21T14:54:26.1951293-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check_gpo_detail.ps1",
+            "size_kb": 0.41,
+            "modified": "2026-05-19T07:46:17.2597599-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check_gpo_full.ps1",
+            "size_kb": 0.43,
+            "modified": "2026-05-19T07:47:46.4465789-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check_gpo_yferreira.ps1",
+            "size_kb": 0.75,
+            "modified": "2026-05-19T07:43:30.9390217-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check_group.ps1",
+            "size_kb": 0.06,
+            "modified": "2026-05-21T14:20:38.2301296-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check_grupos.ps1",
+            "size_kb": 0.44,
+            "modified": "2026-05-19T07:32:11.3128848-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check_mkt_gpo.ps1",
+            "size_kb": 0.41,
+            "modified": "2026-05-19T07:53:27.0270718-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check_quotas.ps1",
+            "size_kb": 0.84,
+            "modified": "2026-05-23T08:34:15.4265224-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check_spn.ps1",
+            "size_kb": 0.73,
+            "modified": "2026-05-19T08:20:51.9598094-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check_sysvol_e.ps1",
+            "size_kb": 0.96,
+            "modified": "2026-05-19T07:51:25.8731575-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check_sysvol_path.ps1",
+            "size_kb": 0.7,
+            "modified": "2026-05-19T07:50:23.2375820-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check_s_drive.ps1",
+            "size_kb": 0.68,
+            "modified": "2026-05-19T11:35:50.8616315-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\check_time.ps1",
+            "size_kb": 0.28,
+            "modified": "2026-05-19T08:51:52.4585993-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\create-nfs-share.ps1",
+            "size_kb": 0.88,
+            "modified": "2026-05-19T23:04:34.7231514-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\create_fiscal.ps1",
+            "size_kb": 0.34,
+            "modified": "2026-05-21T14:22:01.9376167-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\diag-nfs-218.ps1",
+            "size_kb": 1.51,
+            "modified": "2026-05-19T21:48:05.2777020-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\diag218.ps1",
+            "size_kb": 1.24,
+            "modified": "2026-05-19T12:04:03.0263659-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\diag_smousinho.ps1",
+            "size_kb": 1.94,
+            "modified": "2026-05-19T11:07:53.6230169-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\disk-deep-investigation.ps1",
+            "size_kb": 2.93,
+            "modified": "2026-05-20T14:09:50.4649714-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\find_drives.ps1",
+            "size_kb": 0.24,
+            "modified": "2026-05-21T14:50:25.6142851-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\find_flennon.ps1",
+            "size_kb": 0.33,
+            "modified": "2026-05-21T09:20:21.5255577-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\find_flennon2.ps1",
+            "size_kb": 1.03,
+            "modified": "2026-05-21T09:24:07.4937988-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\find_flennon3.ps1",
+            "size_kb": 1.08,
+            "modified": "2026-05-21T09:27:33.5692879-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\find_ip_gpos.ps1",
+            "size_kb": 0.72,
+            "modified": "2026-05-19T08:22:06.0517286-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\find_lpia2.ps1",
+            "size_kb": 0.68,
+            "modified": "2026-05-21T10:44:01.9849804-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\find_lpiaulino.ps1",
+            "size_kb": 0.64,
+            "modified": "2026-05-21T10:42:56.6870720-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\find_users.ps1",
+            "size_kb": 0.35,
+            "modified": "2026-05-18T21:12:03.2845086-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\find_valves.ps1",
+            "size_kb": 0.14,
+            "modified": "2026-05-21T14:24:17.2504858-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\find_valves2.ps1",
+            "size_kb": 0.15,
+            "modified": "2026-05-21T14:26:31.4686885-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\fix-backup-dirs.ps1",
+            "size_kb": 0.61,
+            "modified": "2026-05-20T11:07:09.0148285-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\fix-book-indicadores-gpo.ps1",
+            "size_kb": 2.16,
+            "modified": "2026-05-20T12:03:11.9611015-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\fix-scripts-ini.ps1",
+            "size_kb": 0.35,
+            "modified": "2026-05-20T09:24:07.5717992-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\fix-suprimentos-gptini.ps1",
+            "size_kb": 1.94,
+            "modified": "2026-05-20T10:01:13.6782137-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\fix-suprimentos-version.ps1",
+            "size_kb": 1.54,
+            "modified": "2026-05-20T10:02:48.7524645-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\fix_authkeys.ps1",
+            "size_kb": 1.14,
+            "modified": "2026-05-15T20:51:27.3262175-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\fix_authkeys2.ps1",
+            "size_kb": 1.28,
+            "modified": "2026-05-15T20:52:23.8430832-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\fix_fiscal.ps1",
+            "size_kb": 0.56,
+            "modified": "2026-05-21T14:23:22.1135483-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\fix_grupo_suprimentos.ps1",
+            "size_kb": 0.46,
+            "modified": "2026-05-19T16:00:04.1252633-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\fix_smousinho.ps1",
+            "size_kb": 0.94,
+            "modified": "2026-05-19T07:31:03.1714746-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\fsrm_quotas.ps1",
+            "size_kb": 0.81,
+            "modified": "2026-05-15T19:57:04.3582344-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\fsrm_quotas2.ps1",
+            "size_kb": 0.92,
+            "modified": "2026-05-15T20:00:04.2386245-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\fsrm_verify.ps1",
+            "size_kb": 0.52,
+            "modified": "2026-05-15T19:59:38.0757716-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\fv3.ps1",
+            "size_kb": 0.11,
+            "modified": "2026-05-21T14:29:02.7406897-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\fv4.ps1",
+            "size_kb": 0.27,
+            "modified": "2026-05-21T14:31:49.4237092-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\get_contab_gpo.ps1",
+            "size_kb": 0.52,
+            "modified": "2026-05-21T14:58:57.4887766-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\get_drives_suprimentos.ps1",
+            "size_kb": 0.5,
+            "modified": "2026-05-19T15:57:09.4511921-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\gpo-rustdesk.ps1",
+            "size_kb": 2.48,
+            "modified": "2026-05-20T09:19:56.1372982-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\gpo-wmi.ps1",
+            "size_kb": 1.37,
+            "modified": "2026-05-20T09:22:03.4129712-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\gpo_suprimentos.ps1",
+            "size_kb": 1.58,
+            "modified": "2026-05-19T11:45:41.1289585-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\init_disk3.ps1",
+            "size_kb": 1,
+            "modified": "2026-05-18T20:59:14.7475325-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\init_disk3_g.ps1",
+            "size_kb": 1,
+            "modified": "2026-05-18T21:01:40.0796568-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\list_groups.ps1",
+            "size_kb": 0.1,
+            "modified": "2026-05-21T14:21:18.1990783-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\list_sysvol.ps1",
+            "size_kb": 0.48,
+            "modified": "2026-05-19T07:48:11.7010902-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\move_valves.ps1",
+            "size_kb": 0.5,
+            "modified": "2026-05-21T14:33:47.8088844-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\pause-g-services-218.ps1",
+            "size_kb": 0.34,
+            "modified": "2026-05-20T14:22:51.3989214-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\read-drives-xml.ps1",
+            "size_kb": 0.17,
+            "modified": "2026-05-20T12:00:27.2507928-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\read-gpo-drives.ps1",
+            "size_kb": 0.92,
+            "modified": "2026-05-18T22:26:57.9128831-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\read-gpo-links.ps1",
+            "size_kb": 1.42,
+            "modified": "2026-05-18T22:28:57.1958213-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\read-gpo-sec.ps1",
+            "size_kb": 1.08,
+            "modified": "2026-05-18T22:27:49.0592030-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\read-suprimentos-drives.ps1",
+            "size_kb": 0.77,
+            "modified": "2026-05-20T09:57:56.9584797-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\rename_grupo.ps1",
+            "size_kb": 0.86,
+            "modified": "2026-05-19T07:33:27.6853489-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\replace_ip_to_nexus.ps1",
+            "size_kb": 1.69,
+            "modified": "2026-05-19T08:22:50.8802032-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\rm_contab.ps1",
+            "size_kb": 0.2,
+            "modified": "2026-05-21T14:34:15.6833224-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\setup-nfs-218.ps1",
+            "size_kb": 1.4,
+            "modified": "2026-05-19T21:55:34.2464601-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\setup_drives_gpo.ps1",
+            "size_kb": 2.7,
+            "modified": "2026-05-21T15:01:41.3078409-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\step1_cse.ps1",
+            "size_kb": 0.58,
+            "modified": "2026-05-19T16:20:50.9381150-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\step1_gpt.ps1",
+            "size_kb": 0.19,
+            "modified": "2026-05-19T12:13:11.5766391-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\step2_cse.ps1",
+            "size_kb": 1.58,
+            "modified": "2026-05-19T16:25:59.0704279-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\step2_gpt.ps1",
+            "size_kb": 0.53,
+            "modified": "2026-05-19T12:13:11.5766391-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\step3_drives.ps1",
+            "size_kb": 0.38,
+            "modified": "2026-05-19T12:13:11.5766391-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\step4_ad.ps1",
+            "size_kb": 0.56,
+            "modified": "2026-05-19T12:13:11.5922663-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\tmp_check.ps1",
+            "size_kb": 0.73,
+            "modified": "2026-05-19T14:51:17.7714994-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\tmp_fix_barras.ps1",
+            "size_kb": 1.09,
+            "modified": "2026-05-19T14:52:24.9660261-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\tmp_parte1.ps1",
+            "size_kb": 1.04,
+            "modified": "2026-05-19T14:49:40.8324025-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\tmp_parte2.ps1",
+            "size_kb": 2.56,
+            "modified": "2026-05-19T14:52:48.3054640-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\tmp_verify2.ps1",
+            "size_kb": 0.31,
+            "modified": "2026-05-19T14:54:11.8426996-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\validate-gpo.ps1",
+            "size_kb": 0.76,
+            "modified": "2026-05-20T09:27:55.2881470-03:00"
+          },
+          {
+            "path": "C:\\Windows\\Temp\\write-ini.ps1",
+            "size_kb": 1.04,
+            "modified": "2026-05-20T09:27:27.5702643-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\01A99FB1-FB7E-407A-BB66-40D7D2E34419\\DismHost.exe",
+            "size_kb": 141.69,
+            "modified": "2016-07-16T03:04:26.5208856-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\0241E6D6-5F9D-42FA-9A6F-1F0B15A965E7\\DismHost.exe",
+            "size_kb": 135.11,
+            "modified": "2019-09-11T01:28:19.4353020-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\073FDF5E-D815-4EE8-9DDC-29CA47C53854\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\0EFFACCB-8095-4160-A916-473E186112E8\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\1682A2C9-31E1-4FA2-A420-DC1844D4A4D0\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\19AB8DB8-7006-4A6B-AE03-A97DE69A3A45\\DismHost.exe",
+            "size_kb": 135.11,
+            "modified": "2019-09-11T01:28:19.4353020-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\1C55FC77-8601-4EF3-BDBC-1EB9E1D3E678\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\1EED88D8-4625-47DA-894D-46EE3DD0EA7C\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\22E5EA63-69E1-4DCB-A574-001F128676A7\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\260C051D-89A3-423F-ACBB-D133BCB53373\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\36EF7A07-0B15-4F42-B13A-8E25BEAF5F6D\\DismHost.exe",
+            "size_kb": 135.11,
+            "modified": "2019-09-11T01:28:19.4353020-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\39C3F562-59E8-4B75-8740-CA966F341545\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\3A9E81C1-6329-4D2B-8DAB-8708B0435E07\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\4163F660-311C-4626-A6DC-DBC9DD6A4020\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\43BC9B23-F3FE-4F76-AD24-3E8B8F73EF58\\DismHost.exe",
+            "size_kb": 135.11,
+            "modified": "2019-09-11T01:28:19.4353020-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\4969D16F-A971-42D7-8BB1-F352B632A603\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\4A7A1E89-4792-4DED-A68B-6456874D77C9\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\4BB8D296-BAB0-7891-852A-2BB80620ED9E\\Latest\\setup.exe",
+            "size_kb": 8.5,
+            "modified": "2013-12-19T08:15:06.0829730-02:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\4EE89540-0664-4534-8BC7-90133092C4B8\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\4F5AB191-AED9-42D9-88F8-D52778A18B72\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\51468317-00F1-4CDB-A4E1-F9891CD68433\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\5582D802-2AEF-41F7-BC26-D44249FBCB26\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\5A3C97F6-DC2B-4270-B243-300600D48CD9\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\5B44B82B-1C77-4753-89E2-FDA98B0ECAFE\\DismHost.exe",
+            "size_kb": 135.11,
+            "modified": "2019-09-11T01:28:19.4353020-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\6031CDB7-E222-46C4-A62B-2755B66B0E2A\\DismHost.exe",
+            "size_kb": 135.11,
+            "modified": "2019-09-11T01:28:19.4353020-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\62CE7580-B0C6-4D23-89EB-031F50D7E725\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\62E6E401-B7B2-4502-ACBD-10C201531FBE\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\66472AF8-C52C-45FE-815B-AF8A493DD491\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\6DC6AC20-3720-402F-9C1C-37845644D68C\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\6FAD0A92-FB06-400A-8A38-788051CA184D\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\6FBFB6E0-5B21-4BD0-8FC0-752621B29758\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\7032EA05-8590-4513-84A7-8BBB347F0B61\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\7227E155-F1DD-4F22-8189-53059308E2FE\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\742C2B33-B751-4FA8-A692-060C84693860\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\77BF72A0-6670-452B-B735-2EEBC30EB8F0\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\7EED80FB-26EC-451B-8E88-2E9B3B5C317D\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\808513C7-EB8B-466A-9971-3CB027856BD6\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\81D9DF11-7268-4DCC-9887-BDCCFBE7DE83\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\81EE741F-C08C-4685-A966-D54CD54B0E44\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\853ACE97-4AC2-4FA1-8574-6D3CE31CDF36\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\853C694A-B073-45A5-98D7-AD911FE42842\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\8A3BCB3E-DC13-471E-9510-126E14AAFAD2\\DismHost.exe",
+            "size_kb": 135.11,
+            "modified": "2019-09-11T01:28:19.4353020-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\8C3E8C1D-884A-46FC-B36C-6A9E9C2E471A\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\947627B3-6DE5-46D7-ACDA-50EAAF979B95\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\94AF60A1-DA6B-45FF-96E9-91EC7D8BCDBF\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\999C39C6-E4EE-46F8-9EE7-B54FBB94C0AC\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\9BE4F8DB-6BCF-45D0-A424-1ECB85002CAA\\DismHost.exe",
+            "size_kb": 135.11,
+            "modified": "2019-09-11T01:28:19.4353020-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\9E4D353D-942C-4DFD-9387-E42C9452D812\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\A3DBFFAE-4D7F-42C3-951A-E5D9C2F98A41\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\AB638D15-BC5D-455E-9E36-3C31906E723D\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\AC04E7F8-B94E-4F6D-B43C-37C89AF74858\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\AF514E8C-9C40-45A6-8CCA-3F453D1FD0F9\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\B0CB971B-35A3-4478-8C52-BC9477450D68\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\B5D729E2-7483-4521-9A9D-24EE1FFDD6D5\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\B91CD06A-54D3-4E21-8F92-16F93646AC48\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\BB9873DB-D860-4E24-8C7A-117034C6A24B\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\BFD0B3BF-0875-4503-A6DB-BAED77AAA0E0\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\BFE21E34-E953-4E68-8683-E3DD472C06D6\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\bsodhandlersym\\ntoskrnl.exe\\5B1A16DF820000\\ntoskrnl.exe",
+            "size_kb": 7621.84,
+            "modified": "2020-02-13T17:02:46.6416200-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\C30AED1B-000D-4118-9E24-540BF97288F3\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\C7936AB5-C45B-4A72-A9DB-2A8F60B4703F\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\CBB7DCD2-341B-459D-A6F9-16F39206F9A1\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\CBD2EEAA-4272-4A01-A773-090F39C5EB5E\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\D25914DE-FBCB-4E21-A200-CD54B6402B62\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\D454818F-E503-437F-AD96-13A5A3BF878A\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\D726A780-C377-4924-847C-41F4AAD38DDE\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\D91EDE53-E47E-4913-80B2-BBF9EFE9E202\\DismHost.exe",
+            "size_kb": 135.11,
+            "modified": "2019-09-11T01:28:19.4353020-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\E45B3DB8-D636-4B38-B7FB-B8ABE6AD6429\\DismHost.exe",
+            "size_kb": 135.11,
+            "modified": "2019-09-11T01:28:19.4353020-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\E90189C4-BD9F-4FBA-8260-15BC0854B6C8\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\E96A4219-503A-4D63-AD58-1A640B0EAC34\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\EC6FC3EF-3DB9-40B5-8941-FC1816E661D4\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\F05DDFCA-583C-4224-91CD-5C02E8887594\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\F07BD167-3638-47D9-A826-AC474EA87502\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\F2C0AB57-2A6F-47A2-A8D2-7DD6FF39294B\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\F561AB6E-CEE4-42EB-A7D1-AB8991180B2D\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\F69075AC-A1D8-49BA-ABBC-4661C72D7EA4\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\FAD187C2-F3BF-48C7-9B1F-C012D08A2A4E\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\FEB1F0F4-2A8A-4DD4-9327-E3B78A106CBC\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\GoogleUpdateSetup_230912150341_9932\\GoogleUpdateSetup.exe",
+            "size_kb": 1290.71,
+            "modified": "2023-09-12T12:03:41.4209136-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\CubexSoft Zimbra Export.bat",
+            "size_kb": 0.06,
+            "modified": "2026-05-11T11:46:20.0809944-03:00"
+          },
+          {
+            "path": "C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Temp\\DeltaTB.exe",
+            "size_kb": 767.48,
+            "modified": "2013-05-10T02:10:32.0000000-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\C68407EC-6A97-44A3-81DE-943095E150E3\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\EF77AFD6-2372-433E-880B-B88C64D7F3D0\\DismHost.exe",
+            "size_kb": 135.38,
+            "modified": "2021-01-07T20:23:14.2368366-03:00"
+          },
+          {
+            "path": "C:\\Users\\vsantos\\AppData\\Local\\Temp\\02333CF8-646A-478C-9722-539D16ED3289\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\vsantos\\AppData\\Local\\Temp\\0C9E0533-9577-405A-A212-76F5DF5CDBE6\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          },
+          {
+            "path": "C:\\Users\\vsantos\\AppData\\Local\\Temp\\962324B0-B072-42B6-8065-5EB14EB52483\\DismHost.exe",
+            "size_kb": 136.54,
+            "modified": "2024-09-26T22:23:27.2032621-03:00"
+          }
+        ],
+        "suspect_scheduled_tasks": [
+          {
+            "name": "GoogleUpdaterTaskUser149.0.7814.0{872F6966-FB61-444E-900D-460739FD531F}",
+            "task_path": "\\GoogleUser\\GoogleUpdater\\",
+            "exec": "\"C:\\Users\\Administrador.WIN-ALLCUHDMLCT\\AppData\\Local\\Google\\GoogleUpdater\\149.0.7814.0\\updater.exe\"",
+            "args": "--wake",
+            "principal": "LABSOBRALNET\\Administrador"
+          }
+        ],
+        "alerts": [
+          {
+            "severity": "warn",
+            "msg": "230 executáveis em pastas temp"
+          },
+          {
+            "severity": "warn",
+            "msg": "1 tarefas agendadas com binário em local suspeito"
+          }
+        ]
+      }
+    },
+    "disk": {
+      "exit_code": 0,
+      "stderr": null,
+      "data": {
+        "module": "disk",
+        "timestamp": "2026-05-26T08:00:51.6905371-03:00",
+        "hostname": "LABSRV05",
+        "volumes": [
+          {
+            "drive": "C:",
+            "label": "",
+            "filesystem": "NTFS",
+            "size_gb": 465.2,
+            "free_gb": 263.93,
+            "used_pct": 43.3
+          },
+          {
+            "drive": "E:",
+            "label": "ARQUIVOS",
+            "filesystem": "NTFS",
+            "size_gb": 1863,
+            "free_gb": 670.42,
+            "used_pct": 64
+          },
+          {
+            "drive": "F:",
+            "label": "F",
+            "filesystem": "NTFS",
+            "size_gb": 465.76,
+            "free_gb": 276.05,
+            "used_pct": 40.7
+          },
+          {
+            "drive": "G:",
+            "label": null,
+            "filesystem": null,
+            "size_gb": 0,
+            "free_gb": 0,
+            "used_pct": 0
+          },
+          {
+            "drive": "I:",
+            "label": "COPIA002",
+            "filesystem": "NTFS",
+            "size_gb": 1863.02,
+            "free_gb": 386.64,
+            "used_pct": 79.2
+          }
+        ],
+        "alerts": []
+      }
+    },
+    "gpo-applied": {
+      "exit_code": 0,
+      "stderr": null,
+      "data": {
+        "module": "gpo-applied",
+        "timestamp": "2026-05-26T08:02:15.2262562-03:00",
+        "hostname": "LABSRV05",
+        "applied": [
+          {
+            "name": "Default Domain Controllers Policy",
+            "scope": "computer",
+            "link_order": 12,
+            "applied_order": 0,
+            "enabled": true,
+            "access_denied": false
+          },
+          {
+            "name": "{327ADB6B-2E00-4C64-8BEA-487451D52D8F}",
+            "scope": "computer",
+            "link_order": 2,
+            "applied_order": 0,
+            "enabled": false,
+            "access_denied": false
+          },
+          {
+            "name": "GPO_TelaBloqueio",
+            "scope": "computer",
+            "link_order": 9,
+            "applied_order": 0,
+            "enabled": true,
+            "access_denied": false
+          },
+          {
+            "name": "Auditoria de Arquivos",
+            "scope": "computer",
+            "link_order": 8,
+            "applied_order": 0,
+            "enabled": true,
+            "access_denied": false
+          },
+          {
+            "name": "{377C3A88-A507-49B4-B400-C7430611F852}",
+            "scope": "computer",
+            "link_order": 5,
+            "applied_order": 0,
+            "enabled": false,
+            "access_denied": false
+          },
+          {
+            "name": "Default Domain Policy",
+            "scope": "computer",
+            "link_order": 11,
+            "applied_order": 0,
+            "enabled": true,
+            "access_denied": false
+          },
+          {
+            "name": "{4E37D44A-A82C-46EE-9397-0AB25E68F4A2}",
+            "scope": "computer",
+            "link_order": 7,
+            "applied_order": 0,
+            "enabled": false,
+            "access_denied": false
+          },
+          {
+            "name": "GPO_Adicionar_Admins_Locais",
+            "scope": "computer",
+            "link_order": 6,
+            "applied_order": 0,
+            "enabled": true,
+            "access_denied": false
+          },
+          {
+            "name": "GPUpdate Automático",
+            "scope": "computer",
+            "link_order": 4,
+            "applied_order": 0,
+            "enabled": true,
+            "access_denied": false
+          },
+          {
+            "name": "Políticas de grupo locais",
+            "scope": "computer",
+            "link_order": 1,
+            "applied_order": 0,
+            "enabled": true,
+            "access_denied": false
+          },
+          {
+            "name": "Deploy Zabbix Agent 2",
+            "scope": "computer",
+            "link_order": 3,
+            "applied_order": 0,
+            "enabled": true,
+            "access_denied": false
+          },
+          {
+            "name": "GPO_WallpaperDominio",
+            "scope": "computer",
+            "link_order": 10,
+            "applied_order": 0,
+            "enabled": true,
+            "access_denied": false
+          }
+        ],
+        "denied": [],
+        "parse_error": null,
+        "alerts": []
+      }
+    },
+    "network": {
+      "exit_code": 0,
+      "stderr": null,
+      "data": {
+        "module": "network",
+        "timestamp": "2026-05-26T08:03:40.7885517-03:00",
+        "hostname": "LABSRV05",
+        "gateway": "192.86.221.5",
+        "checks": [
+          {
+            "name": "gateway",
+            "target": "192.86.221.5",
+            "type": "ping",
+            "ok": true,
+            "latency_ms": 0,
+            "detail": null
+          },
+          {
+            "name": "ad_dc",
+            "target": "labsrv05.labsobralnet.ind",
+            "type": "ping",
+            "ok": true,
+            "latency_ms": 0,
+            "detail": null
+          },
+          {
+            "name": "fileserver",
+            "target": "192.86.221.213",
+            "type": "ping",
+            "ok": true,
+            "latency_ms": 0,
+            "detail": null
+          },
+          {
+            "name": "internet_dns",
+            "target": "8.8.8.8",
+            "type": "ping",
+            "ok": true,
+            "latency_ms": 45.5,
+            "detail": null
+          },
+          {
+            "name": "dns_resolve_dc",
+            "target": "labsrv05.labsobralnet.ind",
+            "type": "dns",
+            "ok": false,
+            "latency_ms": null,
+            "detail": "labsrv05.labsobralnet.ind : O nome DNS não existe"
+          },
+          {
+            "name": "dns_resolve_nexus",
+            "target": "nexus.labsobralnet.ind",
+            "type": "dns",
+            "ok": false,
+            "latency_ms": null,
+            "detail": "nexus.labsobralnet.ind : O nome DNS não existe"
+          },
+          {
+            "name": "smb_fileserver",
+            "target": "192.86.221.213",
+            "type": "tcp",
+            "ok": true,
+            "latency_ms": null,
+            "detail": null
+          },
+          {
+            "name": "smb_dc",
+            "target": "192.86.221.218",
+            "type": "tcp",
+            "ok": true,
+            "latency_ms": null,
+            "detail": null
+          },
+          {
+            "name": "winrm_self",
+            "target": "LABSRV05",
+            "type": "tcp",
+            "ok": true,
+            "latency_ms": null,
+            "detail": null
+          }
+        ],
+        "alerts": [
+          {
+            "severity": "warn",
+            "msg": "dns_resolve_dc (labsrv05.labsobralnet.ind) falhou: labsrv05.labsobralnet.ind : O nome DNS não existe"
+          },
+          {
+            "severity": "warn",
+            "msg": "dns_resolve_nexus (nexus.labsobralnet.ind) falhou: nexus.labsobralnet.ind : O nome DNS não existe"
+          }
+        ]
+      }
+    },
+    "temp-junk": {
+      "exit_code": 0,
+      "stderr": null,
+      "data": {
+        "module": "temp-junk",
+        "timestamp": "2026-05-26T08:05:29.0953337-03:00",
+        "hostname": "LABSRV05",
+        "total_mb": 23296.25,
+        "paths": [
+          {
+            "name": "windows_temp",
+            "pattern": "C:\\Windows\\Temp",
+            "found": true,
+            "size_mb": 8566.87,
+            "file_count": 4619
+          },
+          {
+            "name": "user_temp_all",
+            "pattern": "C:\\Users\\*\\AppData\\Local\\Temp",
+            "found": true,
+            "size_mb": 1981.2,
+            "file_count": 15364
+          },
+          {
+            "name": "prefetch",
+            "pattern": "C:\\Windows\\Prefetch",
+            "found": true,
+            "size_mb": 0,
+            "file_count": 0
+          },
+          {
+            "name": "softwaredistribution_download",
+            "pattern": "C:\\Windows\\SoftwareDistribution\\Download",
+            "found": true,
+            "size_mb": 0.35,
+            "file_count": 2
+          },
+          {
+            "name": "recycle_bin",
+            "pattern": "C:\\$Recycle.Bin",
+            "found": true,
+            "size_mb": 12523.14,
+            "file_count": 52985
+          },
+          {
+            "name": "edge_cache",
+            "pattern": "C:\\Users\\*\\AppData\\Local\\Microsoft\\Edge\\User Data\\*\\Cache",
+            "found": true,
+            "size_mb": 37.67,
+            "file_count": 159
+          },
+          {
+            "name": "chrome_cache",
+            "pattern": "C:\\Users\\*\\AppData\\Local\\Google\\Chrome\\User Data\\*\\Cache",
+            "found": true,
+            "size_mb": 187.02,
+            "file_count": 604
+          },
+          {
+            "name": "ccmcache",
+            "pattern": "C:\\Windows\\ccmcache",
+            "found": false,
+            "size_mb": 0,
+            "file_count": 0
+          }
+        ],
+        "alerts": [
+          {
+            "severity": "critical",
+            "path": "windows_temp",
+            "msg": "windows_temp com 8566.87 MB (4619 arquivos)"
+          },
+          {
+            "severity": "warn",
+            "path": "user_temp_all",
+            "msg": "user_temp_all com 1981.2 MB (15364 arquivos)"
+          },
+          {
+            "severity": "critical",
+            "path": "recycle_bin",
+            "msg": "recycle_bin com 12523.14 MB (52985 arquivos)"
+          }
+        ]
+      }
+    }
+  }
+}

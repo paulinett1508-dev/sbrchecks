@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebServer de Arquivos — Laboratório Sobral</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent-1: #e76327;
+      --accent-2: #c0392b;
+      --accent-bright: #ff6501;
+      --bg-right: #0f172a;
+    }
+
+    body {
+      font-family: 'Ubuntu', sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* ── Fundo full-screen ── */
+    .login-bg {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+    }
+
+    /* ── Overlay escuro sobre o fundo ── */
+    .login-overlay {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(
+        145deg,
+        rgba(5, 10, 25, 0.82) 0%,
+        rgba(5, 10, 25, 0.65) 40%,
+        rgba(0, 0, 0, 0.88) 100%
+      );
+      z-index: 1;
+    }
+
+    /* ── Decorações geométricas nos cantos ── */
+    .deco-corner {
+      position: fixed;
+      width: 80px;
+      height: 80px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .deco-tl { top: 32px; left: 32px; border-top: 2px solid rgba(255,255,255,.3); border-left: 2px solid rgba(255,255,255,.3); border-radius: 4px 0 0 0; }
+    .deco-tr { top: 32px; right: 32px; border-top: 2px solid rgba(255,255,255,.3); border-right: 2px solid rgba(255,255,255,.3); border-radius: 0 4px 0 0; }
+    .deco-bl { bottom: 32px; left: 32px; border-bottom: 2px solid rgba(255,255,255,.3); border-left: 2px solid rgba(255,255,255,.3); border-radius: 0 0 0 4px; }
+    .deco-br { bottom: 32px; right: 32px; border-bottom: 2px solid rgba(255,255,255,.3); border-right: 2px solid rgba(255,255,255,.3); border-radius: 0 0 4px 0; }
+
+    /* ── SVG linhas decorativas ── */
+    .deco-lines {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    /* ── Área de conteúdo: alinha card à direita ── */
+    .login-scene {
+      position: relative;
+      z-index: 10;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 2rem 6vw 2rem 2rem;
+    }
+
+    /* ── Logo da marca (junto à linha do meio, alinhado à direita da metade esq) ── */
+    .brand-block {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 38%;
+      width: 40%;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      text-align: center;
+      pointer-events: none;
+      animation: fadeSlideUp 0.6s cubic-bezier(0.16,1,0.3,1) both;
+    }
+    .brand-block img { width: 110px; height: auto; filter: drop-shadow(0 4px 16px rgba(0,0,0,.6)); }
+    .brand-block h1 { font-size: 1.6rem; font-weight: 700; color: #fff; letter-spacing: -0.02em; text-shadow: 0 2px 12px rgba(0,0,0,.5); }
+    .brand-block p  { font-size: 0.85rem; color: rgba(255,255,255,.55); font-weight: 300; }
+
+    /* ── Card ── */
+    .login-card {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(231,99,39,.2);
+      box-shadow: 0 24px 64px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.04);
+      animation: fadeSlideUp 0.55s cubic-bezier(0.16,1,0.3,1) both;
+    }
+
+    .card-header {
+      background: var(--accent-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem 2rem;
+    }
+    .card-header img {
+      width: 130px;
+      height: 130px;
+      object-fit: contain;
+      display: block;
+      animation: logoReveal 0.7s cubic-bezier(0.16,1,0.3,1) both;
+    }
+
+    .card-body {
+      padding: 2rem 2.5rem 2.5rem;
+      background: rgba(255,255,255,.055);
+      backdrop-filter: blur(40px);
+      -webkit-backdrop-filter: blur(40px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .card-body h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.02em;
+      text-align: center;
+    }
+    .card-subtitle {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,.45);
+      text-align: center;
+    }
+    .card-divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(255,255,255,.08);
+    }
+
+    /* ── Form ── */
+    .login-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 0.375rem; }
+    .form-label { font-size: 0.8125rem; font-weight: 500; color: rgba(255,255,255,.65); letter-spacing: .01em; }
+    .form-label-row { display: flex; align-items: center; gap: 6px; }
+    .field-hint { display: inline-flex; align-items: center; justify-content: center; width: 15px; height: 15px; border-radius: 50%; border: 1px solid rgba(255,255,255,.35); font-size: 10px; color: rgba(255,255,255,.5); cursor: pointer; flex-shrink: 0; user-select: none; }
+    .field-hint:hover { border-color: var(--accent-1); color: var(--accent-1); }
+    .field-hint-tooltip { display: none; position: absolute; left: 0; top: 2rem; background: rgba(15,23,42,.97); border: 1px solid rgba(255,255,255,.15); border-radius: 6px; padding: 5px 10px; font-size: 11px; color: rgba(255,255,255,.85); white-space: nowrap; z-index: 50; }
+    .field-hint-tooltip.visible { display: block; }
+    .form-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 10px;
+      color: #fff;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 0.9375rem;
+      outline: none;
+      transition: border-color .2s, background .2s;
+    }
+    .form-input::placeholder { color: rgba(255,255,255,.25); }
+    .form-input:focus { border-color: rgba(231,99,39,.7); background: rgba(255,255,255,.1); }
+    .form-input:disabled { opacity: .5; cursor: not-allowed; }
+
+    .login-error {
+      font-size: 0.8125rem;
+      color: #fca5a5;
+      background: rgba(239,68,68,.12);
+      border: 1px solid rgba(239,68,68,.25);
+      border-radius: 8px;
+      padding: 0.5rem 0.75rem;
+      text-align: center;
+      display: none;
+    }
+    .login-error.visible { display: block; }
+
+    .btn-submit {
+      width: 100%;
+      padding: 0.875rem 1.5rem;
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .2s;
+      box-shadow: 0 2px 8px rgba(231,99,39,.3);
+      margin-top: 0.25rem;
+    }
+    .btn-submit:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(231,99,39,.4); }
+    .btn-submit:active:not(:disabled) { transform: translateY(0); box-shadow: 0 2px 8px rgba(231,99,39,.3); }
+    .btn-submit:disabled { opacity: .5; cursor: not-allowed; }
+
+    .card-footer { font-size: 0.75rem; color: rgba(255,255,255,.3); text-align: center; }
+
+    /* ── Mobile ── */
+    @media (max-width: 600px) {
+      .login-scene { justify-content: center; padding: 1.5rem; }
+      .brand-block { display: none; }
+    }
+
+    @keyframes logoReveal {
+      from { opacity: 0; transform: scale(0.88); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <img src="/static/bg_login.png" alt="" class="login-bg">
+  <div class="login-overlay"></div>
+
+  <div class="deco-corner deco-tl"></div>
+  <div class="deco-corner deco-tr"></div>
+  <div class="deco-corner deco-bl"></div>
+  <div class="deco-corner deco-br"></div>
+
+  <svg class="deco-lines" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <line x1="0"  y1="300" x2="400" y2="0"   stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    <line x1="0"  y1="550" x2="550" y2="0"   stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    <line x1="80" y1="900" x2="800" y2="200" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    <line x1="0"  y1="750" x2="750" y2="0"   stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    <circle cx="200" cy="150" r="90"  fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    <circle cx="200" cy="150" r="140" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    <circle cx="1300" cy="780" r="100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    <circle cx="1300" cy="780" r="160" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  </svg>
+
+  <div class="brand-block">
+    <img src="/static/logo1_transp.svg" alt="Laboratório Sobral">
+    <h1>WebServer de Arquivos</h1>
+    <p>Laboratório Sobral</p>
+  </div>
+
+  <div class="login-scene">
+    <div class="login-card">
+      <div class="card-header">
+        <img src="/static/logo115-background.svg" alt="Lab Sobral">
+      </div>
+      <div class="card-body">
+        <h2>Entre na sua conta</h2>
+        <p class="card-subtitle">Área restrita · Colaboradores autorizados</p>
+        <div class="card-divider"></div>
+        <form class="login-form" id="login-form" novalidate>
+          <div class="form-group" style="position:relative">
+            <div class="form-label-row">
+              <label for="username" class="form-label">Usuário do AD</label>
+              <span class="field-hint" id="hint-trigger">?</span>
+            </div>
+            <span class="field-hint-tooltip" id="hint-tooltip">Mesmo usuário da rede</span>
+            <input type="text" id="username" class="form-input" autocomplete="username" autofocus required>
+          </div>
+          <div class="form-group">
+            <label for="password" class="form-label">Senha</label>
+            <input type="password" id="password" class="form-input" autocomplete="current-password" required>
+          </div>
+          <p class="login-error" id="login-error"></p>
+          <button type="submit" class="btn-submit" id="login-btn" disabled>Entrar</button>
+        </form>
+        <p class="card-footer">Em caso de problemas com a senha, contate o TI</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const hint = document.getElementById('hint-trigger');
+    const tooltip = document.getElementById('hint-tooltip');
+    hint.addEventListener('click', e => { e.stopPropagation(); tooltip.classList.toggle('visible'); });
+    document.addEventListener('click', () => tooltip.classList.remove('visible'));
+
+    const form   = document.getElementById('login-form');
+    const btnEl  = document.getElementById('login-btn');
+    const errEl  = document.getElementById('login-error');
+    const userEl = document.getElementById('username');
+    const passEl = document.getElementById('password');
+
+    function syncBtn() {
+      btnEl.disabled = !userEl.value.trim() || !passEl.value;
+    }
+    userEl.addEventListener('input', syncBtn);
+    passEl.addEventListener('input', syncBtn);
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      errEl.classList.remove('visible');
+      btnEl.disabled = true;
+      btnEl.textContent = 'Autenticando…';
+
+      try {
+        const resp = await fetch('/api/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username: userEl.value.trim(), password: passEl.value }),
+        });
+        if (resp.ok) {
+          window.location.href = '/';
+        } else {
+          const data = await resp.json().catch(() => ({}));
+          errEl.textContent = data.detail || 'Usuário ou senha inválidos.';
+          errEl.classList.add('visible');
+          btnEl.textContent = 'Entrar';
+          syncBtn();
+        }
+      } catch {
+        errEl.textContent = 'Falha de conexão. Verifique a rede e tente novamente.';
+        errEl.classList.add('visible');
+        btnEl.textContent = 'Entrar';
+        syncBtn();
+      }
+    });
+  </script>
+</body>
+</html>

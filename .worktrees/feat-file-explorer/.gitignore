@@ -1,0 +1,8 @@
+.worktrees/
+panel/.secret
+.superpowers/
+fileexplorer/__pycache__/
+fileexplorer/**/__pycache__/
+fileexplorer/.pytest_cache/
+fileexplorer/tests/__pycache__/
+fileexplorer/api/__pycache__/

@@ -1,0 +1,240 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: http://www.tp-link.com/support/
+      - list [ref=e8]:
+        - listitem [ref=e9] [cursor=pointer]:
+          - generic [ref=e10]: Configuração Rápida
+        - listitem [ref=e11] [cursor=pointer]:
+          - generic [ref=e12]: Básico
+        - listitem [ref=e13] [cursor=pointer]:
+          - generic [ref=e14]: Avançado
+      - generic [ref=e18] [cursor=pointer]: Portugués
+      - generic [ref=e21]:
+        - link "Sair" [ref=e22] [cursor=pointer]:
+          - /url: javascript:void(0);
+          - generic [ref=e24]: Sair
+        - link "Reiniciar" [ref=e25] [cursor=pointer]:
+          - /url: javascript:void(0);
+          - generic [ref=e27]: Reiniciar
+        - link "Atualização" [ref=e28] [cursor=pointer]:
+          - /url: javascript:void(0);
+          - generic [ref=e30]: Atualização
+    - generic [ref=e43]:
+      - generic [ref=e44]:
+        - textbox "Procurar" [ref=e48]
+        - list [ref=e278]:
+          - listitem [ref=e279]:
+            - link "Status" [ref=e280] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e282]: Status
+          - listitem [ref=e283]:
+            - link "Modo de Operação" [ref=e284] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e286]: Modo de Operação
+          - listitem [ref=e287]:
+            - link "Rede" [ref=e288] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e290]: Rede
+            - text: "- - - - -"
+          - listitem [ref=e291]:
+            - link "Wireless" [ref=e292] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e294]: Wireless
+            - text: "- - - - - - -"
+          - listitem [ref=e295]:
+            - link "Rede de Convidados" [ref=e296] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e298]: Rede de Convidados
+          - listitem [ref=e299]:
+            - link "Encaminhamento NAT" [ref=e300] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e302]: Encaminhamento NAT
+            - text: "- - - - -"
+          - listitem [ref=e303]:
+            - link "Controle de Pais" [ref=e304] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e306]: Controle de Pais
+          - listitem [ref=e307]:
+            - link "QoS" [ref=e308] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e310]: QoS
+          - listitem [ref=e311]:
+            - link "Segurança" [ref=e312] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e314]: Segurança
+            - text: "- - - - -"
+          - listitem [ref=e315]:
+            - link "VPN" [ref=e316] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e318]: VPN
+            - text: "- - - -"
+          - listitem [ref=e319]:
+            - link "Ferramentas de Sistema" [ref=e320] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=e322]: Ferramentas de Sistema
+            - text: "- - - - - - - - -"
+      - link [ref=e442] [cursor=pointer]:
+        - /url: javascript:void(0)
+    - generic [ref=e32]:
+      - generic [ref=e35]:
+        - generic [ref=e443]:
+          - heading "Servidor DHCP" [level=3] [ref=e445]
+          - generic [ref=e446]:
+            - generic [ref=e447] [cursor=pointer]: IPv4
+            - text: "|"
+            - generic [ref=e448] [cursor=pointer]: IPv6
+          - generic [ref=e453]:
+            - generic [ref=e454]:
+              - generic [ref=e455]: "Endereço MAC:"
+              - textbox [ref=e456]: DC:62:79:2D:E6:09
+            - generic [ref=e457]:
+              - generic [ref=e458]: "Endereço IP:"
+              - generic [ref=e459]:
+                - textbox [ref=e460]: "192"
+                - generic [ref=e461]: .
+                - textbox [ref=e462]: "86"
+                - generic [ref=e463]: .
+                - textbox [ref=e464]: "222"
+                - generic [ref=e465]: .
+                - textbox [ref=e466]: "20"
+            - generic [ref=e468]:
+              - generic [ref=e469]: "Máscara de sub-rede:"
+              - generic [ref=e471] [cursor=pointer]: 255.255.255.0
+            - generic [ref=e474]:
+              - generic [ref=e475]: "IGMP Snooping:"
+              - generic [ref=e476] [cursor=pointer]: Habilitar
+            - generic [ref=e478]:
+              - generic [ref=e479]: "Segundo IP:"
+              - generic [ref=e480] [cursor=pointer]: Habilitar
+            - generic [ref=e482]:
+              - generic [ref=e483]: "DHCP:"
+              - generic [ref=e484] [cursor=pointer]: Habilitar
+            - generic [ref=e486]:
+              - generic [ref=e487]:
+                - generic [ref=e488] [cursor=pointer]: Servidor DHCP
+                - generic [ref=e490] [cursor=pointer]: DHCP Relay
+              - generic [ref=e492]:
+                - generic [ref=e493]:
+                  - generic [ref=e494]: "Endereço do Servidor Remoto:"
+                  - generic [ref=e495]:
+                    - textbox [ref=e496]: "192"
+                    - generic [ref=e497]: .
+                    - textbox [ref=e498]: "86"
+                    - generic [ref=e499]: .
+                    - textbox [ref=e500]: "221"
+                    - generic [ref=e501]: .
+                    - textbox [ref=e502]: "5"
+                - paragraph [ref=e503]: "Observação: Para tornar as configurações de DHCP Relay vigentes, desabilite o NAT da conexão WAN."
+            - button "Salvar" [active] [ref=e507] [cursor=pointer]
+        - generic [ref=e508]:
+          - heading "Lista de Clientes" [level=3] [ref=e510]
+          - generic [ref=e512]:
+            - generic [ref=e513]:
+              - generic [ref=e514]: "Total de clientes: 13"
+              - generic [ref=e516]: Atualizar
+            - table [ref=e518]:
+              - rowgroup [ref=e519]:
+                - row "ID Nome do Cliente Endereço MAC IP Atribuído Tempo de Alocação" [ref=e520]:
+                  - columnheader "ID" [ref=e521]
+                  - columnheader "Nome do Cliente" [ref=e522]
+                  - columnheader "Endereço MAC" [ref=e523]
+                  - columnheader "IP Atribuído" [ref=e524]
+                  - columnheader "Tempo de Alocação" [ref=e525]
+              - rowgroup [ref=e526]:
+                - row "1 Unknown 00:E0:4C:B2:0E:22 192.86.221.170 Estático" [ref=e527]:
+                  - cell "1" [ref=e528]
+                  - cell "Unknown" [ref=e529]
+                  - cell "00:E0:4C:B2:0E:22" [ref=e530]
+                  - cell "192.86.221.170" [ref=e531]
+                  - cell "Estático" [ref=e532]
+                - row "2 Unknown 54:6C:AC:15:36:AD 192.86.221.52 Estático" [ref=e533]:
+                  - cell "2" [ref=e534]
+                  - cell "Unknown" [ref=e535]
+                  - cell "54:6C:AC:15:36:AD" [ref=e536]
+                  - cell "192.86.221.52" [ref=e537]
+                  - cell "Estático" [ref=e538]
+                - row "3 Unknown 54:6C:AC:15:36:EA 192.86.221.51 Estático" [ref=e539]:
+                  - cell "3" [ref=e540]
+                  - cell "Unknown" [ref=e541]
+                  - cell "54:6C:AC:15:36:EA" [ref=e542]
+                  - cell "192.86.221.51" [ref=e543]
+                  - cell "Estático" [ref=e544]
+                - row "4 Unknown 78:2B:CB:2A:00:9D 192.86.221.216 Estático" [ref=e545]:
+                  - cell "4" [ref=e546]
+                  - cell "Unknown" [ref=e547]
+                  - cell "78:2B:CB:2A:00:9D" [ref=e548]
+                  - cell "192.86.221.216" [ref=e549]
+                  - cell "Estático" [ref=e550]
+                - row "5 Unknown 50:E5:49:FA:A1:33 192.86.221.59 Estático" [ref=e551]:
+                  - cell "5" [ref=e552]
+                  - cell "Unknown" [ref=e553]
+                  - cell "50:E5:49:FA:A1:33" [ref=e554]
+                  - cell "192.86.221.59" [ref=e555]
+                  - cell "Estático" [ref=e556]
+            - generic [ref=e557]:
+              - generic [ref=e559] [cursor=pointer]: "1"
+              - generic [ref=e560] [cursor=pointer]: "2"
+              - generic [ref=e561] [cursor=pointer]: "3"
+        - generic [ref=e563]:
+          - heading "Reserva de Endereço" [level=3] [ref=e565]
+          - generic [ref=e567]:
+            - generic [ref=e569]:
+              - generic [ref=e570]: Adicionar
+              - generic [ref=e572]: Excluir
+            - table [ref=e574]:
+              - rowgroup [ref=e575]:
+                - row "Endereço MAC Endereço IP Reservado Grupo Habilitar Modificar" [ref=e576]:
+                  - columnheader [ref=e577]
+                  - columnheader "Endereço MAC" [ref=e582]
+                  - columnheader "Endereço IP Reservado" [ref=e583]
+                  - columnheader "Grupo" [ref=e584]
+                  - columnheader "Habilitar" [ref=e585]
+                  - columnheader "Modificar" [ref=e586]
+              - rowgroup [ref=e587]:
+                - row "-- -- -- -- -- --" [ref=e588]:
+                  - cell "--" [ref=e589]
+                  - cell "--" [ref=e590]
+                  - cell "--" [ref=e591]
+                  - cell "--" [ref=e592]
+                  - cell "--" [ref=e593]
+                  - cell "--" [ref=e594]
+        - generic [ref=e595]:
+          - heading "Conjunto de Condições" [level=3] [ref=e597]
+          - generic [ref=e599]:
+            - generic [ref=e601]:
+              - generic [ref=e602]: Adicionar
+              - generic [ref=e604]: Excluir
+            - table [ref=e606]:
+              - rowgroup [ref=e607]:
+                - row "ID do Fornecedor Endereço IP Inicial/ Endereço IP Final Estabelecimento Grupo Status Modificar" [ref=e608]:
+                  - columnheader [ref=e609]
+                  - columnheader "ID do Fornecedor" [ref=e614]
+                  - columnheader "Endereço IP Inicial/ Endereço IP Final" [ref=e615]
+                  - columnheader "Estabelecimento" [ref=e616]
+                  - columnheader "Grupo" [ref=e617]
+                  - columnheader "Status" [ref=e618]
+                  - columnheader "Modificar" [ref=e619]
+              - rowgroup [ref=e620]:
+                - row "-- -- -- -- -- -- --" [ref=e621]:
+                  - cell "--" [ref=e622]
+                  - cell "--" [ref=e623]
+                  - cell "--" [ref=e624]
+                  - cell "--" [ref=e625]
+                  - cell "--" [ref=e626]
+                  - cell "--" [ref=e627]
+                  - cell "--" [ref=e628]
+      - generic [ref=e37]:
+        - text: Versão de firmware:1.3.0 3.1.0 v608a.0 Build 231215 Rel.30544n Versão de Hardware:EX141 v1.0 00000000
+        - generic [ref=e38] [cursor=pointer]: Aplicativo
+        - link "Suporte" [ref=e40] [cursor=pointer]:
+          - /url: http://www.tp-link.com/support/
+  - generic [ref=e634]:
+    - generic [ref=e635]:
+      - link [ref=e636] [cursor=pointer]:
+        - /url: javascript:void(0);
+      - generic [ref=e641]:
+        - strong [ref=e642]: "Código do Erro: 85020"
+        - text: Configuração inválida do conjunto de endereços DHCP. O conjunto de endereços DHCP deve estar na mesma sub-rede da rede e o número do host não pode conter valores binários 0 ou 1.
+    - button "OK" [ref=e646] [cursor=pointer]

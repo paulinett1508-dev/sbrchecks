@@ -1,0 +1,8 @@
+- generic [ref=e2]:
+  - generic [ref=e3]: ◈ LABSRVFILES
+  - generic [ref=e4]: 192.86.221.213 · Painel Admin
+  - generic [ref=e5]: USUÁRIO
+  - textbox "admin" [ref=e6]
+  - generic [ref=e7]: SENHA
+  - textbox "••••••••" [ref=e8]
+  - button "Entrar" [ref=e9] [cursor=pointer]

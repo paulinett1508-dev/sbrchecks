@@ -1,0 +1,204 @@
+- generic [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - button "Toggle navigation" [active] [ref=e5] [cursor=pointer]:
+          - generic [ref=e6]: Toggle navigation
+        - link "pfSense Logo Community Edition" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - img "pfSense Logo" [ref=e11]
+          - text: Community Edition
+      - text:  
+  - generic [ref=e21]:
+    - banner [ref=e22]:
+      - list [ref=e23]:
+        - listitem [ref=e24]: Services
+        - listitem [ref=e25]:
+          - text: /
+          - link "DHCP Server" [ref=e26] [cursor=pointer]:
+            - /url: /services_dhcp.php
+        - listitem [ref=e27]:
+          - text: /
+          - link "LAN" [ref=e28] [cursor=pointer]:
+            - /url: /services_dhcp.php?if=lan
+        - listitem [ref=e29]:
+          - text: /
+          - link "Static Mapping" [ref=e30] [cursor=pointer]:
+            - /url: /services_dhcp_edit.php?if=lan
+        - listitem [ref=e31]:
+          - text: /
+          - link "Edit" [ref=e32] [cursor=pointer]:
+            - /url: /services_dhcp_edit.php?if=lan
+      - list [ref=e33]:
+        - listitem [ref=e34]:
+          - link "" [ref=e35] [cursor=pointer]:
+            - /url: services_dhcp.php
+            - generic [ref=e36]: 
+        - listitem [ref=e37]:
+          - link "" [ref=e38] [cursor=pointer]:
+            - /url: status_dhcp_leases.php
+            - generic [ref=e39]: 
+        - listitem [ref=e40]:
+          - link "" [ref=e41] [cursor=pointer]:
+            - /url: status_logs.php?logfile=dhcpd
+            - generic [ref=e42]: 
+        - listitem [ref=e43]:
+          - link "" [ref=e44] [cursor=pointer]:
+            - /url: /help.php?page=services_dhcp_edit.php
+            - generic [ref=e45]: 
+    - text:  
+    - alert [ref=e46]:
+      - generic [ref=e47]:
+        - text: ISC DHCP has reached end-of-life and will be removed in a future version of pfSense. Visit
+        - link "System > Advanced > Networking" [ref=e48] [cursor=pointer]:
+          - /url: system_advanced_network.php
+        - text: to switch DHCP backend.
+    - generic [ref=e49]:
+      - generic [ref=e50]:
+        - heading "Static DHCP Mapping" [level=2] [ref=e52]
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - generic [ref=e55]: DHCP Backend
+            - generic [ref=e56]: ISC DHCP
+          - generic [ref=e57]:
+            - generic [ref=e58]: MAC Address
+            - textbox "xx:xx:xx:xx:xx:xx" [ref=e60]
+            - button " Copy My MAC" [ref=e62] [cursor=pointer]:
+              - generic: 
+              - text: Copy My MAC
+            - generic [ref=e64]: MAC address of the client to match (6 hex octets separated by colons).
+          - generic [ref=e65]:
+            - generic [ref=e66]: Client Identifier
+            - generic [ref=e67]:
+              - textbox [ref=e68]
+              - generic [ref=e69]: An optional identifier to match based on the value sent by the client (RFC 2132).
+          - generic [ref=e70]:
+            - generic [ref=e71]: IP Address
+            - generic [ref=e72]:
+              - textbox "An IPv4 address like 1.2.3.4" [ref=e73]
+              - generic [ref=e74]:
+                - text: IPv4 address to assign this client.
+                - text: Address must be outside of any defined pools. If no IPv4 address is given, one will be dynamically allocated from a pool.
+                - text: The same IP address may be assigned to multiple mappings.
+          - generic [ref=e75]:
+            - generic [ref=e76]: Static ARP Entry
+            - generic [ref=e78] [cursor=pointer]:
+              - checkbox "Create a static ARP table entry for this MAC & IP Address pair." [ref=e79]
+              - text: Create a static ARP table entry for this MAC & IP Address pair.
+          - generic [ref=e80]:
+            - generic [ref=e81]: Hostname
+            - generic [ref=e82]:
+              - textbox [ref=e83]
+              - generic [ref=e84]: Name of the client host without the domain part.
+          - generic [ref=e85]:
+            - generic [ref=e86]: Description
+            - generic [ref=e87]:
+              - textbox [ref=e88]
+              - generic [ref=e89]: A description for administrative reference (not parsed).
+          - generic [ref=e90]:
+            - generic [ref=e91]: Early DNS Registration
+            - generic [ref=e92]:
+              - combobox [ref=e93]:
+                - option "Track subnet" [selected]
+                - option "Enable"
+                - option "Disable"
+              - generic [ref=e94]: Optionally overides the subnet early DNS registration policy to force a specific policy.
+      - generic [ref=e95]:
+        - heading "Server Options" [level=2] [ref=e97]
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - generic [ref=e100]: WINS Servers
+            - textbox "An IPv4 address like 1.2.3.4" [ref=e102]:
+              - /placeholder: WINS Server 1
+          - textbox "An IPv4 address like 1.2.3.4" [ref=e106]:
+            - /placeholder: WINS Server 2
+          - generic [ref=e107]:
+            - generic [ref=e108]: DNS Servers
+            - textbox "An IPv4 address like 1.2.3.4" [ref=e110]:
+              - /placeholder: 192.86.221.218
+          - textbox "An IPv4 address like 1.2.3.4" [ref=e114]:
+            - /placeholder: 8.8.8.8
+          - textbox "An IPv4 address like 1.2.3.4" [ref=e118]:
+            - /placeholder: DNS Server 3
+          - generic [ref=e121]:
+            - textbox "An IPv4 address like 1.2.3.4" [ref=e122]:
+              - /placeholder: DNS Server 4
+            - generic [ref=e123]: "Leave blank to use the system default DNS servers: The IP address of this firewall interface if DNS Resolver or Forwarder is enabled, otherwise the servers configured in General settings or those obtained dynamically."
+      - generic [ref=e124]:
+        - heading "Other DHCP Options" [level=2] [ref=e126]
+        - generic [ref=e127]:
+          - generic [ref=e128]:
+            - generic [ref=e129]: Gateway
+            - generic [ref=e130]:
+              - textbox "192.86.222.254" [ref=e131]
+              - generic [ref=e132]: The default is to use the IP address of this firewall interface as the gateway. Specify an alternate gateway here if this is not the correct gateway for the network.
+          - generic [ref=e133]:
+            - generic [ref=e134]: Domain Name
+            - generic [ref=e135]:
+              - textbox "labsobralnet" [ref=e136]
+              - generic [ref=e137]: The default is to use the domain name of this firewall as the default domain name provided by DHCP. An alternate domain name may be specified here.
+          - generic [ref=e138]:
+            - generic [ref=e139]: Domain Search List
+            - generic [ref=e140]:
+              - textbox "example.com;sub.example.com" [ref=e141]
+              - generic [ref=e142]: The DHCP server can optionally provide a domain search list. Use the semicolon character as separator.
+          - generic [ref=e143]:
+            - generic [ref=e144]: Default Lease Time
+            - generic [ref=e145]:
+              - textbox [ref=e146]
+              - generic [ref=e147]: Used for clients that do not ask for a specific expiration time. The default is 7200 seconds.
+          - generic [ref=e148]:
+            - generic [ref=e149]: Maximum Lease Time
+            - generic [ref=e150]:
+              - textbox [ref=e151]
+              - generic [ref=e152]: This is the maximum lease time for clients that ask for a specific expiration time. The default is 86400 seconds.
+          - generic [ref=e153]:
+            - generic [ref=e154]: Dynamic DNS
+            - button " Display Advanced" [ref=e156] [cursor=pointer]:
+              - generic: 
+              - text: Display Advanced
+          - generic [ref=e157]:
+            - generic [ref=e158]: NTP
+            - button " Display Advanced" [ref=e160] [cursor=pointer]:
+              - generic: 
+              - text: Display Advanced
+          - generic [ref=e161]:
+            - generic [ref=e162]: TFTP
+            - button " Display Advanced" [ref=e164] [cursor=pointer]:
+              - generic: 
+              - text: Display Advanced
+          - generic [ref=e165]:
+            - generic [ref=e166]: LDAP
+            - button " Display Advanced" [ref=e168] [cursor=pointer]:
+              - generic: 
+              - text: Display Advanced
+          - generic [ref=e169]:
+            - generic [ref=e170]: Network Booting
+            - button " Display Advanced" [ref=e172] [cursor=pointer]:
+              - generic: 
+              - text: Display Advanced
+          - generic [ref=e173]:
+            - generic [ref=e174]: Custom DHCP Options
+            - button " Display Advanced" [ref=e176] [cursor=pointer]:
+              - generic: 
+              - text: Display Advanced
+      - text:  +
+      - button " Save" [ref=e178] [cursor=pointer]:
+        - generic: 
+        - text: Save
+  - contentinfo [ref=e179]:
+    - paragraph [ref=e181]:
+      - link "":
+        - /url: "#"
+        - generic [ref=e182] [cursor=pointer]: 
+      - link "pfSense" [ref=e183] [cursor=pointer]:
+        - /url: https://pfsense.org
+      - text: is developed and maintained by
+      - link "Netgate." [ref=e184] [cursor=pointer]:
+        - /url: https://netgate.com
+      - text: © ESF 2004 - 2026
+      - link "View license." [ref=e185] [cursor=pointer]:
+        - /url: https://pfsense.org/license
+      - link "":
+        - /url: "#"
+        - generic [ref=e186] [cursor=pointer]: 

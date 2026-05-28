@@ -1,0 +1,106 @@
+<h2>Layout híbrido — prévia</h2>
+<p class="subtitle">Árvore lateral + breadcrumb + lista/grid alternáveis com busca. Clique para selecionar se gostar.</p>
+
+<div class="mockup" style="max-width:860px;margin:0 auto;">
+  <div class="mockup-header">🗂 Explorador de Arquivos — FINANCEIRO (pmiranda)</div>
+  <div class="mockup-body" style="padding:0;overflow:hidden;">
+
+    <!-- Top bar -->
+    <div style="background:#0d1117;padding:8px 12px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #21262d;">
+      <span style="color:#58a6ff;font-size:12px;">📂 FINANCEIRO</span>
+      <span style="color:#444;">›</span>
+      <span style="color:#8b949e;font-size:12px;">2025</span>
+      <span style="color:#444;">›</span>
+      <span style="color:#e6edf3;font-size:12px;">Fevereiro</span>
+      <div style="flex:1;"></div>
+      <input style="background:#161b22;border:1px solid #30363d;border-radius:6px;color:#c9d1d9;padding:4px 10px;font-size:11px;width:160px;" placeholder="🔍 Buscar arquivos...">
+      <button style="background:#21262d;border:1px solid #30363d;border-radius:6px;color:#8b949e;padding:4px 8px;font-size:11px;cursor:pointer;">⊞ Grid</button>
+      <button style="background:#58a6ff22;border:1px solid #58a6ff55;border-radius:6px;color:#58a6ff;padding:4px 8px;font-size:11px;cursor:pointer;">☰ Lista</button>
+    </div>
+
+    <div style="display:flex;height:340px;">
+
+      <!-- Sidebar -->
+      <div style="width:200px;background:#0d1117;border-right:1px solid #21262d;padding:10px;flex-shrink:0;overflow-y:auto;">
+        <div style="color:#8b949e;font-size:10px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Meu Share</div>
+        <div style="color:#58a6ff;padding:4px 6px;border-radius:4px;background:#58a6ff15;font-size:12px;margin-bottom:2px;">📁 FINANCEIRO</div>
+        <div style="color:#8b949e;padding:4px 6px 4px 18px;font-size:12px;margin-bottom:2px;">📁 2024</div>
+        <div style="color:#e6edf3;padding:4px 6px 4px 18px;font-size:12px;background:#161b22;border-radius:4px;margin-bottom:2px;">📁 2025</div>
+        <div style="color:#8b949e;padding:4px 6px 4px 32px;font-size:11px;margin-bottom:2px;">📁 Janeiro</div>
+        <div style="color:#58a6ff;padding:4px 6px 4px 32px;font-size:11px;background:#58a6ff10;border-radius:4px;margin-bottom:2px;">📁 Fevereiro</div>
+        <div style="color:#8b949e;padding:4px 6px 4px 32px;font-size:11px;margin-bottom:2px;">📁 Março</div>
+        <div style="color:#8b949e;padding:4px 6px 4px 18px;font-size:12px;margin-bottom:2px;">📁 2023</div>
+      </div>
+
+      <!-- Main content -->
+      <div style="flex:1;background:#0d1117;display:flex;flex-direction:column;overflow:hidden;">
+
+        <!-- Action bar -->
+        <div style="padding:8px 12px;border-bottom:1px solid #21262d;display:flex;gap:8px;align-items:center;">
+          <button style="background:#238636;border:1px solid #2ea043;border-radius:6px;color:#fff;padding:4px 10px;font-size:11px;">⬆ Upload</button>
+          <button style="background:#21262d;border:1px solid #30363d;border-radius:6px;color:#8b949e;padding:4px 10px;font-size:11px;">📁 Nova pasta</button>
+          <div style="flex:1"></div>
+          <span style="color:#484f58;font-size:11px;">4 itens · 1.8 MB</span>
+        </div>
+
+        <!-- File list -->
+        <div style="flex:1;overflow-y:auto;padding:8px;">
+
+          <!-- Header row -->
+          <div style="display:grid;grid-template-columns:24px 1fr 80px 130px 90px;gap:8px;padding:4px 8px;color:#484f58;font-size:10px;text-transform:uppercase;letter-spacing:0.5px;border-bottom:1px solid #21262d;margin-bottom:4px;">
+            <span></span><span>Nome</span><span>Tamanho</span><span>Modificado</span><span>Ações</span>
+          </div>
+
+          <!-- Rows -->
+          <div style="display:grid;grid-template-columns:24px 1fr 80px 130px 90px;gap:8px;padding:6px 8px;border-radius:6px;background:#161b22;margin-bottom:3px;align-items:center;">
+            <span>📁</span>
+            <span style="color:#58a6ff;font-size:12px;">Notas Fiscais</span>
+            <span style="color:#484f58;font-size:11px;">—</span>
+            <span style="color:#484f58;font-size:11px;">14/02/2025</span>
+            <span style="color:#484f58;font-size:10px;">✏️ 🗑️</span>
+          </div>
+          <div style="display:grid;grid-template-columns:24px 1fr 80px 130px 90px;gap:8px;padding:6px 8px;border-radius:6px;background:#161b22;margin-bottom:3px;align-items:center;">
+            <span>📄</span>
+            <span style="color:#e6edf3;font-size:12px;">Relatorio_Fev.xlsx</span>
+            <span style="color:#484f58;font-size:11px;">142 KB</span>
+            <span style="color:#484f58;font-size:11px;">18/02/2025</span>
+            <span style="color:#484f58;font-size:10px;">⬇️ ✏️ 🗑️</span>
+          </div>
+          <div style="display:grid;grid-template-columns:24px 1fr 80px 130px 90px;gap:8px;padding:6px 8px;border-radius:6px;background:#161b22;margin-bottom:3px;align-items:center;">
+            <span>📄</span>
+            <span style="color:#e6edf3;font-size:12px;">DRE_Fevereiro.pdf</span>
+            <span style="color:#484f58;font-size:11px;">1.2 MB</span>
+            <span style="color:#484f58;font-size:11px;">20/02/2025</span>
+            <span style="color:#484f58;font-size:10px;">⬇️ ✏️ 🗑️</span>
+          </div>
+          <div style="display:grid;grid-template-columns:24px 1fr 80px 130px 90px;gap:8px;padding:6px 8px;border-radius:6px;background:#161b22;margin-bottom:3px;align-items:center;">
+            <span>📄</span>
+            <span style="color:#e6edf3;font-size:12px;">Fluxo_Caixa.xlsx</span>
+            <span style="color:#484f58;font-size:11px;">89 KB</span>
+            <span style="color:#484f58;font-size:11px;">21/02/2025</span>
+            <span style="color:#484f58;font-size:10px;">⬇️ ✏️ 🗑️</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="options" style="margin-top:20px;">
+  <div class="option" data-choice="aprovado" onclick="toggleSelect(this)">
+    <div class="letter">✓</div>
+    <div class="content">
+      <h3>Aprovado — segue com este layout</h3>
+      <p>Árvore lateral + breadcrumb + lista com busca, toggle grid/lista, ações por arquivo</p>
+    </div>
+  </div>
+  <div class="option" data-choice="ajustar" onclick="toggleSelect(this)">
+    <div class="letter">✎</div>
+    <div class="content">
+      <h3>Quero ajustar algo</h3>
+      <p>Diz no terminal o que mudaria</p>
+    </div>
+  </div>
+</div>

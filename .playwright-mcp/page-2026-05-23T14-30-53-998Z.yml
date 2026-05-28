@@ -1,0 +1,1146 @@
+- generic [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - button "Toggle navigation" [active] [ref=e5] [cursor=pointer]:
+          - generic [ref=e6]: Toggle navigation
+        - link "pfSense Logo Community Edition" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - img "pfSense Logo" [ref=e11]
+          - text: Community Edition
+      - text:  
+  - generic [ref=e21]:
+    - banner [ref=e22]:
+      - list [ref=e23]:
+        - listitem [ref=e24]: Services
+        - listitem [ref=e25]:
+          - text: /
+          - link "DHCP Server" [ref=e26] [cursor=pointer]:
+            - /url: /services_dhcp.php
+        - listitem [ref=e27]:
+          - text: /
+          - link "LAN" [ref=e28] [cursor=pointer]:
+            - /url: /services_dhcp.php?if=lan
+      - list [ref=e29]:
+        - listitem [ref=e30]:
+          - link "" [ref=e31] [cursor=pointer]:
+            - /url: "#"
+            - generic "Restart Service" [ref=e32]: 
+          - link "" [ref=e33] [cursor=pointer]:
+            - /url: "#"
+            - generic "Stop Service" [ref=e34]: 
+        - listitem [ref=e35]:
+          - link "" [ref=e36] [cursor=pointer]:
+            - /url: status_dhcp_leases.php
+            - generic [ref=e37]: 
+        - listitem [ref=e38]:
+          - link "" [ref=e39] [cursor=pointer]:
+            - /url: status_logs.php?logfile=dhcpd
+            - generic [ref=e40]: 
+        - listitem [ref=e41]:
+          - link "" [ref=e42] [cursor=pointer]:
+            - /url: /help.php?page=services_dhcp.php
+            - generic [ref=e43]: 
+    - text:  
+    - alert [ref=e44]:
+      - generic [ref=e45]:
+        - text: The DHCP Server configuration has changed.
+        - text: The changes must be applied for them to take effect.
+      - button " Apply Changes" [ref=e47] [cursor=pointer]:
+        - generic: 
+        - text: Apply Changes
+    - alert [ref=e48]:
+      - generic [ref=e49]:
+        - text: ISC DHCP has reached end-of-life and will be removed in a future version of pfSense. Visit
+        - link "System > Advanced > Networking" [ref=e50] [cursor=pointer]:
+          - /url: system_advanced_network.php
+        - text: to switch DHCP backend.
+    - list [ref=e51]:
+      - link "LAN" [ref=e52] [cursor=pointer]:
+        - /url: services_dhcp.php?if=lan
+    - generic [ref=e53]:
+      - generic [ref=e54]:
+        - heading "General DHCP Options" [level=2] [ref=e56]
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - generic [ref=e59]: DHCP Backend
+            - generic [ref=e60]: ISC DHCP
+          - generic [ref=e61]:
+            - generic [ref=e62]: Enable
+            - generic [ref=e64] [cursor=pointer]:
+              - checkbox "Enable DHCP server on LAN interface" [checked] [ref=e65]
+              - text: Enable DHCP server on LAN interface
+          - generic [ref=e66]:
+            - generic [ref=e67]: BOOTP
+            - generic [ref=e69] [cursor=pointer]:
+              - checkbox "Ignore BOOTP queries" [ref=e70]
+              - text: Ignore BOOTP queries
+          - generic [ref=e71]:
+            - generic [ref=e72]: Deny Unknown Clients
+            - generic [ref=e73]:
+              - combobox [ref=e74]:
+                - option "Allow all clients"
+                - option "Allow known clients from any interface" [selected]
+                - option "Allow known clients from only this interface"
+              - generic [ref=e75]:
+                - text: When set to Allow all clients, any DHCP client will get an IP address within this scope/range on this interface. If set to Allow known clients from any interface, any DHCP client with a MAC address listed in a static mapping on
+                - generic [ref=e76]: any
+                - text: scope(s)/interface(s) will get an IP address. If set to Allow known clients from only this interface, only MAC addresses listed in static mappings on this interface will get an IP address within this scope/range.
+          - generic [ref=e77]:
+            - generic [ref=e78]: Ignore Denied Clients
+            - generic [ref=e79]:
+              - generic [ref=e80] [cursor=pointer]:
+                - checkbox "Ignore denied clients rather than reject" [ref=e81]
+                - text: Ignore denied clients rather than reject
+              - generic [ref=e82]: This option is not compatible with failover and cannot be enabled when a Failover Peer IP address is configured.
+          - generic [ref=e83]:
+            - generic [ref=e84]: Ignore Client Identifiers
+            - generic [ref=e85]:
+              - generic [ref=e86] [cursor=pointer]:
+                - checkbox "Do not record a unique identifier (UID) in client lease data if present in the client DHCP request" [ref=e87]
+                - text: Do not record a unique identifier (UID) in client lease data if present in the client DHCP request
+              - generic [ref=e88]: This option may be useful when a client can dual boot using different client identifiers but the same hardware (MAC) address. Note that the resulting server behavior violates the official DHCP specification.
+      - generic [ref=e89]:
+        - heading "Primary Address Pool" [level=2] [ref=e91]
+        - generic [ref=e92]:
+          - generic [ref=e93]:
+            - generic [ref=e94]: Subnet
+            - generic [ref=e95]: 192.86.221.0/24
+          - generic [ref=e96]:
+            - generic [ref=e97]: Subnet Range
+            - generic [ref=e98]: 192.86.221.1 - 192.86.221.254
+          - generic [ref=e99]:
+            - generic [ref=e100]: Address Pool Range
+            - generic [ref=e101]:
+              - textbox "An IPv4 address like 1.2.3.4" [ref=e102]: 192.86.221.253
+              - generic [ref=e103]: From
+            - generic [ref=e104]:
+              - textbox "An IPv4 address like 1.2.3.4" [ref=e105]: 192.86.221.253
+              - generic [ref=e106]: To
+            - generic [ref=e108]: The specified range for this pool must not be within the range configured on any other address pool for this interface.
+          - generic [ref=e109]:
+            - generic [ref=e110]: Additional Pools
+            - generic [ref=e111]:
+              - link " Add Address Pool" [ref=e112] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=newpool
+                - generic: 
+                - text: Add Address Pool
+              - generic [ref=e113]: If additional pools of addresses are needed inside of this subnet outside the above range, they may be specified here.
+      - generic [ref=e114]:
+        - heading "Server Options" [level=2] [ref=e116]
+        - generic [ref=e117]:
+          - generic [ref=e118]:
+            - generic [ref=e119]: WINS Servers
+            - textbox "An IPv4 address like 1.2.3.4" [ref=e121]:
+              - /placeholder: WINS Server 1
+          - textbox "An IPv4 address like 1.2.3.4" [ref=e125]:
+            - /placeholder: WINS Server 2
+          - generic [ref=e126]:
+            - generic [ref=e127]: DNS Servers
+            - textbox "An IPv4 address like 1.2.3.4" [ref=e129]:
+              - /placeholder: 192.86.221.5
+              - text: 192.86.221.218
+          - textbox "An IPv4 address like 1.2.3.4" [ref=e133]:
+            - /placeholder: DNS Server 2
+            - text: 8.8.8.8
+          - textbox "An IPv4 address like 1.2.3.4" [ref=e137]:
+            - /placeholder: DNS Server 3
+          - textbox "An IPv4 address like 1.2.3.4" [ref=e141]:
+            - /placeholder: DNS Server 4
+      - generic [ref=e142]:
+        - heading "OMAPI" [level=2] [ref=e144]
+        - generic [ref=e145]:
+          - generic [ref=e146]:
+            - generic [ref=e147]: OMAPI Port
+            - generic [ref=e148]:
+              - textbox "OMAPI Port" [ref=e149]
+              - generic [ref=e150]: Set the port that OMAPI will listen on. The default port is 7911, leave blank to disable.Only the first OMAPI configuration is used.
+          - generic [ref=e151]:
+            - generic [ref=e152]: OMAPI Key
+            - generic [ref=e153]:
+              - textbox "OMAPI Key" [ref=e154]
+              - generic [ref=e155]:
+                - text: Enter a key matching the selected algorithm
+                - text: to secure connections to the OMAPI endpoint.
+            - generic [ref=e156]:
+              - generic [ref=e157] [cursor=pointer]:
+                - checkbox "Generate New Key" [ref=e158]
+                - text: Generate New Key
+              - generic [ref=e159]:
+                - text: Generate a new key based
+                - text: on the selected algorithm.
+          - generic [ref=e160]:
+            - generic [ref=e161]: Key Algorithm
+            - generic [ref=e162]:
+              - combobox [ref=e163]:
+                - option "HMAC-MD5 (legacy default)"
+                - option "HMAC-SHA1"
+                - option "HMAC-SHA224"
+                - option "HMAC-SHA256 (current bind9 default)" [selected]
+                - option "HMAC-SHA384"
+                - option "HMAC-SHA512 (most secure)"
+              - generic [ref=e164]: Set the algorithm that OMAPI key will use.
+      - generic [ref=e165]:
+        - heading "Other DHCP Options" [level=2] [ref=e167]
+        - generic [ref=e168]:
+          - generic [ref=e169]:
+            - generic [ref=e170]: Gateway
+            - generic [ref=e171]:
+              - textbox "An IPv4 address like 1.2.3.4" [ref=e172]:
+                - /placeholder: 192.86.221.5
+                - text: 192.86.221.5
+              - generic [ref=e173]: The default is to use the IP address of this firewall interface as the gateway. Specify an alternate gateway here if this is not the correct gateway for the network. Enter "none" for no gateway assignment.
+          - generic [ref=e174]:
+            - generic [ref=e175]: Domain Name
+            - generic [ref=e176]:
+              - textbox "labsobralnet.ind" [ref=e177]: labsobralnet
+              - generic [ref=e178]: The default is to use the domain name of this firewall as the default domain name provided by DHCP. An alternate domain name may be specified here.
+          - generic [ref=e179]:
+            - generic [ref=e180]: Domain Search List
+            - generic [ref=e181]:
+              - textbox "example.com;sub.example.com" [ref=e182]
+              - generic [ref=e183]: The DHCP server can optionally provide a domain search list. Use the semicolon character as separator.
+          - generic [ref=e184]:
+            - generic [ref=e185]: Default Lease Time
+            - generic [ref=e186]:
+              - spinbutton [ref=e187]
+              - generic [ref=e188]: This is used for clients that do not ask for a specific expiration time. The default is 7200 seconds.
+          - generic [ref=e189]:
+            - generic [ref=e190]: Maximum Lease Time
+            - generic [ref=e191]:
+              - spinbutton [ref=e192]
+              - generic [ref=e193]: This is the maximum lease time for clients that ask for a specific expiration time. The default is 86400 seconds.
+          - generic [ref=e194]:
+            - generic [ref=e195]: Failover peer IP
+            - generic [ref=e196]:
+              - textbox "An IPv4 address like 1.2.3.4" [ref=e197]
+              - generic [ref=e198]: Leave blank to disable. Enter the interface IP address of the other firewall (failover peer) in this subnet. Firewalls must be using CARP. Advertising skew of the CARP VIP on this interface determines whether the DHCP daemon is Primary or Secondary. Ensure the advertising skew for the VIP on one firewall is < 20 and the other is > 20.
+          - generic [ref=e199]:
+            - generic [ref=e200]: Static ARP
+            - generic [ref=e201]:
+              - generic [ref=e202] [cursor=pointer]:
+                - checkbox "Enable Static ARP entries" [ref=e203]
+                - text: Enable Static ARP entries
+              - generic [ref=e204]: Restricts communication with the firewall to only hosts listed in static mappings containing both IP addresses and MAC addresses. No other hosts will be able to communicate with the firewall on this interface. This behavior is enforced even when DHCP server is disabled.
+          - generic [ref=e205]:
+            - generic [ref=e206]: Time format change
+            - generic [ref=e207]:
+              - generic [ref=e208] [cursor=pointer]:
+                - checkbox "Change DHCP display lease time from UTC to local time" [ref=e209]
+                - text: Change DHCP display lease time from UTC to local time
+              - generic [ref=e210]: By default DHCP leases are displayed in UTC time. By checking this box DHCP lease time will be displayed in local time and set to the time zone selected. This will be used for all DHCP interfaces lease time.
+          - generic [ref=e211]:
+            - generic [ref=e212]: Statistics graphs
+            - generic [ref=e213]:
+              - generic [ref=e214] [cursor=pointer]:
+                - checkbox "Enable monitoring graphs for DHCP lease statistics" [ref=e215]
+                - text: Enable monitoring graphs for DHCP lease statistics
+              - generic [ref=e216]: Enable this to add DHCP leases statistics to the Monitoring graphs. Disabled by default.
+          - generic [ref=e217]:
+            - generic [ref=e218]: Ping check
+            - generic [ref=e219]:
+              - generic [ref=e220] [cursor=pointer]:
+                - checkbox "Disable ping check" [ref=e221]
+                - text: Disable ping check
+              - generic [ref=e222]: When enabled dhcpd sends a ping to the address being assigned, and if no response has been heard, it assigns the address. Enabled by default.
+          - generic [ref=e223]:
+            - generic [ref=e224]: Dynamic DNS
+            - button " Display Advanced" [ref=e226] [cursor=pointer]:
+              - generic [ref=e227]: 
+              - text: Display Advanced
+          - generic [ref=e228]:
+            - generic [ref=e229]: MAC Address Control
+            - button " Display Advanced" [ref=e231] [cursor=pointer]:
+              - generic [ref=e232]: 
+              - text: Display Advanced
+          - generic [ref=e233]:
+            - generic [ref=e234]: NTP
+            - button " Display Advanced" [ref=e236] [cursor=pointer]:
+              - generic [ref=e237]: 
+              - text: Display Advanced
+          - generic [ref=e238]:
+            - generic [ref=e239]: TFTP
+            - button " Display Advanced" [ref=e241] [cursor=pointer]:
+              - generic [ref=e242]: 
+              - text: Display Advanced
+          - generic [ref=e243]:
+            - generic [ref=e244]: LDAP
+            - button " Display Advanced" [ref=e246] [cursor=pointer]:
+              - generic [ref=e247]: 
+              - text: Display Advanced
+          - generic [ref=e248]:
+            - generic [ref=e249]: Network Booting
+            - button " Display Advanced" [ref=e251] [cursor=pointer]:
+              - generic [ref=e252]: 
+              - text: Display Advanced
+          - generic [ref=e253]:
+            - generic [ref=e254]: Custom DHCP Options
+            - button " Display Advanced" [ref=e256] [cursor=pointer]:
+              - generic [ref=e257]: 
+              - text: Display Advanced
+      - text:  
+      - button " Save" [ref=e259] [cursor=pointer]:
+        - generic: 
+        - text: Save
+    - generic [ref=e260]:
+      - heading "DHCP Static Mappings" [level=2] [ref=e262]
+      - table [ref=e264]:
+        - rowgroup [ref=e265]:
+          - row "Static ARP MAC address Client Id IP address Hostname Description" [ref=e266]:
+            - columnheader "Static ARP" [ref=e267] [cursor=pointer]
+            - columnheader "MAC address" [ref=e268] [cursor=pointer]
+            - columnheader "Client Id" [ref=e269] [cursor=pointer]
+            - columnheader "IP address" [ref=e270] [cursor=pointer]
+            - columnheader "Hostname" [ref=e271] [cursor=pointer]
+            - columnheader "Description" [ref=e272] [cursor=pointer]
+            - columnheader [ref=e273] [cursor=pointer]
+        - rowgroup [ref=e274]:
+          - row "00:e0:4c:68:00:f2 192.86.221.2 LABSEC01 Raimunda  " [ref=e275]:
+            - cell [ref=e276]
+            - cell "00:e0:4c:68:00:f2" [ref=e277]
+            - cell [ref=e278]
+            - cell "192.86.221.2" [ref=e279]
+            - cell "LABSEC01" [ref=e280]
+            - cell "Raimunda" [ref=e281]
+            - cell " " [ref=e282]:
+              - link "" [ref=e283] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=0
+              - link "" [ref=e284] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=0
+          - row "e0:d5:5e:f0:7e:8f 192.86.221.4 Labsec04 Wilma  " [ref=e285]:
+            - cell [ref=e286]
+            - cell "e0:d5:5e:f0:7e:8f" [ref=e287]
+            - cell [ref=e288]
+            - cell "192.86.221.4" [ref=e289]
+            - cell "Labsec04" [ref=e290]
+            - cell "Wilma" [ref=e291]
+            - cell " " [ref=e292]:
+              - link "" [ref=e293] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=1
+              - link "" [ref=e294] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=1
+          - row "50:e5:49:fa:94:f5 192.86.221.9 Estagiaria_RH  " [ref=e295]:
+            - cell [ref=e296]
+            - cell "50:e5:49:fa:94:f5" [ref=e297]
+            - cell [ref=e298]
+            - cell "192.86.221.9" [ref=e299]
+            - cell [ref=e300]
+            - cell "Estagiaria_RH" [ref=e301]
+            - cell " " [ref=e302]:
+              - link "" [ref=e303] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=2
+              - link "" [ref=e304] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=2
+          - row "74:27:ea:74:0e:ad 192.86.221.10 labrh01 Denise  " [ref=e305]:
+            - cell [ref=e306]
+            - cell "74:27:ea:74:0e:ad" [ref=e307]
+            - cell [ref=e308]
+            - cell "192.86.221.10" [ref=e309]
+            - cell "labrh01" [ref=e310]
+            - cell "Denise" [ref=e311]
+            - cell " " [ref=e312]:
+              - link "" [ref=e313] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=3
+              - link "" [ref=e314] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=3
+          - row "9c:ae:d3:ad:9a:3c 192.86.221.11 labrh05 Sistemaqualidade  " [ref=e315]:
+            - cell [ref=e316]
+            - cell "9c:ae:d3:ad:9a:3c" [ref=e317]
+            - cell [ref=e318]
+            - cell "192.86.221.11" [ref=e319]
+            - cell "labrh05" [ref=e320]
+            - cell "Sistemaqualidade" [ref=e321]
+            - cell " " [ref=e322]:
+              - link "" [ref=e323] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=4
+              - link "" [ref=e324] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=4
+          - row "00:e0:4c:39:0d:18 192.86.221.14 labcon01 Anisio  " [ref=e325]:
+            - cell [ref=e326]
+            - cell "00:e0:4c:39:0d:18" [ref=e327]
+            - cell [ref=e328]
+            - cell "192.86.221.14" [ref=e329]
+            - cell "labcon01" [ref=e330]
+            - cell "Anisio" [ref=e331]
+            - cell " " [ref=e332]:
+              - link "" [ref=e333] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=5
+              - link "" [ref=e334] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=5
+          - row "74:27:ea:75:73:84 192.86.221.15 labcst08 EDMILSON  " [ref=e335]:
+            - cell [ref=e336]
+            - cell "74:27:ea:75:73:84" [ref=e337]
+            - cell [ref=e338]
+            - cell "192.86.221.15" [ref=e339]
+            - cell "labcst08" [ref=e340]
+            - cell "EDMILSON" [ref=e341]
+            - cell " " [ref=e342]:
+              - link "" [ref=e343] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=6
+              - link "" [ref=e344] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=6
+          - row "00:e0:4c:68:30:68 192.86.221.18 labcon07 Alex  " [ref=e345]:
+            - cell [ref=e346]
+            - cell "00:e0:4c:68:30:68" [ref=e347]
+            - cell [ref=e348]
+            - cell "192.86.221.18" [ref=e349]
+            - cell "labcon07" [ref=e350]
+            - cell "Alex" [ref=e351]
+            - cell " " [ref=e352]:
+              - link "" [ref=e353] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=7
+              - link "" [ref=e354] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=7
+          - row "d8:50:e6:ab:7a:3e 192.86.221.19 labcon06 Vanessa  " [ref=e355]:
+            - cell [ref=e356]
+            - cell "d8:50:e6:ab:7a:3e" [ref=e357]
+            - cell [ref=e358]
+            - cell "192.86.221.19" [ref=e359]
+            - cell "labcon06" [ref=e360]
+            - cell "Vanessa" [ref=e361]
+            - cell " " [ref=e362]:
+              - link "" [ref=e363] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=8
+              - link "" [ref=e364] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=8
+          - row "d8:50:e6:ab:7d:70 192.86.221.21 labcst01 Amarildo  " [ref=e365]:
+            - cell [ref=e366]
+            - cell "d8:50:e6:ab:7d:70" [ref=e367]
+            - cell [ref=e368]
+            - cell "192.86.221.21" [ref=e369]
+            - cell "labcst01" [ref=e370]
+            - cell "Amarildo" [ref=e371]
+            - cell " " [ref=e372]:
+              - link "" [ref=e373] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=9
+              - link "" [ref=e374] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=9
+          - row "00:e0:4c:36:2a:ca 192.86.221.22 labfin01 Marcos Vilarinho  " [ref=e375]:
+            - cell [ref=e376]
+            - cell "00:e0:4c:36:2a:ca" [ref=e377]
+            - cell [ref=e378]
+            - cell "192.86.221.22" [ref=e379]
+            - cell "labfin01" [ref=e380]
+            - cell "Marcos Vilarinho" [ref=e381]
+            - cell " " [ref=e382]:
+              - link "" [ref=e383] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=10
+              - link "" [ref=e384] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=10
+          - row "00:e0:4d:a6:09:ef 192.86.221.24 Sammya  " [ref=e385]:
+            - cell [ref=e386]
+            - cell "00:e0:4d:a6:09:ef" [ref=e387]
+            - cell [ref=e388]
+            - cell "192.86.221.24" [ref=e389]
+            - cell [ref=e390]
+            - cell "Sammya" [ref=e391]
+            - cell " " [ref=e392]:
+              - link "" [ref=e393] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=11
+              - link "" [ref=e394] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=11
+          - row "00:e0:4c:aa:35:33 192.86.221.27 labfin06 Junior  " [ref=e395]:
+            - cell [ref=e396]
+            - cell "00:e0:4c:aa:35:33" [ref=e397]
+            - cell [ref=e398]
+            - cell "192.86.221.27" [ref=e399]
+            - cell "labfin06" [ref=e400]
+            - cell "Junior" [ref=e401]
+            - cell " " [ref=e402]:
+              - link "" [ref=e403] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=12
+              - link "" [ref=e404] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=12
+          - row "00:e0:4c:2c:92:b7 192.86.221.28 Maria daguia  " [ref=e405]:
+            - cell [ref=e406]
+            - cell "00:e0:4c:2c:92:b7" [ref=e407]
+            - cell [ref=e408]
+            - cell "192.86.221.28" [ref=e409]
+            - cell [ref=e410]
+            - cell "Maria daguia" [ref=e411]
+            - cell " " [ref=e412]:
+              - link "" [ref=e413] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=13
+              - link "" [ref=e414] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=13
+          - row "d4:3d:7e:e7:6f:0b 192.86.221.35 labpes01 Francisca  " [ref=e415]:
+            - cell [ref=e416]
+            - cell "d4:3d:7e:e7:6f:0b" [ref=e417]
+            - cell [ref=e418]
+            - cell "192.86.221.35" [ref=e419]
+            - cell "labpes01" [ref=e420]
+            - cell "Francisca" [ref=e421]
+            - cell " " [ref=e422]:
+              - link "" [ref=e423] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=14
+              - link "" [ref=e424] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=14
+          - row "00:50:be:99:3d:2a 192.86.221.36 labpes02 Ana Laura  " [ref=e425]:
+            - cell [ref=e426]
+            - cell "00:50:be:99:3d:2a" [ref=e427]
+            - cell [ref=e428]
+            - cell "192.86.221.36" [ref=e429]
+            - cell "labpes02" [ref=e430]
+            - cell "Ana Laura" [ref=e431]
+            - cell " " [ref=e432]:
+              - link "" [ref=e433] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=15
+              - link "" [ref=e434] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=15
+          - row "d0:27:88:7d:bd:e5 192.86.221.41 Valdiano  " [ref=e435]:
+            - cell [ref=e436]
+            - cell "d0:27:88:7d:bd:e5" [ref=e437]
+            - cell [ref=e438]
+            - cell "192.86.221.41" [ref=e439]
+            - cell [ref=e440]
+            - cell "Valdiano" [ref=e441]
+            - cell " " [ref=e442]:
+              - link "" [ref=e443] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=16
+              - link "" [ref=e444] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=16
+          - row "00:f0:4c:68:55:cb 192.86.221.49 Daniel  " [ref=e445]:
+            - cell [ref=e446]
+            - cell "00:f0:4c:68:55:cb" [ref=e447]
+            - cell [ref=e448]
+            - cell "192.86.221.49" [ref=e449]
+            - cell [ref=e450]
+            - cell "Daniel" [ref=e451]
+            - cell " " [ref=e452]:
+              - link "" [ref=e453] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=17
+              - link "" [ref=e454] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=17
+          - row "50:e5:49:fa:a1:33 192.86.221.59 lablog02 Lucas  " [ref=e455]:
+            - cell [ref=e456]
+            - cell "50:e5:49:fa:a1:33" [ref=e457]
+            - cell [ref=e458]
+            - cell "192.86.221.59" [ref=e459]
+            - cell "lablog02" [ref=e460]
+            - cell "Lucas" [ref=e461]
+            - cell " " [ref=e462]:
+              - link "" [ref=e463] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=18
+              - link "" [ref=e464] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=18
+          - row "00:1d:92:20:70:57 192.86.221.60 lablog03 Almox_Fora  " [ref=e465]:
+            - cell [ref=e466]
+            - cell "00:1d:92:20:70:57" [ref=e467]
+            - cell [ref=e468]
+            - cell "192.86.221.60" [ref=e469]
+            - cell "lablog03" [ref=e470]
+            - cell "Almox_Fora" [ref=e471]
+            - cell " " [ref=e472]:
+              - link "" [ref=e473] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=19
+              - link "" [ref=e474] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=19
+          - row "00:25:22:92:cb:46 192.86.221.62 lablog07 Jefherson  " [ref=e475]:
+            - cell [ref=e476]
+            - cell "00:25:22:92:cb:46" [ref=e477]
+            - cell [ref=e478]
+            - cell "192.86.221.62" [ref=e479]
+            - cell "lablog07" [ref=e480]
+            - cell "Jefherson" [ref=e481]
+            - cell " " [ref=e482]:
+              - link "" [ref=e483] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=20
+              - link "" [ref=e484] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=20
+          - row "38:60:77:34:82:e8 192.86.221.64 labcon02 Almox.Fora  " [ref=e485]:
+            - cell [ref=e486]
+            - cell "38:60:77:34:82:e8" [ref=e487]
+            - cell [ref=e488]
+            - cell "192.86.221.64" [ref=e489]
+            - cell "labcon02" [ref=e490]
+            - cell "Almox.Fora" [ref=e491]
+            - cell " " [ref=e492]:
+              - link "" [ref=e493] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=21
+              - link "" [ref=e494] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=21
+          - row "00:e0:4c:52:66:6b 192.86.221.65 LABLOG08 Darlan Carvalho  " [ref=e495]:
+            - cell [ref=e496]
+            - cell "00:e0:4c:52:66:6b" [ref=e497]
+            - cell [ref=e498]
+            - cell "192.86.221.65" [ref=e499]
+            - cell "LABLOG08" [ref=e500]
+            - cell "Darlan Carvalho" [ref=e501]
+            - cell " " [ref=e502]:
+              - link "" [ref=e503] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=22
+              - link "" [ref=e504] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=22
+          - row "64:1c:67:93:62:1c Notebook CLEIDIANE WIFI 192.86.221.67 LABCST03 CLEIDIANE WIFI  " [ref=e505]:
+            - cell [ref=e506]
+            - cell "64:1c:67:93:62:1c" [ref=e507]
+            - cell "Notebook CLEIDIANE WIFI" [ref=e508]
+            - cell "192.86.221.67" [ref=e509]
+            - cell "LABCST03" [ref=e510]
+            - cell "CLEIDIANE WIFI" [ref=e511]
+            - cell " " [ref=e512]:
+              - link "" [ref=e513] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=23
+              - link "" [ref=e514] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=23
+          - row "84:00:2d:3e:16:08 192.86.221.69 Estagiaria_PCP  " [ref=e515]:
+            - cell [ref=e516]
+            - cell "84:00:2d:3e:16:08" [ref=e517]
+            - cell [ref=e518]
+            - cell "192.86.221.69" [ref=e519]
+            - cell [ref=e520]
+            - cell "Estagiaria_PCP" [ref=e521]
+            - cell " " [ref=e522]:
+              - link "" [ref=e523] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=24
+              - link "" [ref=e524] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=24
+          - row "0c:ee:e6:fa:e4:95 192.86.221.71 labpcp06 Suyelen  " [ref=e525]:
+            - cell [ref=e526]
+            - cell "0c:ee:e6:fa:e4:95" [ref=e527]
+            - cell [ref=e528]
+            - cell "192.86.221.71" [ref=e529]
+            - cell "labpcp06" [ref=e530]
+            - cell "Suyelen" [ref=e531]
+            - cell " " [ref=e532]:
+              - link "" [ref=e533] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=25
+              - link "" [ref=e534] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=25
+          - row "b8:ae:ed:82:ce:f1 192.86.221.73 LABCST05 MAURICIO  " [ref=e535]:
+            - cell [ref=e536]
+            - cell "b8:ae:ed:82:ce:f1" [ref=e537]
+            - cell [ref=e538]
+            - cell "192.86.221.73" [ref=e539]
+            - cell "LABCST05" [ref=e540]
+            - cell "MAURICIO" [ref=e541]
+            - cell " " [ref=e542]:
+              - link "" [ref=e543] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=26
+              - link "" [ref=e544] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=26
+          - row "00:e0:4c:aa:35:32 192.86.221.75 Robert  " [ref=e545]:
+            - cell [ref=e546]
+            - cell "00:e0:4c:aa:35:32" [ref=e547]
+            - cell [ref=e548]
+            - cell "192.86.221.75" [ref=e549]
+            - cell [ref=e550]
+            - cell "Robert" [ref=e551]
+            - cell " " [ref=e552]:
+              - link "" [ref=e553] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=27
+              - link "" [ref=e554] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=27
+          - row "00:e0:4c:9d:30:fb 192.86.221.86 Ana Silvina  " [ref=e555]:
+            - cell [ref=e556]
+            - cell "00:e0:4c:9d:30:fb" [ref=e557]
+            - cell [ref=e558]
+            - cell "192.86.221.86" [ref=e559]
+            - cell [ref=e560]
+            - cell "Ana Silvina" [ref=e561]
+            - cell " " [ref=e562]:
+              - link "" [ref=e563] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=28
+              - link "" [ref=e564] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=28
+          - row "50:3e:aa:0a:c4:e5 192.86.221.91 Diego  " [ref=e565]:
+            - cell [ref=e566]
+            - cell "50:3e:aa:0a:c4:e5" [ref=e567]
+            - cell [ref=e568]
+            - cell "192.86.221.91" [ref=e569]
+            - cell [ref=e570]
+            - cell "Diego" [ref=e571]
+            - cell " " [ref=e572]:
+              - link "" [ref=e573] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=29
+              - link "" [ref=e574] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=29
+          - row "58:10:8c:00:0d:e8 192.86.221.107 labpli01 PROD_LIQUIDOS  " [ref=e575]:
+            - cell [ref=e576]
+            - cell "58:10:8c:00:0d:e8" [ref=e577]
+            - cell [ref=e578]
+            - cell "192.86.221.107" [ref=e579]
+            - cell "labpli01" [ref=e580]
+            - cell "PROD_LIQUIDOS" [ref=e581]
+            - cell " " [ref=e582]:
+              - link "" [ref=e583] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=30
+              - link "" [ref=e584] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=30
+          - row "d4:3d:7e:e7:94:3d 192.86.221.108 PROD_Cosm  " [ref=e585]:
+            - cell [ref=e586]
+            - cell "d4:3d:7e:e7:94:3d" [ref=e587]
+            - cell [ref=e588]
+            - cell "192.86.221.108" [ref=e589]
+            - cell [ref=e590]
+            - cell "PROD_Cosm" [ref=e591]
+            - cell " " [ref=e592]:
+              - link "" [ref=e593] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=31
+              - link "" [ref=e594] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=31
+          - row "64:1c:67:a3:86:a5 192.86.221.122 labger09 Lennon  " [ref=e595]:
+            - cell [ref=e596]
+            - cell "64:1c:67:a3:86:a5" [ref=e597]
+            - cell [ref=e598]
+            - cell "192.86.221.122" [ref=e599]
+            - cell "labger09" [ref=e600]
+            - cell "Lennon" [ref=e601]
+            - cell " " [ref=e602]:
+              - link "" [ref=e603] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=32
+              - link "" [ref=e604] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=32
+          - row "74:86:7a:f7:ae:50 192.86.221.123 labger03 Wilber  " [ref=e605]:
+            - cell [ref=e606]
+            - cell "74:86:7a:f7:ae:50" [ref=e607]
+            - cell [ref=e608]
+            - cell "192.86.221.123" [ref=e609]
+            - cell "labger03" [ref=e610]
+            - cell "Wilber" [ref=e611]
+            - cell " " [ref=e612]:
+              - link "" [ref=e613] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=33
+              - link "" [ref=e614] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=33
+          - row "1c:1b:0d:f3:d0:c6 192.86.221.126 Labger07 Paula  " [ref=e615]:
+            - cell [ref=e616]
+            - cell "1c:1b:0d:f3:d0:c6" [ref=e617]
+            - cell [ref=e618]
+            - cell "192.86.221.126" [ref=e619]
+            - cell "Labger07" [ref=e620]
+            - cell "Paula" [ref=e621]
+            - cell " " [ref=e622]:
+              - link "" [ref=e623] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=34
+              - link "" [ref=e624] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=34
+          - row "90:e6:ba:b4:36:c1 192.86.221.139 labdcq04 ESTAGIARIO_PED  " [ref=e625]:
+            - cell [ref=e626]
+            - cell "90:e6:ba:b4:36:c1" [ref=e627]
+            - cell [ref=e628]
+            - cell "192.86.221.139" [ref=e629]
+            - cell "labdcq04" [ref=e630]
+            - cell "ESTAGIARIO_PED" [ref=e631]
+            - cell " " [ref=e632]:
+              - link "" [ref=e633] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=35
+              - link "" [ref=e634] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=35
+          - row "00:e0:4c:53:60:24 192.86.221.139 EStagiaria_SQ  " [ref=e635]:
+            - cell [ref=e636]
+            - cell "00:e0:4c:53:60:24" [ref=e637]
+            - cell [ref=e638]
+            - cell "192.86.221.139" [ref=e639]
+            - cell [ref=e640]
+            - cell "EStagiaria_SQ" [ref=e641]
+            - cell " " [ref=e642]:
+              - link "" [ref=e643] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=36
+              - link "" [ref=e644] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=36
+          - row "c8:9c:dc:4d:fa:75 192.86.221.141 SQ-01  " [ref=e645]:
+            - cell [ref=e646]
+            - cell "c8:9c:dc:4d:fa:75" [ref=e647]
+            - cell [ref=e648]
+            - cell "192.86.221.141" [ref=e649]
+            - cell [ref=e650]
+            - cell "SQ-01" [ref=e651]
+            - cell " " [ref=e652]:
+              - link "" [ref=e653] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=37
+              - link "" [ref=e654] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=37
+          - row "c8:9c:dc:4d:f7:60 192.86.221.147 Almox  " [ref=e655]:
+            - cell [ref=e656]
+            - cell "c8:9c:dc:4d:f7:60" [ref=e657]
+            - cell [ref=e658]
+            - cell "192.86.221.147" [ref=e659]
+            - cell [ref=e660]
+            - cell "Almox" [ref=e661]
+            - cell " " [ref=e662]:
+              - link "" [ref=e663] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=38
+              - link "" [ref=e664] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=38
+          - row "e0:69:95:b9:3b:35 192.86.221.148 labdman02 Hebert  " [ref=e665]:
+            - cell [ref=e666]
+            - cell "e0:69:95:b9:3b:35" [ref=e667]
+            - cell [ref=e668]
+            - cell "192.86.221.148" [ref=e669]
+            - cell "labdman02" [ref=e670]
+            - cell "Hebert" [ref=e671]
+            - cell " " [ref=e672]:
+              - link "" [ref=e673] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=39
+              - link "" [ref=e674] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=39
+          - row "c8:9c:dc:4d:fd:ba Jaqueline 192.86.221.151 LABCQ14 Jaqueline  " [ref=e675]:
+            - cell [ref=e676]
+            - cell "c8:9c:dc:4d:fd:ba" [ref=e677]
+            - cell "Jaqueline" [ref=e678]
+            - cell "192.86.221.151" [ref=e679]
+            - cell "LABCQ14" [ref=e680]
+            - cell "Jaqueline" [ref=e681]
+            - cell " " [ref=e682]:
+              - link "" [ref=e683] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=40
+              - link "" [ref=e684] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=40
+          - row "d4:3d:7e:e7:6d:45 SQ 192.86.221.156 SQ  " [ref=e685]:
+            - cell [ref=e686]
+            - cell "d4:3d:7e:e7:6d:45" [ref=e687]
+            - cell "SQ" [ref=e688]
+            - cell "192.86.221.156" [ref=e689]
+            - cell [ref=e690]
+            - cell "SQ" [ref=e691]
+            - cell " " [ref=e692]:
+              - link "" [ref=e693] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=41
+              - link "" [ref=e694] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=41
+          - row "ec:a8:6b:b0:a6:bd 192.86.221.157 lagdgq01 PC MENOR APRENDIZ GARANTIA  " [ref=e695]:
+            - cell [ref=e696]
+            - cell "ec:a8:6b:b0:a6:bd" [ref=e697]
+            - cell [ref=e698]
+            - cell "192.86.221.157" [ref=e699]
+            - cell "lagdgq01" [ref=e700]
+            - cell "PC MENOR APRENDIZ GARANTIA" [ref=e701]
+            - cell " " [ref=e702]:
+              - link "" [ref=e703] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=42
+              - link "" [ref=e704] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=42
+          - row "00:22:4d:b0:06:ba 192.86.221.165 LABDGQ08 ANANDA REGINA  " [ref=e705]:
+            - cell [ref=e706]
+            - cell "00:22:4d:b0:06:ba" [ref=e707]
+            - cell [ref=e708]
+            - cell "192.86.221.165" [ref=e709]
+            - cell "LABDGQ08" [ref=e710]
+            - cell "ANANDA REGINA" [ref=e711]
+            - cell " " [ref=e712]:
+              - link "" [ref=e713] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=43
+              - link "" [ref=e714] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=43
+          - row "00:e0:4c:52:55:4c 192.86.221.167 LABDGQ05 ESTAGIARIA  " [ref=e715]:
+            - cell [ref=e716]
+            - cell "00:e0:4c:52:55:4c" [ref=e717]
+            - cell [ref=e718]
+            - cell "192.86.221.167" [ref=e719]
+            - cell "LABDGQ05" [ref=e720]
+            - cell "ESTAGIARIA" [ref=e721]
+            - cell " " [ref=e722]:
+              - link "" [ref=e723] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=44
+              - link "" [ref=e724] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=44
+          - row "1c:1b:0d:f3:d0:bd 192.86.221.174 labman03 Thallyson  " [ref=e725]:
+            - cell [ref=e726]
+            - cell "1c:1b:0d:f3:d0:bd" [ref=e727]
+            - cell [ref=e728]
+            - cell "192.86.221.174" [ref=e729]
+            - cell "labman03" [ref=e730]
+            - cell "Thallyson" [ref=e731]
+            - cell " " [ref=e732]:
+              - link "" [ref=e733] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=45
+              - link "" [ref=e734] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=45
+          - row "50:3e:aa:0a:a1:2a 192.86.221.175 labman04 Tiago manutencao  " [ref=e735]:
+            - cell [ref=e736]
+            - cell "50:3e:aa:0a:a1:2a" [ref=e737]
+            - cell [ref=e738]
+            - cell "192.86.221.175" [ref=e739]
+            - cell "labman04" [ref=e740]
+            - cell "Tiago manutencao" [ref=e741]
+            - cell " " [ref=e742]:
+              - link "" [ref=e743] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=46
+              - link "" [ref=e744] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=46
+          - row "00:71:c2:0c:6f:aa Rose 192.86.221.178 Rose  " [ref=e745]:
+            - cell [ref=e746]
+            - cell "00:71:c2:0c:6f:aa" [ref=e747]
+            - cell "Rose" [ref=e748]
+            - cell "192.86.221.178" [ref=e749]
+            - cell [ref=e750]
+            - cell "Rose" [ref=e751]
+            - cell " " [ref=e752]:
+              - link "" [ref=e753] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=47
+              - link "" [ref=e754] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=47
+          - row "1c:87:2c:c4:75:71 Estagiaria 192.86.221.179 labrh03 Thais_estagiaria  " [ref=e755]:
+            - cell [ref=e756]
+            - cell "1c:87:2c:c4:75:71" [ref=e757]
+            - cell "Estagiaria" [ref=e758]
+            - cell "192.86.221.179" [ref=e759]
+            - cell "labrh03" [ref=e760]
+            - cell "Thais_estagiaria" [ref=e761]
+            - cell " " [ref=e762]:
+              - link "" [ref=e763] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=48
+              - link "" [ref=e764] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=48
+          - row "64:1c:67:a3:86:cf PMIRANDA 192.86.221.181 Paulinett  " [ref=e765]:
+            - cell [ref=e766]
+            - cell "64:1c:67:a3:86:cf" [ref=e767]
+            - cell "PMIRANDA" [ref=e768]
+            - cell "192.86.221.181" [ref=e769]
+            - cell [ref=e770]
+            - cell "Paulinett" [ref=e771]
+            - cell " " [ref=e772]:
+              - link "" [ref=e773] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=49
+              - link "" [ref=e774] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=49
+          - row "00:e0:4c:9d:30:fc LABTI07 192.86.221.184 TI  " [ref=e775]:
+            - cell [ref=e776]
+            - cell "00:e0:4c:9d:30:fc" [ref=e777]
+            - cell "LABTI07" [ref=e778]
+            - cell "192.86.221.184" [ref=e779]
+            - cell [ref=e780]
+            - cell "TI" [ref=e781]
+            - cell " " [ref=e782]:
+              - link "" [ref=e783] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=50
+              - link "" [ref=e784] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=50
+          - row "98:f2:b3:f0:f5:78 192.86.221.213 labsrv05 Servidor de arquivos  " [ref=e785]:
+            - cell [ref=e786]
+            - cell "98:f2:b3:f0:f5:78" [ref=e787]
+            - cell [ref=e788]
+            - cell "192.86.221.213" [ref=e789]
+            - cell "labsrv05" [ref=e790]
+            - cell "Servidor de arquivos" [ref=e791]
+            - cell " " [ref=e792]:
+              - link "" [ref=e793] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=51
+              - link "" [ref=e794] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=51
+          - row "98:f2:b3:ee:3e:1c SERVIDO214 192.86.221.214  " [ref=e795]:
+            - cell [ref=e796]
+            - cell "98:f2:b3:ee:3e:1c" [ref=e797]
+            - cell "SERVIDO214" [ref=e798]
+            - cell "192.86.221.214" [ref=e799]
+            - cell [ref=e800]
+            - cell [ref=e801]
+            - cell " " [ref=e802]:
+              - link "" [ref=e803] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=52
+              - link "" [ref=e804] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=52
+          - row "78:2b:cb:2a:00:9d 192.86.221.216 Labsrv01 ServidoIFS  " [ref=e805]:
+            - cell [ref=e806]
+            - cell "78:2b:cb:2a:00:9d" [ref=e807]
+            - cell [ref=e808]
+            - cell "192.86.221.216" [ref=e809]
+            - cell "Labsrv01" [ref=e810]
+            - cell "ServidoIFS" [ref=e811]
+            - cell " " [ref=e812]:
+              - link "" [ref=e813] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=53
+              - link "" [ref=e814] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=53
+          - row "64:1c:67:88:15:7f 192.86.221.218 AD  " [ref=e815]:
+            - cell [ref=e816]
+            - cell "64:1c:67:88:15:7f" [ref=e817]
+            - cell [ref=e818]
+            - cell "192.86.221.218" [ref=e819]
+            - cell [ref=e820]
+            - cell "AD" [ref=e821]
+            - cell " " [ref=e822]:
+              - link "" [ref=e823] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=54
+              - link "" [ref=e824] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=54
+          - row "50:e5:49:f8:76:94 192.86.221.219 Labsrv04 Servidor_Bal  " [ref=e825]:
+            - cell [ref=e826]
+            - cell "50:e5:49:f8:76:94" [ref=e827]
+            - cell [ref=e828]
+            - cell "192.86.221.219" [ref=e829]
+            - cell "Labsrv04" [ref=e830]
+            - cell "Servidor_Bal" [ref=e831]
+            - cell " " [ref=e832]:
+              - link "" [ref=e833] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=55
+              - link "" [ref=e834] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=55
+          - row "98:f2:b3:ee:3e:1d PFSENSE 192.86.221.220 PFSENSE  " [ref=e835]:
+            - cell [ref=e836]
+            - cell "98:f2:b3:ee:3e:1d" [ref=e837]
+            - cell "PFSENSE" [ref=e838]
+            - cell "192.86.221.220" [ref=e839]
+            - cell [ref=e840]
+            - cell "PFSENSE" [ref=e841]
+            - cell " " [ref=e842]:
+              - link "" [ref=e843] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=56
+              - link "" [ref=e844] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=56
+          - row "f0:4d:a2:e5:5e:bc DELL 192.86.221.222 DELL  " [ref=e845]:
+            - cell [ref=e846]
+            - cell "f0:4d:a2:e5:5e:bc" [ref=e847]
+            - cell "DELL" [ref=e848]
+            - cell "192.86.221.222" [ref=e849]
+            - cell [ref=e850]
+            - cell "DELL" [ref=e851]
+            - cell " " [ref=e852]:
+              - link "" [ref=e853] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=57
+              - link "" [ref=e854] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=57
+          - row "c8:9c:dc:4d:fd:be 192.86.221.227 labdcq12 Luciana  " [ref=e855]:
+            - cell [ref=e856]
+            - cell "c8:9c:dc:4d:fd:be" [ref=e857]
+            - cell [ref=e858]
+            - cell "192.86.221.227" [ref=e859]
+            - cell "labdcq12" [ref=e860]
+            - cell "Luciana" [ref=e861]
+            - cell " " [ref=e862]:
+              - link "" [ref=e863] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=58
+              - link "" [ref=e864] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=58
+          - row "00:e0:4d:f5:25:22 Brenda 192.86.221.227 Brenda  " [ref=e865]:
+            - cell [ref=e866]
+            - cell "00:e0:4d:f5:25:22" [ref=e867]
+            - cell "Brenda" [ref=e868]
+            - cell "192.86.221.227" [ref=e869]
+            - cell [ref=e870]
+            - cell "Brenda" [ref=e871]
+            - cell " " [ref=e872]:
+              - link "" [ref=e873] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=59
+              - link "" [ref=e874] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=59
+          - row "d4:3d:7e:e7:96:29 192.86.221.229 ANA SILVINA  " [ref=e875]:
+            - cell [ref=e876]
+            - cell "d4:3d:7e:e7:96:29" [ref=e877]
+            - cell [ref=e878]
+            - cell "192.86.221.229" [ref=e879]
+            - cell [ref=e880]
+            - cell "ANA SILVINA" [ref=e881]
+            - cell " " [ref=e882]:
+              - link "" [ref=e883] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=60
+              - link "" [ref=e884] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=60
+          - row "d0:8e:79:dd:5a:f3 192.86.221.235 SIMONE  " [ref=e885]:
+            - cell [ref=e886]
+            - cell "d0:8e:79:dd:5a:f3" [ref=e887]
+            - cell [ref=e888]
+            - cell "192.86.221.235" [ref=e889]
+            - cell [ref=e890]
+            - cell "SIMONE" [ref=e891]
+            - cell " " [ref=e892]:
+              - link "" [ref=e893] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=61
+              - link "" [ref=e894] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=61
+          - row "00:71:c2:15:bd:78 192.86.221.238 labped03 Ludymila  " [ref=e895]:
+            - cell [ref=e896]
+            - cell "00:71:c2:15:bd:78" [ref=e897]
+            - cell [ref=e898]
+            - cell "192.86.221.238" [ref=e899]
+            - cell "labped03" [ref=e900]
+            - cell "Ludymila" [ref=e901]
+            - cell " " [ref=e902]:
+              - link "" [ref=e903] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=62
+              - link "" [ref=e904] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=62
+          - row "00:e0:ff:68:07:68 Ludmylla 192.86.221.238 Ludmyla  " [ref=e905]:
+            - cell [ref=e906]
+            - cell "00:e0:ff:68:07:68" [ref=e907]
+            - cell "Ludmylla" [ref=e908]
+            - cell "192.86.221.238" [ref=e909]
+            - cell [ref=e910]
+            - cell "Ludmyla" [ref=e911]
+            - cell " " [ref=e912]:
+              - link "" [ref=e913] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=63
+              - link "" [ref=e914] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=63
+          - row "d8:97:ba:dc:72:1a 192.86.221.240 PFSENSE_CAMERAS Ivan  " [ref=e915]:
+            - cell [ref=e916]
+            - cell "d8:97:ba:dc:72:1a" [ref=e917]
+            - cell [ref=e918]
+            - cell "192.86.221.240" [ref=e919]
+            - cell "PFSENSE_CAMERAS" [ref=e920]
+            - cell "Ivan" [ref=e921]
+            - cell " " [ref=e922]:
+              - link "" [ref=e923] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=64
+              - link "" [ref=e924] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=64
+          - row "00:e0:4c:68:ba:56 Inter 192.86.221.241 PFSENSE_CAMERAS  " [ref=e925]:
+            - cell [ref=e926]
+            - cell "00:e0:4c:68:ba:56" [ref=e927]
+            - cell "Inter" [ref=e928]
+            - cell "192.86.221.241" [ref=e929]
+            - cell [ref=e930]
+            - cell "PFSENSE_CAMERAS" [ref=e931]
+            - cell " " [ref=e932]:
+              - link "" [ref=e933] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=65
+              - link "" [ref=e934] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=65
+          - row "44:8a:5b:91:f7:25 Eduardo Mereis 192.86.221.242 labped07 Eduardo Mereis  " [ref=e935]:
+            - cell [ref=e936]
+            - cell "44:8a:5b:91:f7:25" [ref=e937]
+            - cell "Eduardo Mereis" [ref=e938]
+            - cell "192.86.221.242" [ref=e939]
+            - cell "labped07" [ref=e940]
+            - cell "Eduardo Mereis" [ref=e941]
+            - cell " " [ref=e942]:
+              - link "" [ref=e943] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=66
+              - link "" [ref=e944] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=66
+          - row "d8:50:e6:ab:7d:c4 192.86.221.247 LABMAT02 materia prima  " [ref=e945]:
+            - cell [ref=e946]
+            - cell "d8:50:e6:ab:7d:c4" [ref=e947]
+            - cell [ref=e948]
+            - cell "192.86.221.247" [ref=e949]
+            - cell "LABMAT02" [ref=e950]
+            - cell "materia prima" [ref=e951]
+            - cell " " [ref=e952]:
+              - link "" [ref=e953] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=67
+              - link "" [ref=e954] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=67
+          - row "00:1a:3f:db:a6:b1 192.86.221.184 pc-hclaudio PC admin hclaudio — RDP 3388 Nat_Hian  " [ref=e955]:
+            - cell [ref=e956]
+            - cell "00:1a:3f:db:a6:b1" [ref=e957]
+            - cell [ref=e958]
+            - cell "192.86.221.184" [ref=e959]
+            - cell "pc-hclaudio" [ref=e960]
+            - cell "PC admin hclaudio — RDP 3388 Nat_Hian" [ref=e961]
+            - cell " " [ref=e962]:
+              - link "" [ref=e963] [cursor=pointer]:
+                - /url: services_dhcp_edit.php?if=lan&id=68
+              - link "" [ref=e964] [cursor=pointer]:
+                - /url: services_dhcp.php?if=lan&act=del&id=68
+    - navigation [ref=e965]:
+      - link " Add Static Mapping" [ref=e966] [cursor=pointer]:
+        - /url: services_dhcp_edit.php?if=lan
+        - generic: 
+        - text: Add Static Mapping
+  - contentinfo [ref=e967]:
+    - paragraph [ref=e969]:
+      - link "":
+        - /url: "#"
+        - generic [ref=e970] [cursor=pointer]: 
+      - link "pfSense" [ref=e971] [cursor=pointer]:
+        - /url: https://pfsense.org
+      - text: is developed and maintained by
+      - link "Netgate." [ref=e972] [cursor=pointer]:
+        - /url: https://netgate.com
+      - text: © ESF 2004 - 2026
+      - link "View license." [ref=e973] [cursor=pointer]:
+        - /url: https://pfsense.org/license
+      - link "":
+        - /url: "#"
+        - generic [ref=e974] [cursor=pointer]: 

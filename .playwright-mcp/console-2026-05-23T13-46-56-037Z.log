@@ -1,0 +1,2 @@
+[     123ms] [ERROR] Failed to load resource: the server responded with a status of 406 (Not Acceptable) @ http://192.86.221.251/dhcp.htm:0
+[    1043ms] [ERROR] Failed to load resource: the server responded with a status of 406 (Not Acceptable) @ http://192.86.221.251/favicon.ico:0

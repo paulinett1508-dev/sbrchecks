@@ -1,0 +1,91 @@
+<h2>Estrutura de navegação — Painel Unificado</h2>
+<p class="subtitle">Qual organização faz mais sentido para o painel de TI?</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>A — Arquivos em destaque</h3>
+      <p>Nova seção <strong>ARQUIVOS</strong> no topo. Todo o admin abaixo, preservando grupos atuais.</p>
+      <div style="margin-top:12px;font-size:13px;line-height:2;font-family:monospace;background:#0d1117;padding:12px;border-radius:6px;color:#c9d1d9">
+        <div style="color:#58a6ff;font-size:11px;letter-spacing:1px">ARQUIVOS</div>
+        <div>📂 Explorador de Arquivos</div>
+        <div>📊 Saúde dos Shares</div>
+        <div style="color:#58a6ff;font-size:11px;letter-spacing:1px;margin-top:8px">MONITORAMENTO</div>
+        <div>▣ Dashboard</div>
+        <div>◫ Discos</div>
+        <div>◎ Serviços</div>
+        <div>◈ Conexões SMB</div>
+        <div>⚑ Alertas</div>
+        <div style="color:#58a6ff;font-size:11px;letter-spacing:1px;margin-top:8px">SAMBA</div>
+        <div>◧ Compartilhamentos</div>
+        <div>◉ Usuários AD</div>
+        <div>◑ Logs Samba</div>
+        <div style="color:#58a6ff;font-size:11px;letter-spacing:1px;margin-top:8px">OPERAÇÕES</div>
+        <div>◐ Migração GDrive</div>
+        <div>⇄ Delta Sync</div>
+        <div>⇥ Cutover</div>
+        <div>◒ Backup Local</div>
+        <div>☁ Backup GDrive</div>
+        <div style="color:#58a6ff;font-size:11px;letter-spacing:1px;margin-top:8px">SISTEMA</div>
+        <div>◆ Admin Config</div>
+        <div>▶ Terminal</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>B — Tudo reagrupado</h3>
+      <p>Reagrupa todos os módulos em 4 grupos funcionais com lógica nova.</p>
+      <div style="margin-top:12px;font-size:13px;line-height:2;font-family:monospace;background:#0d1117;padding:12px;border-radius:6px;color:#c9d1d9">
+        <div style="color:#58a6ff;font-size:11px;letter-spacing:1px">ARQUIVOS &amp; SHARES</div>
+        <div>📂 Explorador de Arquivos</div>
+        <div>◧ Compartilhamentos</div>
+        <div>◉ Usuários AD</div>
+        <div style="color:#58a6ff;font-size:11px;letter-spacing:1px;margin-top:8px">MONITORAMENTO</div>
+        <div>▣ Dashboard</div>
+        <div>◫ Discos</div>
+        <div>◈ Conexões SMB</div>
+        <div>◑ Logs Samba</div>
+        <div>⚑ Alertas</div>
+        <div style="color:#58a6ff;font-size:11px;letter-spacing:1px;margin-top:8px">OPERAÇÕES</div>
+        <div>◐ Migração GDrive</div>
+        <div>⇄ Delta Sync</div>
+        <div>⇥ Cutover</div>
+        <div>◒ Backup Local</div>
+        <div>☁ Backup GDrive</div>
+        <div style="color:#58a6ff;font-size:11px;letter-spacing:1px;margin-top:8px">SISTEMA</div>
+        <div>◎ Serviços</div>
+        <div>◆ Admin Config</div>
+        <div>▶ Terminal</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>C — Explorador como página inicial</h3>
+      <p>Login cai direto no Explorador. Nav lateral compacta, admin em sub-seção colapsável.</p>
+      <div style="margin-top:12px;font-size:13px;line-height:2;font-family:monospace;background:#0d1117;padding:12px;border-radius:6px;color:#c9d1d9">
+        <div style="color:#3fb950">★ Explorador de Arquivos</div>
+        <div style="color:#3fb950">★ Dashboard</div>
+        <div style="height:1px;background:#30363d;margin:6px 0"></div>
+        <div style="color:#58a6ff;font-size:11px;letter-spacing:1px">SAMBA</div>
+        <div>◧ Compartilhamentos</div>
+        <div>◈ Conexões SMB</div>
+        <div>◉ Usuários AD</div>
+        <div>◑ Logs Samba</div>
+        <div style="color:#58a6ff;font-size:11px;letter-spacing:1px;margin-top:8px">OPERAÇÕES</div>
+        <div>◒ Backups</div>
+        <div>◐ Migração / Cutover</div>
+        <div style="color:#58a6ff;font-size:11px;letter-spacing:1px;margin-top:8px">▼ SISTEMA</div>
+        <div style="color:#8b949e">◫ Discos · ◎ Serv. · ▶ Terminal</div>
+        <div style="color:#8b949e">⚑ Alertas · ◆ Admin</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top:16px">Clique para selecionar. Pode combinar elementos de mais de uma opção no terminal.</p>

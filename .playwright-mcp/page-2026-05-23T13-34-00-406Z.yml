@@ -1,0 +1,307 @@
+- generic [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - button "Toggle navigation" [active] [ref=e5] [cursor=pointer]:
+          - generic [ref=e6]: Toggle navigation
+        - link "pfSense Logo Community Edition" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - img "pfSense Logo" [ref=e11]
+          - text: Community Edition
+      - text:  
+  - generic [ref=e21]:
+    - banner [ref=e22]:
+      - list [ref=e23]:
+        - listitem [ref=e24]: Services
+        - listitem [ref=e25]:
+          - text: /
+          - link "DHCP Server" [ref=e26] [cursor=pointer]:
+            - /url: /services_dhcp_settings.php
+        - listitem [ref=e27]:
+          - text: /
+          - link "OPT1" [ref=e28] [cursor=pointer]:
+            - /url: /services_dhcp.php?if=opt1
+      - list [ref=e29]:
+        - listitem [ref=e30]:
+          - link "" [ref=e31] [cursor=pointer]:
+            - /url: status_dhcp_leases.php
+            - generic [ref=e32]: 
+        - listitem [ref=e33]:
+          - link "" [ref=e34] [cursor=pointer]:
+            - /url: status_logs.php?logfile=dhcpd
+            - generic [ref=e35]: 
+        - listitem [ref=e36]:
+          - link "" [ref=e37] [cursor=pointer]:
+            - /url: /help.php?page=services_dhcp.php
+            - generic [ref=e38]: 
+    - text:  
+    - alert [ref=e39]:
+      - generic [ref=e40]:
+        - text: The DHCP Server configuration has changed.
+        - text: The changes must be applied for them to take effect.
+      - button " Apply Changes" [ref=e42] [cursor=pointer]:
+        - generic: 
+        - text: Apply Changes
+    - alert [ref=e43]:
+      - generic [ref=e44]:
+        - text: ISC DHCP has reached end-of-life and will be removed in a future version of pfSense. Visit
+        - link "System > Advanced > Networking" [ref=e45] [cursor=pointer]:
+          - /url: system_advanced_network.php
+        - text: to switch DHCP backend.
+    - list [ref=e46]:
+      - link "LAN" [ref=e47] [cursor=pointer]:
+        - /url: services_dhcp.php?if=lan
+    - generic [ref=e48]:
+      - generic [ref=e49]:
+        - heading "General Settings" [level=2] [ref=e51]
+        - generic [ref=e52]:
+          - generic [ref=e53]:
+            - generic [ref=e54]: DHCP Backend
+            - generic [ref=e55]: ISC DHCP
+          - generic [ref=e56]:
+            - generic [ref=e57]: Enable
+            - generic [ref=e59] [cursor=pointer]:
+              - checkbox "Enable DHCP server on OPT1 interface" [ref=e60]
+              - text: Enable DHCP server on OPT1 interface
+          - generic [ref=e61]:
+            - generic [ref=e62]: BOOTP
+            - generic [ref=e64] [cursor=pointer]:
+              - checkbox "Ignore BOOTP queries" [ref=e65]
+              - text: Ignore BOOTP queries
+          - generic [ref=e66]:
+            - generic [ref=e67]: Deny Unknown Clients
+            - generic [ref=e68]:
+              - combobox [ref=e69]:
+                - option "Allow all clients" [selected]
+                - option "Allow known clients from any interface"
+                - option "Allow known clients from only this interface"
+              - generic [ref=e70]:
+                - text: When set to Allow all clients, any DHCP client will get an IP address within this scope/range on this interface. If set to Allow known clients from any interface, any DHCP client with a MAC address listed in a static mapping on
+                - generic [ref=e71]: any
+                - text: scope(s)/interface(s) will get an IP address. If set to Allow known clients from only this interface, only MAC addresses listed in static mappings on this interface will get an IP address within this scope/range.
+          - generic [ref=e72]:
+            - generic [ref=e73]: Ignore Denied Clients
+            - generic [ref=e74]:
+              - generic [ref=e75] [cursor=pointer]:
+                - checkbox "Ignore denied clients rather than reject" [ref=e76]
+                - text: Ignore denied clients rather than reject
+              - generic [ref=e77]: This option is not compatible with failover and cannot be enabled when a Failover Peer IP address is configured.
+          - generic [ref=e78]:
+            - generic [ref=e79]: Ignore Client Identifiers
+            - generic [ref=e80]:
+              - generic [ref=e81] [cursor=pointer]:
+                - checkbox "Do not record a unique identifier (UID) in client lease data if present in the client DHCP request" [ref=e82]
+                - text: Do not record a unique identifier (UID) in client lease data if present in the client DHCP request
+              - generic [ref=e83]: This option may be useful when a client can dual boot using different client identifiers but the same hardware (MAC) address. Note that the resulting server behavior violates the official DHCP specification.
+      - generic [ref=e84]:
+        - heading "Primary Address Pool" [level=2] [ref=e86]
+        - generic [ref=e87]:
+          - generic [ref=e88]:
+            - generic [ref=e89]: Subnet
+            - generic [ref=e90]: /
+          - generic [ref=e91]:
+            - generic [ref=e92]: Subnet Range
+            - generic [ref=e93]: 0.0.0.1 - 255.255.255.255
+          - generic [ref=e94]:
+            - generic [ref=e95]: Address Pool Range
+            - generic [ref=e96]:
+              - textbox "An IPv4 address like 1.2.3.4" [ref=e97]
+              - generic [ref=e98]: From
+            - generic [ref=e99]:
+              - textbox "An IPv4 address like 1.2.3.4" [ref=e100]
+              - generic [ref=e101]: To
+            - generic [ref=e103]: The specified range for this pool must not be within the range configured on any other address pool for this interface.
+          - generic [ref=e104]:
+            - generic [ref=e105]: Additional Pools
+            - generic [ref=e106]:
+              - link "+ Add Address Pool" [ref=e107] [cursor=pointer]:
+                - /url: services_dhcp.php?if=opt1&act=newpool
+                - generic: +
+                - text: Add Address Pool
+              - generic [ref=e108]: If additional pools of addresses are needed inside of this subnet outside the above range, they may be specified here.
+      - generic [ref=e109]:
+        - heading "Server Options" [level=2] [ref=e111]
+        - generic [ref=e112]:
+          - generic [ref=e113]:
+            - generic [ref=e114]: WINS Servers
+            - textbox "An IPv4 address like 1.2.3.4" [ref=e116]:
+              - /placeholder: WINS Server 1
+          - textbox "An IPv4 address like 1.2.3.4" [ref=e120]:
+            - /placeholder: WINS Server 2
+          - generic [ref=e121]:
+            - generic [ref=e122]: DNS Servers
+            - textbox "An IPv4 address like 1.2.3.4" [ref=e124]:
+              - /placeholder: 192.86.221.240
+          - textbox "An IPv4 address like 1.2.3.4" [ref=e128]:
+            - /placeholder: DNS Server 2
+          - textbox "An IPv4 address like 1.2.3.4" [ref=e132]:
+            - /placeholder: DNS Server 3
+          - textbox "An IPv4 address like 1.2.3.4" [ref=e136]:
+            - /placeholder: DNS Server 4
+      - generic [ref=e137]:
+        - heading "OMAPI" [level=2] [ref=e139]
+        - generic [ref=e140]:
+          - generic [ref=e141]:
+            - generic [ref=e142]: OMAPI Port
+            - generic [ref=e143]:
+              - textbox "OMAPI Port" [ref=e144]
+              - generic [ref=e145]: Set the port that OMAPI will listen on. The default port is 7911, leave blank to disable.Only the first OMAPI configuration is used.
+          - generic [ref=e146]:
+            - generic [ref=e147]: OMAPI Key
+            - generic [ref=e148]:
+              - textbox "OMAPI Key" [ref=e149]
+              - generic [ref=e150]:
+                - text: Enter a key matching the selected algorithm
+                - text: to secure connections to the OMAPI endpoint.
+            - generic [ref=e151]:
+              - generic [ref=e152] [cursor=pointer]:
+                - checkbox "Generate New Key" [ref=e153]
+                - text: Generate New Key
+              - generic [ref=e154]:
+                - text: Generate a new key based
+                - text: on the selected algorithm.
+          - generic [ref=e155]:
+            - generic [ref=e156]: Key Algorithm
+            - generic [ref=e157]:
+              - combobox [ref=e158]:
+                - option "HMAC-MD5 (legacy default)"
+                - option "HMAC-SHA1"
+                - option "HMAC-SHA224"
+                - option "HMAC-SHA256 (current bind9 default)" [selected]
+                - option "HMAC-SHA384"
+                - option "HMAC-SHA512 (most secure)"
+              - generic [ref=e159]: Set the algorithm that OMAPI key will use.
+      - generic [ref=e160]:
+        - heading "Other DHCP Options" [level=2] [ref=e162]
+        - generic [ref=e163]:
+          - generic [ref=e164]:
+            - generic [ref=e165]: Gateway
+            - generic [ref=e166]:
+              - textbox "An IPv4 address like 1.2.3.4" [ref=e167]:
+                - /placeholder: 192.86.221.240
+              - generic [ref=e168]: The default is to use the IP address of this firewall interface as the gateway. Specify an alternate gateway here if this is not the correct gateway for the network. Enter "none" for no gateway assignment.
+          - generic [ref=e169]:
+            - generic [ref=e170]: Domain Name
+            - generic [ref=e171]:
+              - textbox "sobralnet.ind.br" [ref=e172]
+              - generic [ref=e173]: The default is to use the domain name of this firewall as the default domain name provided by DHCP. An alternate domain name may be specified here.
+          - generic [ref=e174]:
+            - generic [ref=e175]: Domain Search List
+            - generic [ref=e176]:
+              - textbox "example.com;sub.example.com" [ref=e177]
+              - generic [ref=e178]: The DHCP server can optionally provide a domain search list. Use the semicolon character as separator.
+          - generic [ref=e179]:
+            - generic [ref=e180]: Default Lease Time
+            - generic [ref=e181]:
+              - spinbutton [ref=e182]
+              - generic [ref=e183]: This is used for clients that do not ask for a specific expiration time. The default is 7200 seconds.
+          - generic [ref=e184]:
+            - generic [ref=e185]: Maximum Lease Time
+            - generic [ref=e186]:
+              - spinbutton [ref=e187]
+              - generic [ref=e188]: This is the maximum lease time for clients that ask for a specific expiration time. The default is 86400 seconds.
+          - generic [ref=e189]:
+            - generic [ref=e190]: Failover peer IP
+            - generic [ref=e191]:
+              - textbox "An IPv4 address like 1.2.3.4" [ref=e192]
+              - generic [ref=e193]: Leave blank to disable. Enter the interface IP address of the other firewall (failover peer) in this subnet. Firewalls must be using CARP. Advertising skew of the CARP VIP on this interface determines whether the DHCP daemon is Primary or Secondary. Ensure the advertising skew for the VIP on one firewall is < 20 and the other is > 20.
+          - generic [ref=e194]:
+            - generic [ref=e195]: Static ARP
+            - generic [ref=e196]:
+              - generic [ref=e197] [cursor=pointer]:
+                - checkbox "Enable Static ARP" [ref=e198]
+                - text: Enable Static ARP
+              - generic [ref=e199]: Restricts communication with the firewall to only hosts listed in static mappings containing both IP addresses and MAC addresses. No other hosts will be able to communicate with the firewall on this interface. This behavior is enforced even when DHCP server is disabled.
+          - generic [ref=e200]:
+            - generic [ref=e201]: Time format change
+            - generic [ref=e202]:
+              - generic [ref=e203] [cursor=pointer]:
+                - checkbox "Change DHCP display lease time from UTC to local time" [ref=e204]
+                - text: Change DHCP display lease time from UTC to local time
+              - generic [ref=e205]: By default DHCP leases are displayed in UTC time. By checking this box DHCP lease time will be displayed in local time and set to the time zone selected. This will be used for all DHCP interfaces lease time.
+          - generic [ref=e206]:
+            - generic [ref=e207]: Statistics graphs
+            - generic [ref=e208]:
+              - generic [ref=e209] [cursor=pointer]:
+                - checkbox "Enable monitoring graphs for DHCP lease statistics" [ref=e210]
+                - text: Enable monitoring graphs for DHCP lease statistics
+              - generic [ref=e211]: Enable this to add DHCP leases statistics to the Monitoring graphs. Disabled by default.
+          - generic [ref=e212]:
+            - generic [ref=e213]: Ping check
+            - generic [ref=e214]:
+              - generic [ref=e215] [cursor=pointer]:
+                - checkbox "Disable ping check" [ref=e216]
+                - text: Disable ping check
+              - generic [ref=e217]: When enabled dhcpd sends a ping to the address being assigned, and if no response has been heard, it assigns the address. Enabled by default.
+          - generic [ref=e218]:
+            - generic [ref=e219]: Dynamic DNS
+            - button " Display Advanced" [ref=e221] [cursor=pointer]:
+              - generic: 
+              - text: Display Advanced
+          - generic [ref=e222]:
+            - generic [ref=e223]: MAC Address Control
+            - button " Display Advanced" [ref=e225] [cursor=pointer]:
+              - generic: 
+              - text: Display Advanced
+          - generic [ref=e226]:
+            - generic [ref=e227]: NTP
+            - button " Display Advanced" [ref=e229] [cursor=pointer]:
+              - generic: 
+              - text: Display Advanced
+          - generic [ref=e230]:
+            - generic [ref=e231]: TFTP
+            - button " Display Advanced" [ref=e233] [cursor=pointer]:
+              - generic: 
+              - text: Display Advanced
+          - generic [ref=e234]:
+            - generic [ref=e235]: LDAP
+            - button " Display Advanced" [ref=e237] [cursor=pointer]:
+              - generic: 
+              - text: Display Advanced
+          - generic [ref=e238]:
+            - generic [ref=e239]: Network Booting
+            - button " Display Advanced" [ref=e241] [cursor=pointer]:
+              - generic: 
+              - text: Display Advanced
+          - generic [ref=e242]:
+            - generic [ref=e243]: Custom DHCP Options
+            - button " Display Advanced" [ref=e245] [cursor=pointer]:
+              - generic: 
+              - text: Display Advanced
+      - text:  +
+      - button " Save" [ref=e247] [cursor=pointer]:
+        - generic: 
+        - text: Save
+    - generic [ref=e248]:
+      - heading "DHCP Static Mappings" [level=2] [ref=e250]
+      - table [ref=e252]:
+        - rowgroup [ref=e253]:
+          - row "IP Address Hostname MAC Address Description Actions" [ref=e254]:
+            - columnheader [ref=e255] [cursor=pointer]
+            - columnheader "IP Address" [ref=e256] [cursor=pointer]
+            - columnheader "Hostname" [ref=e257] [cursor=pointer]
+            - columnheader "MAC Address" [ref=e258] [cursor=pointer]
+            - columnheader "Description" [ref=e259] [cursor=pointer]
+            - columnheader "Actions" [ref=e260] [cursor=pointer]
+        - rowgroup
+    - navigation [ref=e261]:
+      - link "+ Add Static Mapping" [ref=e262] [cursor=pointer]:
+        - /url: services_dhcp_edit.php?if=opt1
+        - generic: +
+        - text: Add Static Mapping
+  - contentinfo [ref=e263]:
+    - paragraph [ref=e265]:
+      - link "":
+        - /url: "#"
+        - generic [ref=e266] [cursor=pointer]: 
+      - link "pfSense" [ref=e267] [cursor=pointer]:
+        - /url: https://pfsense.org
+      - text: is developed and maintained by
+      - link "Netgate." [ref=e268] [cursor=pointer]:
+        - /url: https://netgate.com
+      - text: © ESF 2004 - 2026
+      - link "View license." [ref=e269] [cursor=pointer]:
+        - /url: https://pfsense.org/license
+      - link "":
+        - /url: "#"
+        - generic [ref=e270] [cursor=pointer]: 

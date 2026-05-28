@@ -1,0 +1,21 @@
+- generic [ref=e1]:
+  - generic:
+    - banner:
+      - generic [ref=e3]:
+        - img "pfSense Logo" [ref=e6]
+        - heading "Login to pfSense" [level=4] [ref=e19]
+    - generic [ref=e24]:
+      - paragraph [ref=e25]: Sign In
+      - textbox "Username" [active] [ref=e26]
+      - textbox "Password" [ref=e27]
+      - button "Sign In" [ref=e28] [cursor=pointer]
+    - contentinfo:
+      - paragraph [ref=e31]:
+        - link "pfSense" [ref=e32] [cursor=pointer]:
+          - /url: https://pfsense.org
+        - text: is developed and maintained by
+        - link "Netgate." [ref=e33] [cursor=pointer]:
+          - /url: https://netgate.com
+        - text: © ESF 2004 - 2026
+        - link "View license." [ref=e34] [cursor=pointer]:
+          - /url: https://pfsense.org/license

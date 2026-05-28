@@ -1,0 +1,1584 @@
+{
+  "hostname": "LABTI01",
+  "ip": "192.86.221.181",
+  "fqdn": "labti01.labsobralnet.ind",
+  "started_at": "2026-05-26T08:17:05.116425",
+  "modules": {
+    "av-suspects": {
+      "exit_code": 0,
+      "stderr": null,
+      "data": {
+        "module": "av-suspects",
+        "timestamp": "2026-05-26T08:17:23.4508429-03:00",
+        "hostname": "LABTI01",
+        "defender": {
+          "engine_version": "0.0.0.0",
+          "sigs_age_days": 65535,
+          "rtp_enabled": false,
+          "antispyware_enabled": false,
+          "last_quick_scan": null,
+          "last_full_scan": null,
+          "threat_history_count": 0
+        },
+        "temp_executables": [
+          {
+            "path": "C:\\Windows\\Temp\\diag218.ps1",
+            "size_kb": 1.24,
+            "modified": "2026-05-19T12:03:43.8628787-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\vscode-stable-user-x64\\CodeSetup-stable-f6cfa2ea2403534de03f069bdf160d06451ed282.exe",
+            "size_kb": 163421.92,
+            "modified": "2026-05-20T10:52:44.2209798-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\WinGet\\PostgreSQL.PostgreSQL.16.16.13-3\\postgresql-16.13-3-windows-x64.exe",
+            "size_kb": 353980.69,
+            "modified": "2026-05-06T09:26:56.8296691-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\acl_direct.ps1",
+            "size_kb": 2.22,
+            "modified": "2026-05-25T16:33:40.2378225-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\ad_query.ps1",
+            "size_kb": 0.44,
+            "modified": "2026-05-25T15:14:55.7941215-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\ad_query1.ps1",
+            "size_kb": 0.2,
+            "modified": "2026-05-19T09:53:11.9870775-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\ad_query2.ps1",
+            "size_kb": 0.98,
+            "modified": "2026-05-25T15:18:22.9905722-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\audit_smousinho.ps1",
+            "size_kb": 0.58,
+            "modified": "2026-05-19T07:27:38.1116238-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\audit_yferreira.ps1",
+            "size_kb": 0.8,
+            "modified": "2026-05-19T07:35:54.4556802-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\batch_book_indicadores.ps1",
+            "size_kb": 5.29,
+            "modified": "2026-05-19T17:32:43.6274322-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\bump_mkt_gpo.ps1",
+            "size_kb": 0.93,
+            "modified": "2026-05-19T07:56:24.0976247-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\bump_version.ps1",
+            "size_kb": 0.29,
+            "modified": "2026-05-19T16:57:45.7456412-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check-gpo-drives.ps1",
+            "size_kb": 1.52,
+            "modified": "2026-05-20T09:31:29.5106720-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check-ini.ps1",
+            "size_kb": 0.75,
+            "modified": "2026-05-20T09:26:37.3176300-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check-suprimentos.ps1",
+            "size_kb": 0.77,
+            "modified": "2026-05-20T09:30:56.5918253-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check2.ps1",
+            "size_kb": 1.25,
+            "modified": "2026-05-19T17:18:34.7614852-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check3.ps1",
+            "size_kb": 0.65,
+            "modified": "2026-05-19T17:19:45.2758600-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check4.ps1",
+            "size_kb": 0.76,
+            "modified": "2026-05-19T17:26:13.1644175-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check5.ps1",
+            "size_kb": 0.95,
+            "modified": "2026-05-19T17:30:20.5448975-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check_dns_213.ps1",
+            "size_kb": 0.62,
+            "modified": "2026-05-19T08:16:05.3844751-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check_gpo.ps1",
+            "size_kb": 0.48,
+            "modified": "2026-05-25T15:29:43.6860493-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check_gpo2.ps1",
+            "size_kb": 1.56,
+            "modified": "2026-05-21T14:45:22.0806164-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check_gpo_contab.ps1",
+            "size_kb": 0.27,
+            "modified": "2026-05-21T14:54:21.8180174-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check_gpo_detail.ps1",
+            "size_kb": 0.41,
+            "modified": "2026-05-19T07:46:14.2349253-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check_gpo_full.ps1",
+            "size_kb": 0.43,
+            "modified": "2026-05-19T07:47:43.3682038-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check_gpo_links.ps1",
+            "size_kb": 1.16,
+            "modified": "2026-05-19T17:15:13.1867801-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check_gpo_yferreira.ps1",
+            "size_kb": 0.75,
+            "modified": "2026-05-19T07:43:26.9642561-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check_group.ps1",
+            "size_kb": 0.06,
+            "modified": "2026-05-21T14:20:35.0438182-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check_grupos.ps1",
+            "size_kb": 0.44,
+            "modified": "2026-05-19T07:32:07.4027743-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check_mkt_gpo.ps1",
+            "size_kb": 0.41,
+            "modified": "2026-05-19T07:53:23.7850156-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check_spn.ps1",
+            "size_kb": 0.73,
+            "modified": "2026-05-19T08:18:24.4733155-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check_state.ps1",
+            "size_kb": 0.4,
+            "modified": "2026-05-25T15:58:41.7376459-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check_sysvol_e.ps1",
+            "size_kb": 0.96,
+            "modified": "2026-05-19T07:51:21.8195586-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check_sysvol_path.ps1",
+            "size_kb": 0.7,
+            "modified": "2026-05-19T07:50:19.4648410-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\check_time.ps1",
+            "size_kb": 0.28,
+            "modified": "2026-05-19T08:51:48.7722280-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\create-nfs-share.ps1",
+            "size_kb": 0.88,
+            "modified": "2026-05-19T23:04:18.4278037-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\create_fiscal.ps1",
+            "size_kb": 0.34,
+            "modified": "2026-05-21T14:21:57.8584321-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\create_gpo.ps1",
+            "size_kb": 1.98,
+            "modified": "2026-05-25T15:23:55.4478845-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\create_group.ps1",
+            "size_kb": 1.42,
+            "modified": "2026-05-25T15:21:10.8077879-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\diag_smousinho.ps1",
+            "size_kb": 1.94,
+            "modified": "2026-05-19T11:07:06.8649362-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\diff_users.ps1",
+            "size_kb": 0.61,
+            "modified": "2026-05-25T18:07:59.9851439-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\drives_audit.ps1",
+            "size_kb": 0.63,
+            "modified": "2026-05-19T14:37:29.8894038-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\final_perms.ps1",
+            "size_kb": 1.69,
+            "modified": "2026-05-25T16:36:08.4399227-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\find_drives.ps1",
+            "size_kb": 0.24,
+            "modified": "2026-05-21T14:50:12.9406617-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\find_ip_gpos.ps1",
+            "size_kb": 0.72,
+            "modified": "2026-05-19T08:21:29.6387324-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\find_lpia2.ps1",
+            "size_kb": 0.68,
+            "modified": "2026-05-21T10:43:59.2870965-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\find_lpiaulino.ps1",
+            "size_kb": 0.64,
+            "modified": "2026-05-21T10:42:03.4924565-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\find_users.ps1",
+            "size_kb": 0.35,
+            "modified": "2026-05-18T21:11:54.5709848-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\find_valves.ps1",
+            "size_kb": 0.14,
+            "modified": "2026-05-21T14:24:14.3405162-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\find_valves2.ps1",
+            "size_kb": 0.15,
+            "modified": "2026-05-21T14:26:28.7155907-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\fix-scripts-ini.ps1",
+            "size_kb": 0.35,
+            "modified": "2026-05-20T09:24:04.8263488-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\fix_fiscal.ps1",
+            "size_kb": 0.56,
+            "modified": "2026-05-21T14:23:18.9241599-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\fix_gpo.ps1",
+            "size_kb": 1.8,
+            "modified": "2026-05-25T15:25:49.1174732-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\fix_grupo_suprimentos.ps1",
+            "size_kb": 0.46,
+            "modified": "2026-05-19T15:59:27.0686992-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\fix_perms.ps1",
+            "size_kb": 1.05,
+            "modified": "2026-05-25T16:01:20.4114841-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\fix_perms2.ps1",
+            "size_kb": 0.79,
+            "modified": "2026-05-25T16:12:21.6638560-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\fix_smousinho.ps1",
+            "size_kb": 0.94,
+            "modified": "2026-05-19T07:30:59.8188444-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\fv3.ps1",
+            "size_kb": 0.11,
+            "modified": "2026-05-21T14:28:59.6699101-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\fv4.ps1",
+            "size_kb": 0.27,
+            "modified": "2026-05-21T14:31:46.4429702-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\get_contab_gpo.ps1",
+            "size_kb": 0.52,
+            "modified": "2026-05-21T14:58:48.7089914-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\get_ous.ps1",
+            "size_kb": 0.56,
+            "modified": "2026-05-19T17:08:55.9212226-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\gpo-rustdesk.ps1",
+            "size_kb": 2.48,
+            "modified": "2026-05-20T09:19:45.7682195-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\gpo-wmi.ps1",
+            "size_kb": 1.37,
+            "modified": "2026-05-20T09:22:00.2375268-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\gpo_check.ps1",
+            "size_kb": 0.34,
+            "modified": "2026-05-19T15:03:26.4175027-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\gpo_create_manutencao.ps1",
+            "size_kb": 3.22,
+            "modified": "2026-05-19T15:10:03.9461662-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\gpo_fix_manutencao.ps1",
+            "size_kb": 4.21,
+            "modified": "2026-05-19T15:12:18.6245648-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\gpo_suprimentos.ps1",
+            "size_kb": 1.58,
+            "modified": "2026-05-19T11:45:25.2853682-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\init_disk3.ps1",
+            "size_kb": 1,
+            "modified": "2026-05-18T20:59:02.2901487-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\init_disk3_g.ps1",
+            "size_kb": 1,
+            "modified": "2026-05-18T21:01:30.3687353-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\list_groups.ps1",
+            "size_kb": 0.1,
+            "modified": "2026-05-21T14:21:15.1713757-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\list_sysvol.ps1",
+            "size_kb": 0.48,
+            "modified": "2026-05-19T07:48:08.7347500-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\move_valves.ps1",
+            "size_kb": 0.5,
+            "modified": "2026-05-21T14:33:44.8373649-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\quick.ps1",
+            "size_kb": 0.19,
+            "modified": "2026-05-25T16:27:50.0094534-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\read-gpo-drives.ps1",
+            "size_kb": 0.92,
+            "modified": "2026-05-18T22:26:45.5415011-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\read-gpo-links.ps1",
+            "size_kb": 1.42,
+            "modified": "2026-05-18T22:28:42.2530529-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\read-gpo-sec.ps1",
+            "size_kb": 1.08,
+            "modified": "2026-05-18T22:27:36.5278480-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\rename_grupo.ps1",
+            "size_kb": 0.86,
+            "modified": "2026-05-19T07:33:24.4567406-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\replace_ip_to_nexus.ps1",
+            "size_kb": 1.69,
+            "modified": "2026-05-19T08:22:47.5440129-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\rm_contab.ps1",
+            "size_kb": 0.2,
+            "modified": "2026-05-21T14:34:12.4832278-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\rollback_cahenrique.ps1",
+            "size_kb": 0.49,
+            "modified": "2026-05-25T18:18:48.3560913-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\setup_drives_gpo.ps1",
+            "size_kb": 2.7,
+            "modified": "2026-05-21T15:01:31.8997528-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\step1_cse.ps1",
+            "size_kb": 0.58,
+            "modified": "2026-05-19T16:20:09.3308233-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\step1_gpt.ps1",
+            "size_kb": 0.19,
+            "modified": "2026-05-19T12:11:28.0335888-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\step2_cse.ps1",
+            "size_kb": 1.58,
+            "modified": "2026-05-19T16:25:52.1116326-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\step2_gpt.ps1",
+            "size_kb": 0.53,
+            "modified": "2026-05-19T12:12:00.0012286-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\step3_drives.ps1",
+            "size_kb": 0.38,
+            "modified": "2026-05-19T12:12:00.0052231-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\step4_ad.ps1",
+            "size_kb": 0.56,
+            "modified": "2026-05-19T12:12:00.0087341-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\sysvol_check.ps1",
+            "size_kb": 0.3,
+            "modified": "2026-05-25T15:44:35.1258803-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\try_perm.ps1",
+            "size_kb": 1.11,
+            "modified": "2026-05-25T16:29:46.3216146-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\validacao_complete.ps1",
+            "size_kb": 3.61,
+            "modified": "2026-05-25T15:47:47.3343567-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\validacao_finish.ps1",
+            "size_kb": 2.2,
+            "modified": "2026-05-25T15:51:28.1853423-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\validacao_template.ps1",
+            "size_kb": 4.02,
+            "modified": "2026-05-25T15:41:20.1101353-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\validate-gpo.ps1",
+            "size_kb": 0.76,
+            "modified": "2026-05-20T09:27:53.5518382-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\write-ini.ps1",
+            "size_kb": 1.04,
+            "modified": "2026-05-20T09:27:24.9162395-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_0bqhzmk0.tmd.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-23T07:39:57.2087120-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_0n3sk1gy.x2x.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-23T11:06:26.8997688-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_0u1w5lbg.p5l.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-21T14:57:44.2550202-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_1dmtljdb.lmp.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T11:07:34.0650576-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_1tingroc.f3y.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-22T10:46:09.0393847-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_1xoojp5o.nrk.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T23:06:51.0198603-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_21ujrprv.5gn.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T15:36:40.3980863-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_2djl5cmc.ed4.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-25T21:56:45.9403370-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_2mnx0ufz.tqb.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-20T09:45:52.2366855-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_2ng1l3kv.gti.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-21T09:52:01.3291237-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_2o5srs5i.zjy.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T21:21:31.4518205-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_3hmawqdt.dqc.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-25T21:51:51.3282738-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_3izgp5yr.cdw.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T14:26:03.6080347-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_3uzozkj1.wk0.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T10:02:22.6346187-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_4dti5pb2.up4.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-21T14:21:57.3502767-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_4eamftdm.r10.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-21T09:50:41.9236539-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_4zy1tagt.stb.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-20T17:45:59.8686172-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_5hsutwhv.qtd.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-20T22:07:34.7619439-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_5jbjvsjs.mz3.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-20T11:58:04.2858499-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_5m0paqbm.pg4.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T23:03:02.5283553-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_5nyzf1jz.eqw.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-25T22:48:39.7414067-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_5y5mdptl.ujk.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-18T21:45:56.1708193-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_a02ejufa.urm.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-20T21:32:12.8252839-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_a1na0hus.dqp.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T09:05:12.0289210-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_a2hbhfcb.bye.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T09:05:52.7507657-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ajkr3ehv.m4s.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-23T10:38:52.0000450-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_akzvcqtb.1rh.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-25T12:06:07.5285105-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_amyiktqr.b0m.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-21T15:09:09.0909268-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_apjsfsgp.p2u.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T17:27:53.4628870-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_apz1i4v5.0kn.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T17:35:02.1901609-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_atgjbzji.foe.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T23:18:51.6631372-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_avirhusm.2ba.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-20T14:41:13.2204332-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_awejqtjj.ipo.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-20T14:51:32.7189040-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_azk21pzt.ne4.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T07:35:54.2717138-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_bohlaybn.ky5.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-22T10:16:57.4337447-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_bw31nllf.pz2.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-18T22:07:54.3975978-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_cla13tm0.w40.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-23T10:10:11.4158415-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_cvc20wcj.1dq.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T21:18:39.7380650-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_czdfyhfr.2e0.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-21T14:28:59.1590296-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_d23hlmyk.ori.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T18:21:58.9550439-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_daqkhms3.h22.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-25T15:07:43.9620239-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_df52mdaq.4zw.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-24T12:51:45.2558174-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_dfsnljgw.klk.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-20T21:28:06.1514717-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_dhpcteu3.1ls.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T11:29:23.3224416-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_dhvz3ppt.oyf.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-22T08:21:58.1875027-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_dq1vjvi0.p4h.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-21T10:22:04.3390568-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_dvq1jhr5.q3b.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T12:06:22.8954064-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_edycn0b2.44s.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-25T23:22:15.3290635-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_efwbi5cm.yjo.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-23T22:51:14.3163466-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ehfpsghj.wp4.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T14:56:22.5127477-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ei0umeaw.cs2.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-20T10:05:15.5676842-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ekntd5vs.mi2.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T06:23:17.8809892-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_fb1gr1pd.mme.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T09:52:27.9764021-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_fbiqniw4.smu.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T08:27:11.6222134-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_fgsmauhp.v0r.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T17:22:14.5225169-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_fo2zzhkq.vc5.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-25T11:43:35.0154461-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_frmjbrkv.tqq.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T10:47:35.3693161-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ftwthbed.lbj.ps1",
+            "size_kb": 0.06,
+            "modified": "2026-05-25T18:13:52.9123193-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_funbnz1y.wsg.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-20T18:05:34.3952756-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_g2hoegqs.32z.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-20T17:16:51.6270475-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ge1lzfn3.x35.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T11:37:29.3756208-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ghcyvdct.qnc.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T22:09:57.0430401-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_gqjqxehy.bpb.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-20T10:15:21.0980252-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_gr0iebxv.4rq.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T12:04:15.7690888-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_h50uhfbe.jwb.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T22:56:37.2142553-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_hfllkkk0.uea.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T22:48:52.7388747-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_hwc4frd0.zc0.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T08:25:53.6969498-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_i05xv1pp.gkg.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-21T11:54:43.2930747-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_i2rqqdrn.kmn.ps1",
+            "size_kb": 0.06,
+            "modified": "2026-05-24T12:08:59.7419434-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_i3cmltnl.vt2.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T08:27:13.7697831-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_i3sduu5e.fju.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-25T10:36:38.1924029-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ifjlx3z1.siq.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-21T09:54:04.2054794-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_igqdhshj.gxq.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T22:43:59.4416742-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_im0nert5.erz.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T08:26:41.5766973-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_irubt44w.1s2.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-25T21:47:18.4048536-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_isd3h2kf.cwd.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T07:48:08.6300989-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_jb5hcxyq.hkn.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-23T07:13:42.7986128-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_jbejhzia.qh1.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T15:59:08.4055459-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_jiu0r2ff.g44.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-18T17:42:29.6311836-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_jl5x5ick.iun.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-20T17:33:05.2152590-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_jmqqwnip.idp.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-18T15:57:44.0467552-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_jtaignyh.2ac.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T07:25:39.4318169-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_kclzsqb5.ehd.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-25T16:01:27.2690534-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_kcw3rhs0.hbj.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-25T22:49:11.8837222-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ko2e51xd.1le.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-18T22:01:44.7462491-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_kq4e1ybr.ptz.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-23T10:47:33.3937262-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_l3pkcf43.3gp.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-25T21:43:12.2570189-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ldu5hw3k.mlv.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-21T10:42:54.2892623-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_louwhlqt.rjz.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T08:51:46.2861314-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_lygr0uih.z2d.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-21T07:56:25.4797969-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_m235vlz0.rdq.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-25T18:21:32.8507142-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_memxab3s.zbl.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T23:14:57.0895528-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_mhhiv4ts.yar.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T11:52:58.2843942-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_mk5bqxqv.fo4.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-18T16:40:58.8891501-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ms2ovx5m.aci.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-20T21:38:09.1993623-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_n4ernmcz.veb.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T10:40:02.1236902-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_nc201azx.dy0.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-21T21:09:09.8601869-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ndkxsyoe.ltv.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-21T14:37:17.8956909-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_oc12egub.5ok.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T16:34:26.5700618-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_oeo1otjx.bus.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-20T15:16:30.6974865-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ohvq3l4o.ucq.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-25T11:00:01.6322154-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_opv1jsuo.0dm.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-18T22:05:51.1759103-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_opxrpfh2.q2i.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T07:53:23.5293255-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_oznwlhn5.41a.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-18T18:00:56.0285104-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ozw3vtey.4el.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-20T14:51:12.9843898-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_pbln0kzw.tit.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-21T11:48:06.7281037-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_pmjo0z4e.zmn.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-20T21:48:37.8080991-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_pqlchuxl.rd1.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T15:00:14.4650381-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_pr45v304.s4x.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-21T17:57:37.2311844-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ps1ncbt1.a5z.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T11:23:20.2639076-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_pu0saa5q.5n3.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-20T18:08:00.9349402-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_q3n1pfkk.hou.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T11:39:17.6352088-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_qma0lu0d.dvh.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T09:29:08.5050457-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_qvunhqm4.uic.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-21T21:04:14.1842712-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_rt2nuxiu.oqq.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T18:35:50.3212894-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_rvhvrs5r.bp2.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T14:58:51.7127813-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_s5xvim1j.sbr.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-25T18:20:19.9306962-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_sa0gl1yf.jls.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-20T17:51:09.6268178-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_st1ceqdw.ebk.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T09:53:11.3235139-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_t03mq2j4.vvc.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-21T17:19:47.2648243-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_t3wsud1v.i2w.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T22:38:56.5765496-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_tkyki14g.uhy.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-20T08:21:58.8226003-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_tobkqhfp.4hx.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-25T23:14:45.4317378-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_tvpnxeui.pt3.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-20T18:07:47.5848101-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_twf4fuqw.3o1.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T21:42:55.9416331-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_twobghas.wna.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-20T10:02:01.6902385-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_tz1opilh.n14.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-22T08:15:38.1740628-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_u2bpnh2s.f1i.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-20T15:09:15.3454948-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ud01yjom.uyj.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-20T15:57:16.2530254-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ukfc0yqk.olk.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-21T10:38:45.8615225-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_utbd1ybm.jnz.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-20T16:01:45.6125370-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_v0cjaqok.vw1.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-20T15:16:20.1330024-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_vcce0om4.ue1.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T10:42:23.9651169-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_vv1bgolq.ooo.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T06:25:11.1146719-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_wbsboxzj.cs1.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-26T07:35:01.0208235-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_wo4u5c00.krp.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-20T22:16:48.1210118-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_wtbn20re.fje.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-20T18:11:05.0765170-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_wtucu2hq.m20.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-20T10:12:36.7084502-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ww1spgyn.ceo.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-20T15:26:04.7763148-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_xizmmu4g.ury.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-23T10:34:01.7694397-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_xyh31osd.yy2.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-25T21:05:08.9131434-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_yalieyqf.wmf.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-19T16:41:42.2266793-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ybm04xsw.c0p.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-23T10:47:18.0071215-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_z420pkq0.04v.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-25T20:48:35.6463841-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_zlgkiqr2.o4e.ps1",
+            "size_kb": 0.06,
+            "modified": "2026-05-20T09:52:01.0136901-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_zrmjcpha.jbc.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-21T09:07:04.3688273-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ztnko2ed.wkr.ps1",
+            "size_kb": 0.07,
+            "modified": "2026-05-25T15:56:07.1435093-03:00"
+          },
+          {
+            "path": "C:\\Users\\pmiranda\\AppData\\Local\\Temp\\__PSScriptPolicyTest_zx2wtbjw.qce.ps1",
+            "size_kb": 0,
+            "modified": "2026-05-19T21:22:09.1389361-03:00"
+          }
+        ],
+        "suspect_scheduled_tasks": [
+          {
+            "name": "Bot Telegram Jogos",
+            "task_path": "\\",
+            "exec": "C:\\Users\\pmiranda\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "args": "\"C:\\Users\\pmiranda\\Downloads\\bot_telegram.py\"",
+            "principal": "pmiranda"
+          }
+        ],
+        "alerts": [
+          {
+            "severity": "warn",
+            "msg": "242 executáveis em pastas temp"
+          },
+          {
+            "severity": "warn",
+            "msg": "1 tarefas agendadas com binário em local suspeito"
+          },
+          {
+            "severity": "warn",
+            "msg": "Defender com assinaturas há 65535 dias"
+          },
+          {
+            "severity": "critical",
+            "msg": "Defender Real-Time Protection DESABILITADO"
+          }
+        ]
+      }
+    },
+    "disk": {
+      "exit_code": 0,
+      "stderr": null,
+      "data": {
+        "module": "disk",
+        "timestamp": "2026-05-26T08:17:26.6871624-03:00",
+        "hostname": "LABTI01",
+        "volumes": [
+          {
+            "drive": "C:",
+            "label": "",
+            "filesystem": "NTFS",
+            "size_gb": 222.72,
+            "free_gb": 38.77,
+            "used_pct": 82.6
+          },
+          {
+            "drive": "D:",
+            "label": "",
+            "filesystem": "NTFS",
+            "size_gb": 465.22,
+            "free_gb": 460.74,
+            "used_pct": 1
+          },
+          {
+            "drive": "G:",
+            "label": null,
+            "filesystem": null,
+            "size_gb": 0,
+            "free_gb": 0,
+            "used_pct": 0
+          },
+          {
+            "drive": "I:",
+            "label": null,
+            "filesystem": null,
+            "size_gb": 0,
+            "free_gb": 0,
+            "used_pct": 0
+          },
+          {
+            "drive": "J:",
+            "label": null,
+            "filesystem": null,
+            "size_gb": 0,
+            "free_gb": 0,
+            "used_pct": 0
+          }
+        ],
+        "alerts": []
+      }
+    },
+    "gpo-applied": {
+      "exit_code": 0,
+      "stderr": null,
+      "data": {
+        "module": "gpo-applied",
+        "timestamp": "2026-05-26T08:17:45.2336041-03:00",
+        "hostname": "LABTI01",
+        "applied": [
+          {
+            "name": "{327ADB6B-2E00-4C64-8BEA-487451D52D8F}",
+            "scope": "computer",
+            "link_order": 2,
+            "applied_order": 0,
+            "enabled": false,
+            "access_denied": false
+          },
+          {
+            "name": "GPO_TelaBloqueio",
+            "scope": "computer",
+            "link_order": 9,
+            "applied_order": 0,
+            "enabled": true,
+            "access_denied": false
+          },
+          {
+            "name": "Auditoria de Arquivos",
+            "scope": "computer",
+            "link_order": 8,
+            "applied_order": 0,
+            "enabled": true,
+            "access_denied": false
+          },
+          {
+            "name": "{377C3A88-A507-49B4-B400-C7430611F852}",
+            "scope": "computer",
+            "link_order": 5,
+            "applied_order": 0,
+            "enabled": false,
+            "access_denied": false
+          },
+          {
+            "name": "Default Domain Policy",
+            "scope": "computer",
+            "link_order": 11,
+            "applied_order": 0,
+            "enabled": true,
+            "access_denied": false
+          },
+          {
+            "name": "{4E37D44A-A82C-46EE-9397-0AB25E68F4A2}",
+            "scope": "computer",
+            "link_order": 7,
+            "applied_order": 0,
+            "enabled": false,
+            "access_denied": false
+          },
+          {
+            "name": "GPO_Adicionar_Admins_Locais",
+            "scope": "computer",
+            "link_order": 6,
+            "applied_order": 0,
+            "enabled": true,
+            "access_denied": false
+          },
+          {
+            "name": "GPUpdate Automático",
+            "scope": "computer",
+            "link_order": 4,
+            "applied_order": 0,
+            "enabled": true,
+            "access_denied": false
+          },
+          {
+            "name": "Políticas de grupo locais",
+            "scope": "computer",
+            "link_order": 1,
+            "applied_order": 0,
+            "enabled": true,
+            "access_denied": false
+          },
+          {
+            "name": "Deploy Zabbix Agent 2",
+            "scope": "computer",
+            "link_order": 3,
+            "applied_order": 0,
+            "enabled": true,
+            "access_denied": false
+          },
+          {
+            "name": "GPO_WallpaperDominio",
+            "scope": "computer",
+            "link_order": 10,
+            "applied_order": 0,
+            "enabled": true,
+            "access_denied": false
+          }
+        ],
+        "denied": [],
+        "parse_error": null,
+        "alerts": []
+      }
+    },
+    "network": {
+      "exit_code": 0,
+      "stderr": null,
+      "data": {
+        "module": "network",
+        "timestamp": "2026-05-26T08:18:00.2351250-03:00",
+        "hostname": "LABTI01",
+        "gateway": "192.86.221.5",
+        "checks": [
+          {
+            "name": "gateway",
+            "target": "192.86.221.5",
+            "type": "ping",
+            "ok": true,
+            "latency_ms": 0,
+            "detail": null
+          },
+          {
+            "name": "ad_dc",
+            "target": "labsrv05.labsobralnet.ind",
+            "type": "ping",
+            "ok": true,
+            "latency_ms": 0,
+            "detail": null
+          },
+          {
+            "name": "fileserver",
+            "target": "192.86.221.213",
+            "type": "ping",
+            "ok": true,
+            "latency_ms": 0,
+            "detail": null
+          },
+          {
+            "name": "internet_dns",
+            "target": "8.8.8.8",
+            "type": "ping",
+            "ok": true,
+            "latency_ms": 36,
+            "detail": null
+          },
+          {
+            "name": "dns_resolve_dc",
+            "target": "labsrv05.labsobralnet.ind",
+            "type": "dns",
+            "ok": true,
+            "latency_ms": null,
+            "detail": "192.86.221.218"
+          },
+          {
+            "name": "dns_resolve_nexus",
+            "target": "nexus.labsobralnet.ind",
+            "type": "dns",
+            "ok": true,
+            "latency_ms": null,
+            "detail": "192.86.221.213"
+          },
+          {
+            "name": "smb_fileserver",
+            "target": "192.86.221.213",
+            "type": "tcp",
+            "ok": true,
+            "latency_ms": null,
+            "detail": null
+          },
+          {
+            "name": "smb_dc",
+            "target": "192.86.221.218",
+            "type": "tcp",
+            "ok": true,
+            "latency_ms": null,
+            "detail": null
+          },
+          {
+            "name": "winrm_self",
+            "target": "LABTI01",
+            "type": "tcp",
+            "ok": true,
+            "latency_ms": null,
+            "detail": null
+          }
+        ],
+        "alerts": []
+      }
+    },
+    "temp-junk": {
+      "exit_code": 0,
+      "stderr": null,
+      "data": {
+        "module": "temp-junk",
+        "timestamp": "2026-05-26T08:18:06.4328577-03:00",
+        "hostname": "LABTI01",
+        "total_mb": 2714.71,
+        "paths": [
+          {
+            "name": "windows_temp",
+            "pattern": "C:\\Windows\\Temp",
+            "found": true,
+            "size_mb": 20.21,
+            "file_count": 140
+          },
+          {
+            "name": "user_temp_all",
+            "pattern": "C:\\Users\\*\\AppData\\Local\\Temp",
+            "found": true,
+            "size_mb": 1117.17,
+            "file_count": 5274
+          },
+          {
+            "name": "prefetch",
+            "pattern": "C:\\Windows\\Prefetch",
+            "found": true,
+            "size_mb": 13.06,
+            "file_count": 508
+          },
+          {
+            "name": "softwaredistribution_download",
+            "pattern": "C:\\Windows\\SoftwareDistribution\\Download",
+            "found": true,
+            "size_mb": 23.32,
+            "file_count": 2
+          },
+          {
+            "name": "recycle_bin",
+            "pattern": "C:\\$Recycle.Bin",
+            "found": true,
+            "size_mb": 54.29,
+            "file_count": 313
+          },
+          {
+            "name": "edge_cache",
+            "pattern": "C:\\Users\\*\\AppData\\Local\\Microsoft\\Edge\\User Data\\*\\Cache",
+            "found": true,
+            "size_mb": 205.03,
+            "file_count": 871
+          },
+          {
+            "name": "chrome_cache",
+            "pattern": "C:\\Users\\*\\AppData\\Local\\Google\\Chrome\\User Data\\*\\Cache",
+            "found": true,
+            "size_mb": 1281.63,
+            "file_count": 5619
+          },
+          {
+            "name": "ccmcache",
+            "pattern": "C:\\Windows\\ccmcache",
+            "found": false,
+            "size_mb": 0,
+            "file_count": 0
+          }
+        ],
+        "alerts": [
+          {
+            "severity": "warn",
+            "path": "user_temp_all",
+            "msg": "user_temp_all com 1117.17 MB (5274 arquivos)"
+          },
+          {
+            "severity": "warn",
+            "path": "chrome_cache",
+            "msg": "chrome_cache com 1281.63 MB (5619 arquivos)"
+          }
+        ]
+      }
+    }
+  }
+}

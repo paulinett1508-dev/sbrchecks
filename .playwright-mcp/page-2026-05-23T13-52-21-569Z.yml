@@ -1,0 +1,669 @@
+- generic [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - button "Toggle navigation" [active] [ref=e5] [cursor=pointer]:
+          - generic [ref=e6]: Toggle navigation
+        - link "pfSense Logo Community Edition" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - img "pfSense Logo" [ref=e11]
+          - text: Community Edition
+      - text:  
+  - generic [ref=e21]:
+    - banner [ref=e22]:
+      - list [ref=e23]:
+        - listitem [ref=e24]: Status
+        - listitem [ref=e25]:
+          - text: /
+          - link "Dashboard" [ref=e26] [cursor=pointer]:
+            - /url: /index.php
+      - list [ref=e27]:
+        - listitem [ref=e28]
+        - listitem [ref=e29]:
+          - generic "Available widgets" [ref=e30]:
+            - generic [ref=e31] [cursor=pointer]: +
+        - listitem [ref=e32]:
+          - link "" [ref=e33] [cursor=pointer]:
+            - /url: /help.php?page=index.php
+            - generic [ref=e34]: 
+    - text:    + + + + + + + + + + + + + + + + + + +
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - heading "System Information   " [level=2] [ref=e39]:
+            - text: System Information
+            - generic [ref=e40]:
+              - link "" [ref=e41] [cursor=pointer]:
+                - /url: "#widget-system_information-0_panel-footer"
+                - generic [ref=e42]: 
+              - link "" [ref=e43] [cursor=pointer]:
+                - /url: "#widget-system_information-0_panel-body"
+                - generic [ref=e44]: 
+              - link "" [ref=e45] [cursor=pointer]:
+                - /url: "#widget-system_information-0"
+                - generic [ref=e46]: 
+          - table [ref=e49]:
+            - rowgroup [ref=e50]:
+              - row "Name labnet01.sobralnet.ind.br" [ref=e51]:
+                - rowheader "Name" [ref=e52]
+                - cell "labnet01.sobralnet.ind.br" [ref=e53]
+              - row "User admin@192.86.221.181 (Local Database Fallback)" [ref=e54]:
+                - rowheader "User" [ref=e55]
+                - cell "admin@192.86.221.181 (Local Database Fallback)" [ref=e56]
+              - 'row "System pfSense Netgate Device ID: 0ef4361a6d776dce40d7" [ref=e57]':
+                - rowheader "System" [ref=e58]
+                - 'cell "pfSense Netgate Device ID: 0ef4361a6d776dce40d7" [ref=e59]':
+                  - text: pfSense
+                  - text: "Netgate Device ID:"
+                  - strong [ref=e60]: 0ef4361a6d776dce40d7
+              - 'row "BIOS Vendor: Desenvolvida por Positivo Informatica SA Version: 0105 Release Date: Thu Nov 6 2014 Boot Method: BIOS" [ref=e61]':
+                - rowheader "BIOS" [ref=e62]
+                - 'cell "Vendor: Desenvolvida por Positivo Informatica SA Version: 0105 Release Date: Thu Nov 6 2014 Boot Method: BIOS" [ref=e63]':
+                  - text: "Vendor:"
+                  - strong [ref=e64]: Desenvolvida por Positivo Informatica SA
+                  - text: "Version:"
+                  - strong [ref=e65]: "0105"
+                  - text: "Release Date:"
+                  - strong [ref=e66]: Thu Nov 6 2014
+                  - text: "Boot Method:"
+                  - strong [ref=e67]: BIOS
+              - row "Version 2.8.1-RELEASE (amd64) built on Wed May 13 16:43:00 -03 2026 FreeBSD 15.0-CURRENT Obtaining update status " [ref=e68]:
+                - rowheader "Version" [ref=e69]
+                - cell "2.8.1-RELEASE (amd64) built on Wed May 13 16:43:00 -03 2026 FreeBSD 15.0-CURRENT Obtaining update status " [ref=e70]:
+                  - strong [ref=e71]: 2.8.1-RELEASE
+                  - text: (amd64)
+                  - text: built on Wed May 13 16:43:00 -03 2026
+                  - text: FreeBSD 15.0-CURRENT
+                  - generic [ref=e72]:
+                    - text: Obtaining update status
+                    - generic [ref=e73]: 
+              - 'row "CPU Type Intel(R) Core(TM) i3-4160 CPU @ 3.60GHz 4 CPUs : 1 package(s) x 2 core(s) x 2 hardware threads AES-NI CPU Crypto: Yes (inactive) QAT Crypto: No" [ref=e74]':
+                - rowheader "CPU Type" [ref=e75]
+                - 'cell "Intel(R) Core(TM) i3-4160 CPU @ 3.60GHz 4 CPUs : 1 package(s) x 2 core(s) x 2 hardware threads AES-NI CPU Crypto: Yes (inactive) QAT Crypto: No" [ref=e76]':
+                  - text: Intel(R) Core(TM) i3-4160 CPU @ 3.60GHz
+                  - generic [ref=e77]: "4 CPUs : 1 package(s) x 2 core(s) x 2 hardware threads"
+                  - generic [ref=e78]:
+                    - text: "AES-NI CPU Crypto: Yes (inactive)"
+                    - text: "QAT Crypto: No"
+              - row "Hardware crypto Inactive" [ref=e79]:
+                - rowheader "Hardware crypto" [ref=e80]
+                - cell "Inactive" [ref=e81]
+              - row "Kernel PTI Enabled" [ref=e82]:
+                - rowheader "Kernel PTI" [ref=e83]
+                - cell "Enabled" [ref=e84]
+              - row "MDS Mitigation Inactive" [ref=e85]:
+                - rowheader "MDS Mitigation" [ref=e86]
+                - cell "Inactive" [ref=e87]
+              - row "Uptime 16 Hours 13 Minutes 17 Seconds" [ref=e88]:
+                - rowheader "Uptime" [ref=e89]
+                - cell "16 Hours 13 Minutes 17 Seconds" [ref=e90]
+              - row "Current date/time Sat May 23 10:52:20 -03 2026" [ref=e91]:
+                - rowheader "Current date/time" [ref=e92]
+                - cell "Sat May 23 10:52:20 -03 2026" [ref=e93]:
+                  - generic [ref=e94]: Sat May 23 10:52:20 -03 2026
+              - row "DNS server(s) 127.0.0.1 ::1 192.86.221.218 8.8.8.8 177.66.116.50 8.8.4.4 1.1.1.1" [ref=e95]:
+                - rowheader "DNS server(s)" [ref=e96]
+                - cell "127.0.0.1 ::1 192.86.221.218 8.8.8.8 177.66.116.50 8.8.4.4 1.1.1.1" [ref=e97]:
+                  - list [ref=e98]:
+                    - listitem [ref=e99]: 127.0.0.1
+                    - listitem [ref=e100]: ::1
+                    - listitem [ref=e101]: 192.86.221.218
+                    - listitem [ref=e102]: 8.8.8.8
+                    - listitem [ref=e103]: 177.66.116.50
+                    - listitem [ref=e104]: 8.8.4.4
+                    - listitem [ref=e105]: 1.1.1.1
+              - row "Last config change Sat May 23 10:32:56 -03 2026" [ref=e106]:
+                - rowheader "Last config change" [ref=e107]
+                - cell "Sat May 23 10:32:56 -03 2026" [ref=e108]
+              - row "State table size 0 0% (575/347000) Show states" [ref=e109]:
+                - rowheader "State table size" [ref=e110]: State table size
+                - cell "0 0% (575/347000) Show states" [ref=e111]:
+                  - generic [ref=e112]:
+                    - progressbar
+                  - text: 0% (575/347000)
+                  - link "Show states" [ref=e114] [cursor=pointer]:
+                    - /url: diag_dump_states.php
+              - row "MBUF Usage 2 2% (21844/1000000)" [ref=e115]:
+                - rowheader "MBUF Usage" [ref=e116]
+                - cell "2 2% (21844/1000000)" [ref=e117]:
+                  - progressbar [ref=e119]
+                  - text: 2% (21844/1000000)
+              - row "Temperature 27.9 27.9°C" [ref=e120]:
+                - rowheader "Temperature" [ref=e121]
+                - cell "27.9 27.9°C" [ref=e122]:
+                  - progressbar [ref=e124]
+                  - text: 27.9°C
+              - row "Load average 0.27, 0.23, 0.18" [ref=e125]:
+                - rowheader "Load average" [ref=e126]
+                - cell "0.27, 0.23, 0.18" [ref=e127]:
+                  - generic "Last 1, 5 and 15 minutes" [ref=e128]: 0.27, 0.23, 0.18
+              - row "CPU usage 0 Retrieving CPU data " [ref=e129]:
+                - rowheader "CPU usage" [ref=e130]
+                - cell "0 Retrieving CPU data " [ref=e131]:
+                  - generic [ref=e132]:
+                    - progressbar
+                  - generic [ref=e133]:
+                    - text: Retrieving CPU data
+                    - generic [ref=e134]: 
+              - row "Memory usage 14 14% of 3479 MiB" [ref=e135]:
+                - rowheader "Memory usage" [ref=e136]
+                - cell "14 14% of 3479 MiB" [ref=e137]:
+                  - progressbar [ref=e139]
+                  - text: 14% of 3479 MiB
+              - row "SWAP usage 0 0% of 1024 MiB" [ref=e140]:
+                - rowheader "SWAP usage" [ref=e141]
+                - cell "0 0% of 1024 MiB" [ref=e142]:
+                  - generic [ref=e143]:
+                    - progressbar
+                  - text: 0% of 1024 MiB
+          - text:  
+        - generic [ref=e144]:
+          - heading "Disks   " [level=2] [ref=e146]:
+            - text: Disks
+            - generic [ref=e147]:
+              - link "" [ref=e148] [cursor=pointer]:
+                - /url: "#widget-disks-0_panel-footer"
+                - generic [ref=e149]: 
+              - link "" [ref=e150] [cursor=pointer]:
+                - /url: "#widget-disks-0_panel-body"
+                - generic [ref=e151]: 
+              - link "" [ref=e152] [cursor=pointer]:
+                - /url: "#widget-disks-0"
+                - generic [ref=e153]: 
+          - table [ref=e156]:
+            - rowgroup [ref=e157]:
+              - row "Mount Used Size Usage" [ref=e158]:
+                - columnheader "Mount" [ref=e159]
+                - columnheader "Used" [ref=e160]
+                - columnheader "Size" [ref=e161]
+                - columnheader "Usage" [ref=e162]
+            - rowgroup [ref=e163]:
+              - row " / 899M 809G 0% of 809G (zfs)" [ref=e164]:
+                - cell " /" [ref=e165]:
+                  - generic [ref=e166] [cursor=pointer]: 
+                  - text: /
+                - cell "899M" [ref=e167]
+                - cell "809G" [ref=e168]
+                - cell "0% of 809G (zfs)" [ref=e169]: 0% of 809G (zfs)
+              - text:   
+          - text:   
+      - generic [ref=e171]:
+        - generic [ref=e172]:
+          - heading "Netgate Services And Support  " [level=2] [ref=e174]:
+            - text: Netgate Services And Support
+            - generic [ref=e175]:
+              - text: 
+              - link "" [ref=e176] [cursor=pointer]:
+                - /url: "#widget-netgate_services_and_support-0_panel-body"
+                - generic [ref=e177]: 
+              - link "" [ref=e178] [cursor=pointer]:
+                - /url: "#widget-netgate_services_and_support-0"
+                - generic [ref=e179]: 
+          - generic [ref=e181]:
+            - generic [ref=e183]:
+              - term [ref=e184]: Contract type
+              - definition [ref=e185]:
+                - text: Community Support
+                - text: Community Support Only
+            - generic [ref=e187]: NETGATE AND pfSense COMMUNITY SUPPORT RESOURCES
+            - paragraph [ref=e188]:
+              - generic [ref=e189]:
+                - text: If you purchased your pfSense gateway firewall appliance from Netgate and elected Community Support at the point of sale or installed pfSense on your own hardware, you have access to various community support resources. This includes the
+                - link "NETGATE RESOURCE LIBRARY" [ref=e190] [cursor=pointer]:
+                  - /url: https://www.netgate.com/resources/
+                - text: .
+            - paragraph [ref=e191]:
+              - generic [ref=e192]: You also may upgrade to a Netgate Global Technical Assistance Center (TAC) Support subscription. We're always on! Our team is staffed 24x7x365 and committed to delivering enterprise-class, worldwide support at a price point that is more than competitive when compared to others in our space.
+            - table [ref=e193]:
+              - rowgroup [ref=e194]:
+                - row "Upgrade Your Support Community Support Resources" [ref=e195]:
+                  - cell "Upgrade Your Support" [ref=e196]:
+                    - list [ref=e197]:
+                      - listitem [ref=e198]:
+                        - link "Upgrade Your Support" [ref=e199] [cursor=pointer]:
+                          - /url: https://www.netgate.com/support
+                  - cell "Community Support Resources" [ref=e200]:
+                    - list [ref=e201]:
+                      - listitem [ref=e202]:
+                        - link "Community Support Resources" [ref=e203] [cursor=pointer]:
+                          - /url: https://www.netgate.com/support/contact-support.html#community-support
+                - row "Netgate Global Support FAQ Official pfSense Training by Netgate" [ref=e204]:
+                  - cell "Netgate Global Support FAQ" [ref=e205]:
+                    - list [ref=e206]:
+                      - listitem [ref=e207]:
+                        - link "Netgate Global Support FAQ" [ref=e208] [cursor=pointer]:
+                          - /url: https://www.netgate.com/support/frequently-asked-questions.html
+                  - cell "Official pfSense Training by Netgate" [ref=e209]:
+                    - list [ref=e210]:
+                      - listitem [ref=e211]:
+                        - link "Official pfSense Training by Netgate" [ref=e212] [cursor=pointer]:
+                          - /url: https://www.netgate.com/training/
+                - row "Netgate Professional Services Visit Netgate.com" [ref=e213]:
+                  - cell "Netgate Professional Services" [ref=e214]:
+                    - list [ref=e215]:
+                      - listitem [ref=e216]:
+                        - link "Netgate Professional Services" [ref=e217] [cursor=pointer]:
+                          - /url: http://www.netgate.com/our-services/professional-services.html
+                  - cell "Visit Netgate.com" [ref=e218]:
+                    - list [ref=e219]:
+                      - listitem [ref=e220]:
+                        - link "Visit Netgate.com" [ref=e221] [cursor=pointer]:
+                          - /url: https://www.netgate.com
+                - row [ref=e222]:
+                  - cell [ref=e223]:
+                    - paragraph
+                  - cell [ref=e224]
+            - generic [ref=e228]:
+              - text: If you decide to purchase a Netgate Global TAC Support subscription, you MUST have your Netgate Device ID (NDI) from your firewall in order to validate support for this unit.
+              - generic [ref=e229]:
+                - text: Write down your NDI and store it in a safe place. You can purchase TAC supports
+                - link "here" [ref=e230] [cursor=pointer]:
+                  - /url: https://www.netgate.com/support
+                - text: .
+            - link "" [ref=e232] [cursor=pointer]:
+              - /url: /widgets/widgets/netgate_services_and_support.widget.php?act=refresh
+              - generic [ref=e233]: 
+        - generic [ref=e234]:
+          - heading "Interfaces   " [level=2] [ref=e236]:
+            - link "Interfaces" [ref=e237] [cursor=pointer]:
+              - /url: status_interfaces.php
+            - generic [ref=e238]:
+              - link "" [ref=e239] [cursor=pointer]:
+                - /url: "#widget-interfaces-0_panel-footer"
+                - generic [ref=e240]: 
+              - link "" [ref=e241] [cursor=pointer]:
+                - /url: "#widget-interfaces-0_panel-body"
+                - generic [ref=e242]: 
+              - link "" [ref=e243] [cursor=pointer]:
+                - /url: "#widget-interfaces-0"
+                - generic [ref=e244]: 
+          - generic [ref=e246]:
+            - table [ref=e248]:
+              - rowgroup [ref=e249]:
+                - row " WANMEGALINK  1000baseT <full-duplex> 192.86.221.241" [ref=e250]:
+                  - cell " WANMEGALINK" [ref=e251]:
+                    - generic [ref=e252]: 
+                    - link "WANMEGALINK" [ref=e253] [cursor=pointer]:
+                      - /url: /interfaces.php?if=wan
+                  - cell "" [ref=e254]:
+                    - generic "up" [ref=e255]: 
+                  - cell "1000baseT <full-duplex>" [ref=e256]
+                  - cell "192.86.221.241" [ref=e257]
+                - row " LAN  100baseTX <full-duplex> 192.86.222.254" [ref=e258]:
+                  - cell " LAN" [ref=e259]:
+                    - generic [ref=e260]: 
+                    - link "LAN" [ref=e261] [cursor=pointer]:
+                      - /url: /interfaces.php?if=lan
+                  - cell "" [ref=e262]:
+                    - generic "up" [ref=e263]: 
+                  - cell "100baseTX <full-duplex>" [ref=e264]
+                  - cell "192.86.222.254" [ref=e265]
+                - row " OPT1  1000baseT <full-duplex> 192.86.221.240" [ref=e266]:
+                  - cell " OPT1" [ref=e267]:
+                    - generic [ref=e268]: 
+                    - link "OPT1" [ref=e269] [cursor=pointer]:
+                      - /url: /interfaces.php?if=opt1
+                  - cell "" [ref=e270]:
+                    - generic "up" [ref=e271]: 
+                  - cell "1000baseT <full-duplex>" [ref=e272]
+                  - cell "192.86.221.240" [ref=e273]
+            - text:  
+          - text:  
+        - generic [ref=e274]:
+          - heading "Gateways   " [level=2] [ref=e276]:
+            - link "Gateways" [ref=e277] [cursor=pointer]:
+              - /url: status_gateways.php
+            - generic [ref=e278]:
+              - link "" [ref=e279] [cursor=pointer]:
+                - /url: "#widget-gateways-0_panel-footer"
+                - generic [ref=e280]: 
+              - link "" [ref=e281] [cursor=pointer]:
+                - /url: "#widget-gateways-0_panel-body"
+                - generic [ref=e282]: 
+              - link "" [ref=e283] [cursor=pointer]:
+                - /url: "#widget-gateways-0"
+                - generic [ref=e284]: 
+          - table [ref=e287]:
+            - rowgroup [ref=e288]:
+              - row "Name RTT RTTsd Loss Status" [ref=e289]:
+                - columnheader [ref=e290]
+                - columnheader "Name" [ref=e291]
+                - columnheader "RTT" [ref=e292]
+                - columnheader "RTTsd" [ref=e293]
+                - columnheader "Loss" [ref=e294]
+                - columnheader "Status" [ref=e295]
+            - rowgroup [ref=e296]:
+              - row " WAN_PPPOE  192.86.221.5 36.1ms 0.3ms 0.0% Online" [ref=e297]:
+                - cell "" [ref=e298]:
+                  - generic [ref=e299]: 
+                - cell "WAN_PPPOE  192.86.221.5" [ref=e300]:
+                  - text: WAN_PPPOE
+                  - generic [ref=e301]: 
+                  - generic [ref=e302]: 192.86.221.5
+                - cell "36.1ms" [ref=e303]
+                - cell "0.3ms" [ref=e304]
+                - cell "0.0%" [ref=e305]
+                - cell "Online" [ref=e306]
+              - row " OPT1_PPPOE  192.86.221.5 0.1ms 0.1ms 0.0% Online" [ref=e307]:
+                - cell "" [ref=e308]:
+                  - generic [ref=e309]: 
+                - cell "OPT1_PPPOE  192.86.221.5" [ref=e310]:
+                  - text: OPT1_PPPOE
+                  - generic [ref=e311]: 
+                  - generic [ref=e312]: 192.86.221.5
+                - cell "0.1ms" [ref=e313]
+                - cell "0.1ms" [ref=e314]
+                - cell "0.0%" [ref=e315]
+                - cell "Online" [ref=e316]
+          - text:  
+        - generic [ref=e317]:
+          - heading "Services Status   " [level=2] [ref=e319]:
+            - link "Services Status" [ref=e320] [cursor=pointer]:
+              - /url: status_services.php
+            - generic [ref=e321]:
+              - link "" [ref=e322] [cursor=pointer]:
+                - /url: "#widget-services_status-0_panel-footer"
+                - generic [ref=e323]: 
+              - link "" [ref=e324] [cursor=pointer]:
+                - /url: "#widget-services_status-0_panel-body"
+                - generic [ref=e325]: 
+              - link "" [ref=e326] [cursor=pointer]:
+                - /url: "#widget-services_status-0"
+                - generic [ref=e327]: 
+          - table [ref=e330]:
+            - rowgroup [ref=e331]:
+              - row "Service Description Action" [ref=e332]:
+                - columnheader [ref=e333]
+                - columnheader "Service" [ref=e334]
+                - columnheader "Description" [ref=e335]
+                - columnheader "Action" [ref=e336]
+            - rowgroup [ref=e337]:
+              - row " bsnmpd SNMP Service  " [ref=e338]:
+                - cell "" [ref=e339]:
+                  - generic "Running" [ref=e340]: 
+                - cell "bsnmpd" [ref=e341]
+                - cell "SNMP Service" [ref=e342]
+                - cell " " [ref=e343]:
+                  - link "" [ref=e344] [cursor=pointer]:
+                    - /url: "#"
+                    - generic "Restart Service" [ref=e345]: 
+                  - link "" [ref=e346] [cursor=pointer]:
+                    - /url: "#"
+                    - generic "Stop Service" [ref=e347]: 
+              - row " c-icap ICAP Inteface for Squid and ClamAV integration " [ref=e348]:
+                - cell "" [ref=e349]:
+                  - generic "Stopped" [ref=e350]: 
+                - cell "c-icap" [ref=e351]
+                - cell "ICAP Inteface for Squid and ClamAV integration" [ref=e352]
+                - cell "" [ref=e353]:
+                  - link "" [ref=e354] [cursor=pointer]:
+                    - /url: "#"
+                    - generic [ref=e355]: 
+              - row " clamd ClamAV Antivirus " [ref=e356]:
+                - cell "" [ref=e357]:
+                  - generic "Stopped" [ref=e358]: 
+                - cell "clamd" [ref=e359]
+                - cell "ClamAV Antivirus" [ref=e360]
+                - cell "" [ref=e361]:
+                  - link "" [ref=e362] [cursor=pointer]:
+                    - /url: "#"
+                    - generic [ref=e363]: 
+              - row " dpinger Gateway Monitoring Daemon  " [ref=e364]:
+                - cell "" [ref=e365]:
+                  - generic "Running" [ref=e366]: 
+                - cell "dpinger" [ref=e367]
+                - cell "Gateway Monitoring Daemon" [ref=e368]
+                - cell " " [ref=e369]:
+                  - link "" [ref=e370] [cursor=pointer]:
+                    - /url: "#"
+                    - generic "Restart Service" [ref=e371]: 
+                  - link "" [ref=e372] [cursor=pointer]:
+                    - /url: "#"
+                    - generic "Stop Service" [ref=e373]: 
+              - row " ftp-proxy Client FTP Proxy Daemon " [ref=e374]:
+                - cell "" [ref=e375]:
+                  - generic "Stopped" [ref=e376]: 
+                - cell "ftp-proxy" [ref=e377]
+                - cell "Client FTP Proxy Daemon" [ref=e378]
+                - cell "" [ref=e379]:
+                  - link "" [ref=e380] [cursor=pointer]:
+                    - /url: "#"
+                    - generic [ref=e381]: 
+              - row " lightsquid_web Lightsquid Web Server " [ref=e382]:
+                - cell "" [ref=e383]:
+                  - generic "Stopped" [ref=e384]: 
+                - cell "lightsquid_web" [ref=e385]
+                - cell "Lightsquid Web Server" [ref=e386]
+                - cell "" [ref=e387]:
+                  - link "" [ref=e388] [cursor=pointer]:
+                    - /url: "#"
+                    - generic [ref=e389]: 
+              - row " ntpd NTP clock sync  " [ref=e390]:
+                - cell "" [ref=e391]:
+                  - generic "Running" [ref=e392]: 
+                - cell "ntpd" [ref=e393]
+                - cell "NTP clock sync" [ref=e394]
+                - cell " " [ref=e395]:
+                  - link "" [ref=e396] [cursor=pointer]:
+                    - /url: "#"
+                    - generic "Restart Service" [ref=e397]: 
+                  - link "" [ref=e398] [cursor=pointer]:
+                    - /url: "#"
+                    - generic "Stop Service" [ref=e399]: 
+              - row " squid Squid Proxy Server Service " [ref=e400]:
+                - cell "" [ref=e401]:
+                  - generic "Stopped" [ref=e402]: 
+                - cell "squid" [ref=e403]
+                - cell "Squid Proxy Server Service" [ref=e404]
+                - cell "" [ref=e405]:
+                  - link "" [ref=e406] [cursor=pointer]:
+                    - /url: "#"
+                    - generic [ref=e407]: 
+              - row " squidGuard Proxy server filter Service " [ref=e408]:
+                - cell "" [ref=e409]:
+                  - generic "Stopped" [ref=e410]: 
+                - cell "squidGuard" [ref=e411]
+                - cell "Proxy server filter Service" [ref=e412]
+                - cell "" [ref=e413]:
+                  - link "" [ref=e414] [cursor=pointer]:
+                    - /url: "#"
+                    - generic [ref=e415]: 
+              - row " sshd Secure Shell Daemon  " [ref=e416]:
+                - cell "" [ref=e417]:
+                  - generic "Running" [ref=e418]: 
+                - cell "sshd" [ref=e419]
+                - cell "Secure Shell Daemon" [ref=e420]
+                - cell " " [ref=e421]:
+                  - link "" [ref=e422] [cursor=pointer]:
+                    - /url: "#"
+                    - generic "Restart Service" [ref=e423]: 
+                  - link "" [ref=e424] [cursor=pointer]:
+                    - /url: "#"
+                    - generic "Stop Service" [ref=e425]: 
+              - row " syslogd System Logger Daemon  " [ref=e426]:
+                - cell "" [ref=e427]:
+                  - generic "Running" [ref=e428]: 
+                - cell "syslogd" [ref=e429]
+                - cell "System Logger Daemon" [ref=e430]
+                - cell " " [ref=e431]:
+                  - link "" [ref=e432] [cursor=pointer]:
+                    - /url: "#"
+                    - generic "Restart Service" [ref=e433]: 
+                  - link "" [ref=e434] [cursor=pointer]:
+                    - /url: "#"
+                    - generic "Stop Service" [ref=e435]: 
+              - row " unbound DNS Resolver  " [ref=e436]:
+                - cell "" [ref=e437]:
+                  - generic "Running" [ref=e438]: 
+                - cell "unbound" [ref=e439]
+                - cell "DNS Resolver" [ref=e440]
+                - cell " " [ref=e441]:
+                  - link "" [ref=e442] [cursor=pointer]:
+                    - /url: "#"
+                    - generic "Restart Service" [ref=e443]: 
+                  - link "" [ref=e444] [cursor=pointer]:
+                    - /url: "#"
+                    - generic "Stop Service" [ref=e445]: 
+          - text:  
+        - generic [ref=e446]:
+          - heading "Interface Statistics   " [level=2] [ref=e448]:
+            - link "Interface Statistics" [ref=e449] [cursor=pointer]:
+              - /url: status_interfaces.php
+            - generic [ref=e450]:
+              - link "" [ref=e451] [cursor=pointer]:
+                - /url: "#widget-interface_statistics-0_panel-footer"
+                - generic [ref=e452]: 
+              - link "" [ref=e453] [cursor=pointer]:
+                - /url: "#widget-interface_statistics-0_panel-body"
+                - generic [ref=e454]: 
+              - link "" [ref=e455] [cursor=pointer]:
+                - /url: "#widget-interface_statistics-0"
+                - generic [ref=e456]: 
+          - table [ref=e458]:
+            - rowgroup [ref=e459]:
+              - row "Retrieving interface data" [ref=e460]:
+                - cell "Retrieving interface data" [ref=e461]
+          - text:  
+        - generic [ref=e462]:
+          - heading "Traffic Graphs   " [level=2] [ref=e464]:
+            - link "Traffic Graphs" [ref=e465] [cursor=pointer]:
+              - /url: status_graph.php
+            - generic [ref=e466]:
+              - link "" [ref=e467] [cursor=pointer]:
+                - /url: "#widget-traffic_graphs-0_panel-footer"
+                - generic [ref=e468]: 
+              - link "" [ref=e469] [cursor=pointer]:
+                - /url: "#widget-traffic_graphs-0_panel-body"
+                - generic [ref=e470]: 
+              - link "" [ref=e471] [cursor=pointer]:
+                - /url: "#widget-traffic_graphs-0"
+                - generic [ref=e472]: 
+          - generic [ref=e473]:
+            - img [ref=e475]:
+              - generic [ref=e476]: WANMEGALINK
+              - generic [ref=e478]:
+                - generic [ref=e481]:
+                  - generic [ref=e484] [cursor=pointer]: wan (in)
+                  - generic [ref=e487] [cursor=pointer]: wan (out)
+                - generic [ref=e488]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: 50:40
+                        - generic:
+                          - generic: 51:00
+                        - generic:
+                          - generic: 51:20
+                        - generic:
+                          - generic: 51:40
+                        - generic:
+                          - generic: 52:00
+                      - generic:
+                        - generic: 50:22
+                      - generic:
+                        - generic: 52:21
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: "-1.0"
+                        - generic:
+                          - generic: "-500m"
+                        - generic:
+                          - generic: "0.0"
+                        - generic:
+                          - generic: 500m
+                        - generic:
+                          - generic: "1.0"
+            - img [ref=e499]:
+              - generic [ref=e500]: LAN
+              - generic [ref=e502]:
+                - generic [ref=e505]:
+                  - generic [ref=e508] [cursor=pointer]: lan (in)
+                  - generic [ref=e511] [cursor=pointer]: lan (out)
+                - generic [ref=e512]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: 50:40
+                        - generic:
+                          - generic: 51:00
+                        - generic:
+                          - generic: 51:20
+                        - generic:
+                          - generic: 51:40
+                        - generic:
+                          - generic: 52:00
+                      - generic:
+                        - generic: 50:22
+                      - generic:
+                        - generic: 52:21
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: "-1.0"
+                        - generic:
+                          - generic: "-500m"
+                        - generic:
+                          - generic: "0.0"
+                        - generic:
+                          - generic: 500m
+                        - generic:
+                          - generic: "1.0"
+            - img [ref=e523]:
+              - generic [ref=e524]: OPT1
+              - generic [ref=e526]:
+                - generic [ref=e529]:
+                  - generic [ref=e532] [cursor=pointer]: opt1 (in)
+                  - generic [ref=e535] [cursor=pointer]: opt1 (out)
+                - generic [ref=e536]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: 50:40
+                        - generic:
+                          - generic: 51:00
+                        - generic:
+                          - generic: 51:20
+                        - generic:
+                          - generic: 51:40
+                        - generic:
+                          - generic: 52:00
+                      - generic:
+                        - generic: 50:22
+                      - generic:
+                        - generic: 52:21
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: "-1.0"
+                        - generic:
+                          - generic: "-500m"
+                        - generic:
+                          - generic: "0.0"
+                        - generic:
+                          - generic: 500m
+                        - generic:
+                          - generic: "1.0"
+          - text:  
+  - contentinfo [ref=e546]:
+    - paragraph [ref=e548]:
+      - link "":
+        - /url: "#"
+        - generic [ref=e549] [cursor=pointer]: 
+      - link "pfSense" [ref=e550] [cursor=pointer]:
+        - /url: https://pfsense.org
+      - text: is developed and maintained by
+      - link "Netgate." [ref=e551] [cursor=pointer]:
+        - /url: https://netgate.com
+      - text: © ESF 2004 - 2026
+      - link "View license." [ref=e552] [cursor=pointer]:
+        - /url: https://pfsense.org/license
+      - link "":
+        - /url: "#"
+        - generic [ref=e553] [cursor=pointer]: 

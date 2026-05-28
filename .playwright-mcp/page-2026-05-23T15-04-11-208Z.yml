@@ -1,0 +1,42 @@
+- generic [ref=e1]:
+  - generic [ref=e54]: Usuário ou senha incorretos. 4 tentativas restantes.
+  - img [ref=e3]
+  - generic [ref=e9]:
+    - generic [ref=e12]:
+      - img [ref=e14]
+      - table [ref=e15]:
+        - rowgroup [ref=e16]:
+          - generic [ref=e17]: iNVD 3032
+    - table [ref=e18]:
+      - rowgroup [ref=e19]:
+        - textbox [ref=e20]:
+          - /placeholder: Usuário
+          - text: admin
+    - table [ref=e21]:
+      - rowgroup [ref=e22]:
+        - table [ref=e23]:
+          - rowgroup [ref=e24]:
+            - row "Sobral123*" [ref=e49]:
+              - cell "Sobral123*" [ref=e50]:
+                - textbox [ref=e27]:
+                  - /placeholder: Senha
+                  - text: Sobral123*
+              - cell [ref=e28]:
+                - button [ref=e29] [cursor=pointer]
+    - table [ref=e30]:
+      - rowgroup [ref=e31]:
+        - table [ref=e32]:
+          - rowgroup [ref=e33]:
+            - row "TCP" [ref=e34]:
+              - cell "TCP" [ref=e35]:
+                - textbox [ref=e36]: TCP
+              - cell [ref=e37]:
+                - button [ref=e38] [cursor=pointer]
+    - button "Entrar" [active] [ref=e39] [cursor=pointer]:
+      - generic [ref=e41]:
+        - generic [ref=e42]: Entrar
+        - img [ref=e43]
+    - button "Esqueceu a senha?" [ref=e44] [cursor=pointer]:
+      - generic [ref=e46]:
+        - generic [ref=e47]: Esqueceu a senha?
+        - img [ref=e48]
