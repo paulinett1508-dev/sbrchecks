@@ -12,8 +12,9 @@ datasource db {
 }
 
 enum Role {
-  VENDEDOR
+  GDD
   GERENTE
+  ADMIN
 }
 
 enum CheckMode {
@@ -30,8 +31,8 @@ model User {
   id        String   @id @default(uuid())
   name      String
   email     String   @unique
-  password  String // hash (argon2/bcrypt)
-  role      Role     @default(VENDEDOR)
+  googleId  String   @unique
+  role      Role     @default(GDD)
   active    Boolean  @default(true)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
