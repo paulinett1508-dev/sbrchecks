@@ -1,0 +1,142 @@
+// schema.prisma — modelo de dados do SBRChecks
+// Foco: usuários (vendedor/gerente), PDVs, carteira, visitas (check-in/out),
+// checklist e fotos. Idempotência via clientUuid nas visitas.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  VENDEDOR
+  GERENTE
+}
+
+enum CheckMode {
+  PROXIMIDADE // disparado pela detecção de chegada (confirmado em 1 toque)
+  MANUAL      // o vendedor abriu e confirmou manualmente
+}
+
+enum VisitStatus {
+  EM_ANDAMENTO // check-in feito, sem check-out
+  CONCLUIDA    // check-in + check-out
+}
+
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  password  String // hash (argon2/bcrypt)
+  role      Role     @default(VENDEDOR)
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  pdvs   PdvAssignment[]
+  visits Visit[]
+}
+
+model Pdv {
+  id        String   @id @default(uuid())
+  name      String
+  document  String? // CNPJ, opcional
+  address   String?
+  latitude  Float
+  longitude Float
+  radiusM   Int      @default(120) // raio de geofence em metros
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  assignments PdvAssignment[]
+  visits      Visit[]
+
+  @@index([latitude, longitude])
+}
+
+// Carteira: quais PDVs pertencem a quais vendedores.
+model PdvAssignment {
+  id     String @id @default(uuid())
+  user   User   @relation(fields: [userId], references: [id])
+  userId String
+  pdv    Pdv    @relation(fields: [pdvId], references: [id])
+  pdvId  String
+
+  @@unique([userId, pdvId])
+}
+
+model Visit {
+  id String @id @default(uuid())
+
+  // Idempotência: gerado no cliente, garante que reenvios na sync não dupliquem.
+  clientUuid String @unique
+
+  user   User   @relation(fields: [userId], references: [id])
+  userId String
+  pdv    Pdv    @relation(fields: [pdvId], references: [id])
+  pdvId  String
+
+  status VisitStatus @default(EM_ANDAMENTO)
+
+  // Check-in
+  checkInAt        DateTime
+  checkInLat       Float
+  checkInLng       Float
+  checkInAccuracyM Float?
+  checkInMode      CheckMode
+
+  // Check-out
+  checkOutAt        DateTime?
+  checkOutLat       Float?
+  checkOutLng       Float?
+  checkOutAccuracyM Float?
+  checkOutMode      CheckMode?
+
+  notes      String?
+  checklist  ChecklistAnswer[]
+  photos     VisitPhoto[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId, checkInAt])
+  @@index([pdvId, checkInAt])
+}
+
+// Definição de um item de checklist (configurável pelo gerente).
+model ChecklistItem {
+  id       String  @id @default(uuid())
+  label    String
+  type     String  @default("boolean") // boolean | text | number | select
+  options  String? // JSON para selects
+  required Boolean @default(false)
+  order    Int     @default(0)
+  active   Boolean @default(true)
+
+  answers ChecklistAnswer[]
+}
+
+model ChecklistAnswer {
+  id      String        @id @default(uuid())
+  visit   Visit         @relation(fields: [visitId], references: [id], onDelete: Cascade)
+  visitId String
+  item    ChecklistItem @relation(fields: [itemId], references: [id])
+  itemId  String
+  value   String // valor serializado conforme o tipo do item
+
+  @@unique([visitId, itemId])
+}
+
+model VisitPhoto {
+  id        String   @id @default(uuid())
+  visit     Visit    @relation(fields: [visitId], references: [id], onDelete: Cascade)
+  visitId   String
+  objectKey String // chave do objeto no MinIO
+  takenAt   DateTime @default(now())
+  latitude  Float?
+  longitude Float?
+}

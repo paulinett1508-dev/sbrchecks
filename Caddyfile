@@ -1,0 +1,22 @@
+# Caddyfile — HTTPS automático para o subdomínio do SBRChecks.
+# Caddy obtém e renova o certificado TLS sozinho (Let's Encrypt).
+
+sbrchecks.laboratoriosobral.com.br {
+	# Chamadas à API: /api/* → container api (removendo o prefixo /api)
+	handle_path /api/* {
+		reverse_proxy api:3000
+	}
+
+	# Todo o resto: o PWA + painel (SPA servido por Nginx no container web)
+	handle {
+		reverse_proxy web:80
+	}
+
+	encode gzip zstd
+	header {
+		# Headers básicos de segurança
+		Strict-Transport-Security "max-age=31536000;"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+	}
+}

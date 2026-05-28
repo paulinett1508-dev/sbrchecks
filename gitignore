@@ -1,0 +1,60 @@
+# ─── Segredos (NUNCA versionar) ──────────────────────────────
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ─── Dependências ────────────────────────────────────────────
+node_modules/
+.pnpm-store/
+.yarn/
+.npm/
+
+# ─── Builds e saídas ─────────────────────────────────────────
+dist/
+build/
+out/
+.vite/
+*.tsbuildinfo
+
+# ─── Prisma ──────────────────────────────────────────────────
+# O client gerado não vai pro Git; é recriado no build.
+db/prisma/generated/
+**/generated/prisma/
+
+# ─── Logs ────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# ─── Docker / dados locais ───────────────────────────────────
+# Volumes persistentes (Postgres, MinIO) ficam fora do repo.
+data/
+pg_data/
+minio_data/
+caddy_data/
+
+# ─── Cache de ferramentas ────────────────────────────────────
+.cache/
+.eslintcache
+coverage/
+.vitest/
+
+# ─── Editores e SO ───────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+
+# VS Code: versiona só o necessário, ignora o resto
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# ─── PWA / assets gerados ────────────────────────────────────
+apps/web/dev-dist/
+sw.js
+workbox-*.js
