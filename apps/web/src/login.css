@@ -124,12 +124,42 @@ body {
     flex: none;
     width: 100%;
     padding: 0;
-    gap: .5rem;
+    gap: .35rem;
     animation: none;
   }
-  .brand-icon-row { display: none; } /* ícones somem, só nome e subtítulo */
-  .login-left h1 { font-size: 1.4rem; letter-spacing: .18em; }
-  .brand-sub { font-size: .7rem; }
+  .brand-icon-row { display: none; }
+  .login-left h1 {
+    font-size: 1rem;
+    letter-spacing: .08em;
+    font-weight: 500;
+    color: rgba(255,255,255,.55);   /* subtil, não compete com o card */
+  }
+  .brand-sub { display: none; }     /* subtítulo some no mobile — menos ruído */
+
+  /* mobile: header fino — logo pequena, sem peso visual */
+  .login-card-header {
+    padding: .6rem 1.5rem;
+    min-height: auto;
+    /* faixa fina de cor: apenas um traço de identidade */
+  }
+  .login-card-header-logo {
+    width: 52px;
+    height: 52px;
+  }
+
+  /* card body: mais espaço, mais respiro */
+  .login-card-body {
+    padding: 1.5rem 1.75rem 1.75rem;
+    gap: .75rem;
+  }
+  .login-card-body h2 { font-size: 1.15rem; }
+
+  /* botão: área de toque mínima 48px */
+  .btn-entrar {
+    padding: .9rem 1.25rem;
+    font-size: .95rem;
+    min-height: 48px;
+  }
 }
 
 /* ── Ícones do sistema (estilo Nexus: dois ícones + separador) ── */
@@ -176,14 +206,12 @@ body {
 .login-right {
   position: relative;
   z-index: 10;
-  /* largura total do painel, com margem real da borda */
-  width: 420px;
+  width: 500px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding-right = margem da borda direita da janela */
-  padding: 2rem 3rem 2rem 0;
+  padding: 2rem 4rem 2rem 1rem;
   animation: fadeUp .55s .08s cubic-bezier(.16,1,.3,1) both;
 }
 @media (max-width: 720px) {
@@ -197,18 +225,16 @@ body {
 /* ── Card ─────────────────────────────────────────────────────── */
 .login-card {
   width: 100%;
-  max-width: 340px;
-  /* mobile: card ocupa a largura toda */
-}
-
-@media (max-width: 720px) {
-  .login-card { max-width: 100%; }
-}
+  max-width: 390px;
   border-radius: 18px;
   overflow: hidden;
   box-shadow:
     0 28px 72px rgba(0,0,0,.7),
     0 0 0 1px rgba(255,255,255,.04);
+}
+
+@media (max-width: 720px) {
+  .login-card { max-width: 100%; }
 }
 
 /* ── Header laranja + logo (estilo Nexus) ────────────────────── */
@@ -217,14 +243,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 2rem 1.5rem;
-  min-height: 160px;
+  padding: 2.25rem 2rem;
 }
 
 /* Logo circular — clip-path elimina os cantos pretos do PNG */
 .login-card-header-logo {
-  width: 118px;
-  height: 118px;
+  width: 130px;
+  height: 130px;
   object-fit: cover;
   border-radius: 50%;
   clip-path: circle(50%);
