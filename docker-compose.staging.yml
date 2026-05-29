@@ -3,5 +3,7 @@
 
 services:
   caddy:
+    ports:
+      - "8080:80"    # usa 8080 para não conflitar com outros apps na VPS
     volumes:
       - ./Caddyfile.staging:/etc/caddy/Caddyfile:ro
