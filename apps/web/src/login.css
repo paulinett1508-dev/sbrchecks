@@ -10,18 +10,28 @@
 
 body {
   font-family: 'Ubuntu', sans-serif;
-  height: 100vh;
-  overflow: hidden;
-  background: #1e0700;   /* fallback sólido warm */
+  min-height: 100vh;
+  background: #1e0700;
 }
 
 /* ── Raiz ────────────────────────────────────────────────────── */
 .login-root {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   background: #1e0700;
+  /* mobile: coluna centrada */
+}
+
+@media (max-width: 720px) {
+  .login-root {
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 1.25rem;
+    gap: 1.5rem;
+    overflow-y: auto;
+  }
 }
 
 /* ── Foto de fundo ────────────────────────────────────────────── */
@@ -108,7 +118,19 @@ body {
   text-align: center;
   animation: fadeUp .65s cubic-bezier(.16,1,.3,1) both;
 }
-@media (max-width: 720px) { .login-left { display: none; } }
+/* em mobile: painel esquerdo vira bloco compacto acima do card */
+@media (max-width: 720px) {
+  .login-left {
+    flex: none;
+    width: 100%;
+    padding: 0;
+    gap: .5rem;
+    animation: none;
+  }
+  .brand-icon-row { display: none; } /* ícones somem, só nome e subtítulo */
+  .login-left h1 { font-size: 1.4rem; letter-spacing: .18em; }
+  .brand-sub { font-size: .7rem; }
+}
 
 /* ── Ícones do sistema (estilo Nexus: dois ícones + separador) ── */
 .brand-icon-row {
@@ -165,13 +187,23 @@ body {
   animation: fadeUp .55s .08s cubic-bezier(.16,1,.3,1) both;
 }
 @media (max-width: 720px) {
-  .login-right { width: 100%; padding: 1.5rem; }
+  .login-right {
+    width: 100%;
+    padding: 0;
+    animation: none;
+  }
 }
 
 /* ── Card ─────────────────────────────────────────────────────── */
 .login-card {
   width: 100%;
   max-width: 340px;
+  /* mobile: card ocupa a largura toda */
+}
+
+@media (max-width: 720px) {
+  .login-card { max-width: 100%; }
+}
   border-radius: 18px;
   overflow: hidden;
   box-shadow:
