@@ -77,6 +77,7 @@ services:
       - "5173:5173"
     volumes:
       - ./apps/web/src:/app/apps/web/src
+      - ./apps/web/public:/app/apps/web/public
       - ./packages/shared/src:/app/packages/shared/src
 
 volumes:
