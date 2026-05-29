@@ -92,9 +92,7 @@ export function LoginPage() {
       <div className="login-right">
         <div className="login-card">
           <div className="login-card-header">
-            <div className="login-logo-circle">
-              <img src="/logo-sobral-oficial.svg" alt="Laboratório Sobral" className="login-card-header-logo" />
-            </div>
+            <img src="/logo-sobral.png" alt="Laboratório Sobral" className="login-card-header-logo" />
           </div>
           <div className="login-card-body">
             <h2>Entre na sua conta</h2>

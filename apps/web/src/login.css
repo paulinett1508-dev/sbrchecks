@@ -12,8 +12,7 @@ body {
   font-family: 'Ubuntu', sans-serif;
   height: 100vh;
   overflow: hidden;
-  /* fallback caso a imagem não carregue */
-  background: #1a0600;
+  background: #1e0700;   /* fallback sólido warm */
 }
 
 /* ── Raiz ────────────────────────────────────────────────────── */
@@ -22,87 +21,80 @@ body {
   height: 100vh;
   display: flex;
   align-items: center;
-  /* garante warm escuro em toda a extensão da tela */
-  background: #140300;
+  background: #1e0700;
 }
 
-/* ── Foto de fundo full-screen ────────────────────────────────── */
+/* ── Foto de fundo ────────────────────────────────────────────── */
 .login-left-bg {
   position: fixed;
   inset: 0;
-  width: 100%;
-  height: 100%;
+  width: 100%; height: 100%;
   object-fit: cover;
   object-position: center;
   z-index: 0;
 }
 
-/* ── Overlay quente uniforme — cobre toda a foto ─────────────── */
+/* ── Overlay principal: warm opaco (~90%) cobre qualquer tom frio da foto */
 .login-overlay {
   position: fixed;
   inset: 0;
-  /* camada 1: escurece e aquece uniformemente */
-  background: rgba(14, 3, 0, 0.72);
+  background: rgba(20, 6, 1, 0.88);
   z-index: 1;
 }
 
-/* camada 2: warm vignette adicional nas bordas */
+/* ── Vinheta radial: escurece bordas, clareia levemente o centro */
 .login-overlay::after {
   content: '';
   position: absolute;
   inset: 0;
   background: radial-gradient(
-    ellipse at 60% 50%,
-    transparent 30%,
-    rgba(8, 1, 0, 0.55) 100%
+    ellipse 70% 70% at 40% 50%,
+    rgba(50, 16, 2, 0.0) 0%,
+    rgba(8, 1, 0, 0.50) 100%
   );
 }
 
-/* ── Quatro cantos decorativos ────────────────────────────────── */
+/* ── Quatro cantos ────────────────────────────────────────────── */
 .login-deco-corner-tl,
 .login-deco-corner-tr,
 .login-deco-corner-bl,
 .login-deco-corner-br {
   position: fixed;
-  width: 60px;
-  height: 60px;
+  width: 56px; height: 56px;
   z-index: 3;
   pointer-events: none;
 }
-.login-deco-corner-tl { top: 24px; left: 24px;
-  border-top: 1.5px solid rgba(255,255,255,.2);
-  border-left: 1.5px solid rgba(255,255,255,.2); }
-.login-deco-corner-tr { top: 24px; right: 24px;
-  border-top: 1.5px solid rgba(255,255,255,.2);
-  border-right: 1.5px solid rgba(255,255,255,.2); }
-.login-deco-corner-bl { bottom: 24px; left: 24px;
-  border-bottom: 1.5px solid rgba(255,255,255,.2);
-  border-left: 1.5px solid rgba(255,255,255,.2); }
-.login-deco-corner-br { bottom: 24px; right: 24px;
-  border-bottom: 1.5px solid rgba(255,255,255,.2);
-  border-right: 1.5px solid rgba(255,255,255,.2); }
+.login-deco-corner-tl { top: 22px; left: 22px;
+  border-top: 1.5px solid rgba(255,255,255,.18);
+  border-left: 1.5px solid rgba(255,255,255,.18); }
+.login-deco-corner-tr { top: 22px; right: 22px;
+  border-top: 1.5px solid rgba(255,255,255,.18);
+  border-right: 1.5px solid rgba(255,255,255,.18); }
+.login-deco-corner-bl { bottom: 22px; left: 22px;
+  border-bottom: 1.5px solid rgba(255,255,255,.18);
+  border-left: 1.5px solid rgba(255,255,255,.18); }
+.login-deco-corner-br { bottom: 22px; right: 22px;
+  border-bottom: 1.5px solid rgba(255,255,255,.18);
+  border-right: 1.5px solid rgba(255,255,255,.18); }
 
-/* ── Círculo fantasma ─────────────────────────────────────────── */
+/* ── Círculo decorativo fantasma (canto sup-esq) ─────────────── */
 .login-deco-circle {
   position: fixed;
-  width: 320px; height: 320px;
+  width: 300px; height: 300px;
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,.06);
-  top: -70px; left: -70px;
-  z-index: 2;
-  pointer-events: none;
+  border: 1px solid rgba(255,255,255,.055);
+  top: -60px; left: -60px;
+  z-index: 2; pointer-events: none;
 }
 
-/* ── Linhas SVG decorativas ───────────────────────────────────── */
+/* ── Linhas SVG ───────────────────────────────────────────────── */
 .login-deco-lines {
-  position: fixed;
-  inset: 0;
+  position: fixed; inset: 0;
   width: 100%; height: 100%;
-  z-index: 2;
-  pointer-events: none;
+  z-index: 2; pointer-events: none;
 }
 
-/* ── Painel esquerdo — marca flutuante ────────────────────────── */
+/* ── Painel esquerdo — marca flutuante (estilo Nexus) ────────── */
 .login-left {
   position: relative;
   z-index: 10;
@@ -111,66 +103,65 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.1rem;
-  padding: 2rem 4rem;
+  gap: 1rem;
+  padding: 2rem 5rem;
   text-align: center;
   animation: fadeUp .65s cubic-bezier(.16,1,.3,1) both;
 }
 @media (max-width: 720px) { .login-left { display: none; } }
 
-/* ── Ícone de sistema (estilo Nexus) ──────────────────────────── */
+/* ── Ícones do sistema (estilo Nexus: dois ícones + separador) ── */
 .brand-icon-row {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: .25rem;
+  gap: 14px;
+  margin-bottom: .2rem;
 }
 
 .brand-icon {
-  width: 52px; height: 52px;
+  width: 56px; height: 56px;
   display: flex; align-items: center; justify-content: center;
-  border-radius: 12px;
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 14px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.1);
 }
-
-.brand-icon svg { width: 28px; height: 28px; }
+.brand-icon svg { width: 30px; height: 30px; }
 
 .brand-sep {
-  font-size: 1.4rem;
-  color: rgba(255,255,255,.25);
+  font-size: 1.6rem;
+  color: rgba(255,255,255,.2);
   font-weight: 200;
-  margin: 0 2px;
+  line-height: 1;
 }
 
 .login-left h1 {
   font-size: 2rem;
   font-weight: 700;
   color: #fff;
-  letter-spacing: .2em;
+  letter-spacing: .22em;
   text-transform: uppercase;
-  text-shadow: 0 2px 20px rgba(0,0,0,.5);
+  text-shadow: 0 2px 24px rgba(0,0,0,.55);
 }
 
 .brand-sub {
-  font-size: .75rem;
-  color: rgba(255,255,255,.32);
+  font-size: .72rem;
+  color: rgba(255,255,255,.28);
   font-weight: 300;
   letter-spacing: .08em;
-  text-transform: uppercase;
 }
 
-/* ── Painel direito — card ────────────────────────────────────── */
+/* ── Painel direito ───────────────────────────────────────────── */
 .login-right {
   position: relative;
   z-index: 10;
-  width: 420px;
+  width: 440px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 2.5rem;
-  animation: fadeUp .55s .1s cubic-bezier(.16,1,.3,1) both;
+  /* margem interna para não grudar na borda */
+  padding: 2rem 4.5rem 2rem 0;
+  animation: fadeUp .55s .08s cubic-bezier(.16,1,.3,1) both;
 }
 @media (max-width: 720px) {
   .login-right { width: 100%; padding: 1.5rem; }
@@ -181,30 +172,34 @@ body {
   width: 100%;
   border-radius: 18px;
   overflow: hidden;
-  border: 1px solid rgba(231,99,39,.15);
   box-shadow:
-    0 24px 64px rgba(0,0,0,.7),
-    0 0 0 1px rgba(255,255,255,.03);
+    0 28px 72px rgba(0,0,0,.7),
+    0 0 0 1px rgba(255,255,255,.04);
 }
 
+/* ── Header laranja + logo circular (estilo Nexus) ───────────── */
 .login-card-header {
-  background: var(--bright);
+  background: radial-gradient(ellipse at 45% 40%, #ff8c3a 0%, #ff6501 55%, #e05200 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.6rem 2rem;
+  padding: 1.75rem 2rem;
 }
 
+/* Logo já é circular com borda branca — só controla o tamanho */
 .login-card-header-logo {
-  width: 108px; height: 108px;
+  width: 140px;
+  height: 140px;
   object-fit: contain;
   animation: logoReveal .75s cubic-bezier(.16,1,.3,1) both;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,.25));
 }
 
-/* card body: sem backdrop-filter → cor sólida warm, sem interferência do bg */
+/* ── Body do card: warm brown sólido (sem backdrop-filter) ─── */
 .login-card-body {
-  padding: 1.75rem 2.25rem 2.25rem;
-  background: rgba(22, 6, 1, 0.95);
+  padding: 1.75rem 2.25rem 2rem;
+  /* warm escuro que combina com o fundo do Nexus */
+  background: #2a0d04;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -212,7 +207,7 @@ body {
 }
 
 .login-card-body h2 {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: #fff;
   letter-spacing: -.01em;
@@ -221,12 +216,11 @@ body {
 
 .subtitle {
   font-size: .71rem;
-  color: rgba(255,255,255,.35);
+  color: rgba(255,255,255,.32);
   text-align: center;
-  letter-spacing: .02em;
 }
 
-.card-divider { width: 100%; height: 1px; background: rgba(255,255,255,.07); }
+.card-divider { width: 100%; height: 1px; background: rgba(255,255,255,.06); }
 
 .login-error {
   width: 100%;
@@ -239,11 +233,11 @@ body {
   text-align: center;
 }
 
-/* ── Botão de entrar (orange, estilo Nexus) ───────────────────── */
+/* ── Botão laranja (estilo Nexus: "Entrar") ───────────────────── */
 .btn-entrar {
   width: 100%;
   padding: .9rem 1.5rem;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -252,30 +246,26 @@ body {
   font-weight: 600;
   cursor: pointer;
   letter-spacing: .02em;
-  transition: opacity .18s, transform .18s, box-shadow .18s;
-  box-shadow: 0 2px 12px rgba(231,99,39,.35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: .5rem;
+  transition: opacity .18s, transform .15s, box-shadow .18s;
+  box-shadow: 0 2px 14px rgba(231,99,39,.38);
 }
 .btn-entrar:hover:not(:disabled) {
-  opacity: .92;
+  opacity: .9;
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(231,99,39,.45);
+  box-shadow: 0 6px 22px rgba(231,99,39,.48);
 }
 .btn-entrar:active:not(:disabled) { transform: translateY(0); }
 .btn-entrar:disabled { opacity: .45; cursor: not-allowed; }
 
 .card-footer {
   font-size: .68rem;
-  color: rgba(255,255,255,.2);
+  color: rgba(255,255,255,.18);
   text-align: center;
 }
 
 /* ── Animações ───────────────────────────────────────────────── */
 @keyframes logoReveal {
-  from { opacity: 0; transform: scale(.84); }
+  from { opacity: 0; transform: scale(.82); }
   to   { opacity: 1; transform: scale(1); }
 }
 @keyframes fadeUp {
