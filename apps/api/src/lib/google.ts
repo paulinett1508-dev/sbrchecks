@@ -16,6 +16,7 @@ interface UserInfo {
   sub: string;
   name?: string;
   email: string;
+  email_verified?: boolean;
   hd?: string;
 }
 
@@ -41,10 +42,15 @@ export async function verifyGoogleToken(accessToken: string): Promise<GoogleUser
 
   const userInfo = (await userRes.json()) as UserInfo;
 
-  // 3. Validar domínio pelo email (tokeninfo nem sempre retorna hd para access tokens)
-  const emailDomain = userInfo.email.split('@')[1] ?? '';
-  if (emailDomain !== ALLOWED_DOMAIN) {
-    throw new Error(`Domain not allowed: ${emailDomain}`);
+  // 3. Email deve estar verificado pelo Google
+  if (!userInfo.email_verified) {
+    throw new Error('Email not verified by Google');
+  }
+
+  // 4. Validar domínio via hd (hosted domain) do userinfo — mais confiável que email split
+  //    hd só está presente em contas Google Workspace da organização
+  if (userInfo.hd !== ALLOWED_DOMAIN) {
+    throw new Error(`Domain not allowed: ${userInfo.hd ?? 'unknown'}`);
   }
 
   return {
