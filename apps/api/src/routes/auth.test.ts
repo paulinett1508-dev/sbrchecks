@@ -2,15 +2,31 @@ import { describe, it, expect, vi, beforeAll, afterAll } from 'vitest';
 import { createApp } from '../app.js';
 import type { FastifyInstance } from 'fastify';
 
-// Mock fetch (google userinfo endpoint)
-const mockFetch = vi.fn().mockResolvedValue({
-  ok: true,
-  json: async () => ({
-    sub: 'google-test-id-001',
-    email: 'test.user@laboratoriosobral.com.br',
-    name: 'Test User',
-    hd: 'laboratoriosobral.com.br',
-  }),
+const CLIENT_ID = 'test-client-id';
+
+// Mock fetch: tokeninfo (audience validation) + userinfo (profile)
+const mockFetch = vi.fn().mockImplementation((url: string) => {
+  if (String(url).includes('tokeninfo')) {
+    return Promise.resolve({
+      ok: true,
+      json: async () => ({
+        aud: CLIENT_ID,
+        azp: CLIENT_ID,
+        sub: 'google-test-id-001',
+        email: 'test.user@laboratoriosobral.com.br',
+        hd: 'laboratoriosobral.com.br',
+      }),
+    });
+  }
+  // userinfo
+  return Promise.resolve({
+    ok: true,
+    json: async () => ({
+      sub: 'google-test-id-001',
+      email: 'test.user@laboratoriosobral.com.br',
+      name: 'Test User',
+    }),
+  });
 });
 vi.stubGlobal('fetch', mockFetch);
 
@@ -38,6 +54,7 @@ let app: FastifyInstance;
 beforeAll(async () => {
   process.env.JWT_SECRET = 'test-secret-access';
   process.env.JWT_REFRESH_SECRET = 'test-secret-refresh';
+  process.env.GOOGLE_CLIENT_ID = CLIENT_ID;
   process.env.ALLOWED_DOMAIN = 'laboratoriosobral.com.br';
   app = await createApp();
   await app.ready();
