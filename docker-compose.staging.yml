@@ -11,9 +11,8 @@ services:
   # Web servida diretamente via nginx na porta 8080
   web:
     ports:
-      - "8080:80"
+      - "8085:80"
 
-  # API exposta diretamente na porta 3001
   api:
     ports:
-      - "3001:3000"
+      - "3002:3000"
