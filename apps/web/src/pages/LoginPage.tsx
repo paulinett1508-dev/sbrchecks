@@ -51,7 +51,7 @@ export function LoginPage() {
     <div className="login-root">
       {/* Painel esquerdo */}
       <div className="login-left">
-        <img src="/bg_login.webp" alt="" className="login-left-bg" />
+        <img src="/bg_login.png" alt="" className="login-left-bg" />
         <div className="login-overlay" />
         <div className="login-left-deco" />
         <div className="login-deco-circle" />
