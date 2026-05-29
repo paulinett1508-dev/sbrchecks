@@ -10,19 +10,17 @@ export interface GoogleUser {
 interface TokenInfo {
   aud?: string;
   azp?: string;
-  sub?: string;
-  email?: string;
-  hd?: string;
 }
 
 interface UserInfo {
   sub: string;
   name?: string;
   email: string;
+  hd?: string;
 }
 
 export async function verifyGoogleToken(accessToken: string): Promise<GoogleUser> {
-  // 1. Validar audience — impede que tokens de outras apps sejam aceitos aqui
+  // 1. Validar audience — impede token substitution de outras apps
   const tokenRes = await fetch(
     `https://oauth2.googleapis.com/tokeninfo?access_token=${encodeURIComponent(accessToken)}`
   );
@@ -30,17 +28,11 @@ export async function verifyGoogleToken(accessToken: string): Promise<GoogleUser
 
   const tokenInfo = (await tokenRes.json()) as TokenInfo;
 
-  // aud ou azp devem ser o client ID desta aplicação
   if (tokenInfo.aud !== CLIENT_ID && tokenInfo.azp !== CLIENT_ID) {
     throw new Error('Token not issued for this application');
   }
 
-  // 2. Validar domínio hosted (G Suite)
-  if (tokenInfo.hd !== ALLOWED_DOMAIN) {
-    throw new Error(`Domain not allowed: ${tokenInfo.hd ?? 'unknown'}`);
-  }
-
-  // 3. Buscar perfil do usuário (para name)
+  // 2. Buscar perfil do usuário
   const userRes = await fetch(
     'https://www.googleapis.com/oauth2/v3/userinfo',
     { headers: { Authorization: `Bearer ${accessToken}` } }
@@ -48,6 +40,12 @@ export async function verifyGoogleToken(accessToken: string): Promise<GoogleUser
   if (!userRes.ok) throw new Error('Falha ao obter perfil Google');
 
   const userInfo = (await userRes.json()) as UserInfo;
+
+  // 3. Validar domínio pelo email (tokeninfo nem sempre retorna hd para access tokens)
+  const emailDomain = userInfo.email.split('@')[1] ?? '';
+  if (emailDomain !== ALLOWED_DOMAIN) {
+    throw new Error(`Domain not allowed: ${emailDomain}`);
+  }
 
   return {
     googleId: userInfo.sub,
