@@ -1,9 +1,19 @@
-# docker-compose.staging.yml — override para staging via IP (sem DNS/TLS)
-# Uso: docker-compose -f docker-compose.yml -f docker-compose.staging.yml up -d --build
+# docker-compose.staging.yml — staging via IP sem Caddy/TLS
+# Expõe web em :8080 e api em :3001 diretamente (sem proxy reverso)
+# Uso: docker compose -f docker-compose.yml -f docker-compose.staging.yml up -d --build
 
 services:
+  # Desabilitar Caddy no staging — não expõe portas
   caddy:
+    ports: []
+    profiles: ["disabled"]   # remove o caddy do deploy padrão
+
+  # Web servida diretamente via nginx na porta 8080
+  web:
     ports:
-      - "8080:80"    # usa 8080 para não conflitar com outros apps na VPS
-    volumes:
-      - ./Caddyfile.staging:/etc/caddy/Caddyfile:ro
+      - "8080:80"
+
+  # API exposta diretamente na porta 3001
+  api:
+    ports:
+      - "3001:3000"
