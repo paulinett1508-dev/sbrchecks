@@ -11,9 +11,12 @@ COPY db/prisma ./db/prisma
 RUN npm install --workspaces --include-workspace-root
 
 COPY apps/api/tsconfig.json ./apps/api/
+COPY packages/shared/tsconfig.json ./packages/shared/
 COPY apps/api/src ./apps/api/src
 COPY packages/shared/src ./packages/shared/src
 
+# Compila shared primeiro (gera dist/ que o api importa em runtime)
+RUN cd packages/shared && npx tsc
 RUN cd apps/api && npx prisma generate && npm run build
 
 # ---- runtime stage ----
