@@ -154,13 +154,14 @@ body {
 .login-right {
   position: relative;
   z-index: 10;
-  width: 440px;
+  /* largura total do painel, com margem real da borda */
+  width: 420px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margem interna para não grudar na borda */
-  padding: 2rem 4.5rem 2rem 0;
+  /* padding-right = margem da borda direita da janela */
+  padding: 2rem 3rem 2rem 0;
   animation: fadeUp .55s .08s cubic-bezier(.16,1,.3,1) both;
 }
 @media (max-width: 720px) {
@@ -170,6 +171,7 @@ body {
 /* ── Card ─────────────────────────────────────────────────────── */
 .login-card {
   width: 100%;
+  max-width: 340px;
   border-radius: 18px;
   overflow: hidden;
   box-shadow:
@@ -187,12 +189,15 @@ body {
   min-height: 160px;
 }
 
-/* Logo SVG transparente — marca branca sobre o laranja do header */
+/* Logo circular — clip-path elimina os cantos pretos do PNG */
 .login-card-header-logo {
-  width: 110px;
-  height: 110px;
-  object-fit: contain;
+  width: 118px;
+  height: 118px;
+  object-fit: cover;
+  border-radius: 50%;
+  clip-path: circle(50%);
   animation: logoReveal .75s cubic-bezier(.16,1,.3,1) both;
+  box-shadow: 0 0 0 3px rgba(255,255,255,.85);
 }
 
 /* ── Body do card: warm brown sólido (sem backdrop-filter) ─── */
