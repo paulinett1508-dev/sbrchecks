@@ -10,6 +10,7 @@ COPY db/prisma ./db/prisma
 
 RUN npm install --workspaces --include-workspace-root
 
+COPY apps/api/tsconfig.json ./apps/api/
 COPY apps/api/src ./apps/api/src
 COPY packages/shared/src ./packages/shared/src
 
