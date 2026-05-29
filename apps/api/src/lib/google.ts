@@ -1,6 +1,3 @@
-import { OAuth2Client } from 'google-auth-library';
-
-const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 const ALLOWED_DOMAIN = process.env.ALLOWED_DOMAIN ?? 'laboratoriosobral.com.br';
 
 export interface GoogleUser {
@@ -9,19 +6,28 @@ export interface GoogleUser {
   name: string;
 }
 
-export async function verifyGoogleToken(idToken: string): Promise<GoogleUser> {
-  const ticket = await client.verifyIdToken({
-    idToken,
-    audience: process.env.GOOGLE_CLIENT_ID,
-  });
-  const payload = ticket.getPayload();
-  if (!payload) throw new Error('Empty payload');
-  if (payload.hd !== ALLOWED_DOMAIN) {
-    throw new Error(`Domain not allowed: ${payload.hd}`);
+interface GoogleUserInfo {
+  sub: string;
+  email: string;
+  name?: string;
+  hd?: string;
+}
+
+export async function verifyGoogleToken(accessToken: string): Promise<GoogleUser> {
+  const res = await fetch(
+    'https://www.googleapis.com/oauth2/v3/userinfo',
+    { headers: { Authorization: `Bearer ${accessToken}` } }
+  );
+  if (!res.ok) throw new Error('Token Google inválido');
+
+  const info = (await res.json()) as GoogleUserInfo;
+
+  if (info.hd !== ALLOWED_DOMAIN) {
+    throw new Error(`Domain not allowed: ${info.hd ?? 'unknown'}`);
   }
   return {
-    googleId: payload.sub,
-    email: payload.email!,
-    name: payload.name ?? payload.email!,
+    googleId: info.sub,
+    email: info.email,
+    name: info.name ?? info.email,
   };
 }

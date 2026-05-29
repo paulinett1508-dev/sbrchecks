@@ -29,7 +29,7 @@ export async function authRoutes(app: FastifyInstance) {
 
     let googleUser;
     try {
-      googleUser = await verifyGoogleToken(body.data.idToken);
+      googleUser = await verifyGoogleToken(body.data.accessToken);
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : 'Token inválido';
       const isDomain = msg.includes('Domain not allowed');

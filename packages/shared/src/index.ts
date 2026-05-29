@@ -4,7 +4,7 @@ export const RoleSchema = z.enum(['GDD', 'GERENTE', 'ADMIN']);
 export type Role = z.infer<typeof RoleSchema>;
 
 export const GoogleAuthInput = z.object({
-  idToken: z.string().min(1),
+  accessToken: z.string().min(1),
 });
 
 export const UpdateRoleInput = z.object({

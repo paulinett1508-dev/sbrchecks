@@ -2,25 +2,23 @@ import { describe, it, expect, vi, beforeAll, afterAll } from 'vitest';
 import { createApp } from '../app.js';
 import type { FastifyInstance } from 'fastify';
 
-// Mock google-auth-library before importing createApp
-vi.mock('google-auth-library', () => ({
-  OAuth2Client: vi.fn().mockImplementation(() => ({
-    verifyIdToken: vi.fn().mockResolvedValue({
-      getPayload: () => ({
-        sub: 'google-test-id-001',
-        email: 'test.user@laboratoriosobral.com.br',
-        name: 'Test User',
-        hd: 'laboratoriosobral.com.br',
-      }),
-    }),
-  })),
-}));
+// Mock fetch (google userinfo endpoint)
+const mockFetch = vi.fn().mockResolvedValue({
+  ok: true,
+  json: async () => ({
+    sub: 'google-test-id-001',
+    email: 'test.user@laboratoriosobral.com.br',
+    name: 'Test User',
+    hd: 'laboratoriosobral.com.br',
+  }),
+});
+vi.stubGlobal('fetch', mockFetch);
 
 // Mock Prisma
 vi.mock('@prisma/client', () => ({
   PrismaClient: vi.fn().mockImplementation(() => ({
     user: {
-      findUnique: vi.fn().mockResolvedValue(null), // simulates first login
+      findUnique: vi.fn().mockResolvedValue(null),
       create: vi.fn().mockResolvedValue({
         id: 'user-id-001',
         googleId: 'google-test-id-001',
@@ -40,7 +38,6 @@ let app: FastifyInstance;
 beforeAll(async () => {
   process.env.JWT_SECRET = 'test-secret-access';
   process.env.JWT_REFRESH_SECRET = 'test-secret-refresh';
-  process.env.GOOGLE_CLIENT_ID = 'test-client-id';
   process.env.ALLOWED_DOMAIN = 'laboratoriosobral.com.br';
   app = await createApp();
   await app.ready();
@@ -51,7 +48,7 @@ afterAll(async () => {
 });
 
 describe('POST /auth/google', () => {
-  it('retorna 400 sem idToken', async () => {
+  it('retorna 400 sem accessToken', async () => {
     const res = await app.inject({
       method: 'POST',
       url: '/auth/google',
@@ -64,7 +61,7 @@ describe('POST /auth/google', () => {
     const res = await app.inject({
       method: 'POST',
       url: '/auth/google',
-      payload: { idToken: 'mock-valid-token' },
+      payload: { accessToken: 'mock-valid-token' },
     });
     expect(res.statusCode).toBe(200);
     const body = res.json<{ accessToken: string; user: { role: string } }>();
@@ -76,7 +73,7 @@ describe('POST /auth/google', () => {
     const res = await app.inject({
       method: 'POST',
       url: '/auth/google',
-      payload: { idToken: 'mock-valid-token' },
+      payload: { accessToken: 'mock-valid-token' },
     });
     const cookies = res.headers['set-cookie'] as string | string[];
     const cookieStr = Array.isArray(cookies) ? cookies.join('; ') : cookies;
