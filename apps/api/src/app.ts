@@ -5,10 +5,12 @@ import './types.js';
 import { authRoutes } from './routes/auth.js';
 import { usersRoutes } from './routes/users.js';
 
-const ALLOWED_ORIGINS =
-  process.env.NODE_ENV === 'production'
-    ? ['https://sbrchecks.laboratoriosobral.com.br']
-    : ['http://localhost:5173'];
+// CORS_ORIGIN pode ser uma lista separada por vírgula no .env
+const ALLOWED_ORIGINS = process.env.CORS_ORIGIN
+  ? process.env.CORS_ORIGIN.split(',').map((s) => s.trim())
+  : process.env.NODE_ENV === 'production'
+  ? ['https://sbrchecks.laboratoriosobral.com.br']
+  : ['http://localhost:5173'];
 
 export async function createApp(): Promise<FastifyInstance> {
   const app = Fastify({
