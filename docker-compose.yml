@@ -20,9 +20,10 @@ services:
     build:
       context: .
       dockerfile: apps/web/Dockerfile
+      args:
+        - VITE_API_URL=${VITE_API_URL:-https://sbrchecks.laboratoriosobral.com.br/api}
+        - VITE_GOOGLE_CLIENT_ID=${VITE_GOOGLE_CLIENT_ID}
     restart: unless-stopped
-    environment:
-      - VITE_API_URL=https://sbrchecks.laboratoriosobral.com.br/api
     expose:
       - "80"
 

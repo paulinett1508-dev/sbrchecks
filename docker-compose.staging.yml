@@ -1,0 +1,7 @@
+# docker-compose.staging.yml — override para staging via IP (sem DNS/TLS)
+# Uso: docker-compose -f docker-compose.yml -f docker-compose.staging.yml up -d --build
+
+services:
+  caddy:
+    volumes:
+      - ./Caddyfile.staging:/etc/caddy/Caddyfile:ro
