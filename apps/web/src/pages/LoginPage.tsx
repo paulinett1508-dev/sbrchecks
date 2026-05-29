@@ -85,18 +85,20 @@ export function LoginPage() {
           </div>
         </div>
         <h1>SBRChecks</h1>
-        <p className="brand-sub">Gestão de Visitas a PDVs</p>
+        <p className="brand-sub">Gestão Visitas e Mapeamento de Demandas</p>
       </div>
 
       {/* Card — direita */}
       <div className="login-right">
         <div className="login-card">
           <div className="login-card-header">
-            <img src="/logo115-background.svg" alt="" className="login-card-header-logo" />
+            <div className="login-logo-circle">
+              <img src="/logo-sobral-oficial.svg" alt="Laboratório Sobral" className="login-card-header-logo" />
+            </div>
           </div>
           <div className="login-card-body">
             <h2>Entre na sua conta</h2>
-            <p className="subtitle">Gestão de Visitas · Laboratório Sobral</p>
+            <p className="subtitle">Gestão de Visitas - Geradores de Demanda</p>
             <div className="card-divider" />
 
             {error && <p className="login-error">{error}</p>}
