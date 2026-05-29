@@ -26,6 +26,8 @@ RUN addgroup -S app && adduser -S app -G app
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/apps/api/dist ./dist
 COPY --from=builder /app/db/prisma ./db/prisma
+# packages/shared é referenciado via symlink em node_modules — precisa existir
+COPY --from=builder /app/packages ./packages
 
 USER app
 EXPOSE 3000
