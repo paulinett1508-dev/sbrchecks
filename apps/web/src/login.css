@@ -136,15 +136,19 @@ body {
   }
   .brand-sub { display: none; }     /* subtítulo some no mobile — menos ruído */
 
-  /* mobile: header fino — logo pequena, sem peso visual */
+  /* mobile: sem fundo laranja — logo só, card com traço laranja no topo */
+  .login-card {
+    border-top: 3px solid var(--bright);
+    max-width: 100%;
+  }
   .login-card-header {
-    padding: .6rem 1.5rem;
+    background: transparent;
+    padding: 1.5rem 1.5rem .5rem;
     min-height: auto;
-    /* faixa fina de cor: apenas um traço de identidade */
   }
   .login-card-header-logo {
-    width: 52px;
-    height: 52px;
+    width: 68px;
+    height: 68px;
   }
 
   /* card body: mais espaço, mais respiro */
