@@ -136,21 +136,6 @@ body {
   }
   .brand-sub { display: none; }     /* subtítulo some no mobile — menos ruído */
 
-  /* mobile: sem fundo laranja — logo só, card com traço laranja no topo */
-  .login-card {
-    border-top: 3px solid var(--bright);
-    max-width: 100%;
-  }
-  .login-card-header {
-    background: transparent;
-    padding: 1.5rem 1.5rem .5rem;
-    min-height: auto;
-  }
-  .login-card-header-logo {
-    width: 68px;
-    height: 68px;
-  }
-
   /* card body: mais espaço, mais respiro */
   .login-card-body {
     padding: 1.5rem 1.75rem 1.75rem;
@@ -337,4 +322,23 @@ body {
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Mobile: header sem laranja (deve ficar DEPOIS das regras base) ── */
+@media (max-width: 720px) {
+  .login-card {
+    border-top: 3px solid var(--bright);
+    max-width: 100%;
+  }
+  .login-card-header {
+    background: transparent;
+    padding: 1.5rem 1.5rem .5rem;
+    min-height: auto;
+  }
+  .login-card-header-logo {
+    width: 68px;
+    height: 68px;
+    clip-path: circle(50%);
+    border-radius: 50%;
+  }
 }
