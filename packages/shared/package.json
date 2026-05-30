@@ -6,7 +6,9 @@
   "types": "./src/index.ts",
   "exports": {
     ".": {
+      "require": "./dist/index.js",
       "import": "./dist/index.js",
+      "default": "./dist/index.js",
       "types": "./src/index.ts"
     }
   },
