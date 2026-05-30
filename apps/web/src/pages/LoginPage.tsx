@@ -84,7 +84,7 @@ export function LoginPage() {
             </svg>
           </div>
         </div>
-        <h1>SBRChecks</h1>
+        <h1>SBR-<span style={{ color: '#ff6501' }}>CHECKS</span></h1>
         <p className="brand-sub">Gestão Visitas e Mapeamento de Demandas</p>
       </div>
 
