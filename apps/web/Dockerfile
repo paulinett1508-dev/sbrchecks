@@ -15,8 +15,11 @@ COPY packages/shared/package.json ./packages/shared/
 RUN npm install --workspaces --include-workspace-root
 
 COPY apps/web ./apps/web
+COPY packages/shared/tsconfig.json ./packages/shared/
 COPY packages/shared/src ./packages/shared/src
 
+# Compila shared antes do Vite (main aponta para dist/index.js)
+RUN cd packages/shared && npx tsc
 RUN cd apps/web && npm run build
 
 # ---- runtime stage ----
