@@ -1,0 +1,20 @@
+# docker-compose.vps.yml — produção na VPS compartilhada
+# O Nginx da VPS gerencia 80/443. Este override remove o Caddy
+# e expõe web e api em portas localhost para o Nginx fazer proxy.
+# Uso: docker compose -f docker-compose.yml -f docker-compose.vps.yml up -d --build
+
+services:
+  # Caddy desativado — o Nginx da VPS assume o proxy
+  caddy:
+    profiles: ["disabled"]
+    ports: []
+
+  # Web servida pelo nginx interno do container na porta 8085 (localhost only)
+  web:
+    ports:
+      - "127.0.0.1:8085:80"
+
+  # API exposta na porta 3002 (localhost only)
+  api:
+    ports:
+      - "127.0.0.1:3002:3000"
