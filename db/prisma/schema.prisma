@@ -31,7 +31,7 @@ model User {
   id        String   @id @default(uuid())
   name      String
   email     String   @unique
-  googleId  String   @unique
+  googleId  String?  @unique
   role      Role     @default(GDD)
   active    Boolean  @default(true)
   createdAt DateTime @default(now())
@@ -46,8 +46,8 @@ model Pdv {
   name      String
   document  String? // CNPJ, opcional
   address   String?
-  latitude  Float
-  longitude Float
+  latitude  Float?
+  longitude Float?
   radiusM   Int      @default(120) // raio de geofence em metros
   active    Boolean  @default(true)
   createdAt DateTime @default(now())
