@@ -41,6 +41,7 @@ export const PdvInput = z.object({
   latitude: z.number().optional(),
   longitude: z.number().optional(),
   radiusM: z.number().int().min(10).optional(),
+  active: z.boolean().optional(),
 });
 export type PdvInput = z.infer<typeof PdvInput>;
 
@@ -70,3 +71,8 @@ export const AssignPdvInput = z.object({
   pdvId: z.string().min(1),
 });
 export type AssignPdvInput = z.infer<typeof AssignPdvInput>;
+
+export const AdminUserDto = UserDto.extend({
+  googleId: z.string().nullable(),
+});
+export type AdminUserDto = z.infer<typeof AdminUserDto>;

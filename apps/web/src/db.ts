@@ -1,4 +1,15 @@
-import Dexie from 'dexie';
+import Dexie, { type Table } from 'dexie';
+import type { WalletItemDto } from '@sbrchecks/shared';
 
-// Banco local (IndexedDB). Tabelas e lógica de sync virão no Sprint 3.
-export const db = new Dexie('sbrchecks');
+class SbrCheckDb extends Dexie {
+  wallet!: Table<WalletItemDto, string>;
+
+  constructor() {
+    super('sbrchecks');
+    this.version(1).stores({
+      wallet: 'id, name',
+    });
+  }
+}
+
+export const db = new SbrCheckDb();
