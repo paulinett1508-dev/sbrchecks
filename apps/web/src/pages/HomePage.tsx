@@ -2,69 +2,55 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import type { Role } from '@sbrchecks/shared';
 
-interface NavItem {
-  label: string;
-  path: string;
-  roles: Role[];
-  desc: string;
-}
+interface Card { label: string; path: string; desc: string; roles: Role[] }
 
-const NAV: NavItem[] = [
-  { label: 'Minha Carteira', path: '/wallet', roles: ['GDD'], desc: 'PDVs do dia, sync offline' },
-  { label: 'PDVs', path: '/admin/pdvs', roles: ['GERENTE', 'ADMIN'], desc: 'Cadastro e edição de PDVs' },
-  { label: 'Carteira', path: '/admin/carteira', roles: ['GERENTE', 'ADMIN'], desc: 'Atribuição de PDVs aos GDDs' },
-  { label: 'Usuários', path: '/admin/usuarios', roles: ['ADMIN'], desc: 'Pré-cadastro e gestão de acessos' },
+const CARDS: Card[] = [
+  { label: 'Minha Carteira', path: '/wallet',          desc: 'PDVs do dia · sync offline',       roles: ['GDD'] },
+  { label: 'PDVs',           path: '/admin/pdvs',       desc: 'Cadastro e edição de PDVs',        roles: ['GERENTE', 'ADMIN'] },
+  { label: 'Carteira',       path: '/admin/carteira',   desc: 'Atribuição de PDVs aos GDDs',      roles: ['GERENTE', 'ADMIN'] },
+  { label: 'Usuários',       path: '/admin/usuarios',   desc: 'Pré-cadastro e gestão de acessos', roles: ['ADMIN'] },
 ];
 
 export function HomePage() {
-  const { user, logout } = useAuth();
+  const { user } = useAuth();
   const navigate = useNavigate();
   if (!user) return null;
 
-  const visible = NAV.filter(item => item.roles.includes(user.role));
+  const visible = CARDS.filter(c => c.roles.includes(user.role as Role));
 
   return (
-    <main style={{ fontFamily: 'sans-serif', padding: '2rem', background: '#0f172a', minHeight: '100vh', color: '#fff' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '2rem' }}>
+    <div className="page">
+      <div className="page-header">
         <div>
-          <h1 style={{ margin: '0 0 0.25rem', fontSize: '1.6rem' }}>SBR<span style={{ color: '#e76327' }}>Checks</span></h1>
-          <p style={{ margin: 0, color: '#94a3b8', fontSize: '0.9rem' }}>
-            Olá, <strong style={{ color: '#f1f5f9' }}>{user.name}</strong>
-            {' '}·{' '}
-            <span style={{ color: '#e76327' }}>{user.role}</span>
-          </p>
+          <h1 className="page-title">Início</h1>
+          <p className="page-sub">Olá, {user.name}</p>
         </div>
-        <button
-          onClick={logout}
-          style={{ padding: '0.4rem 0.9rem', background: 'transparent', color: '#64748b', border: '1px solid #334155', borderRadius: '6px', cursor: 'pointer', fontSize: '0.85rem' }}
-        >
-          Sair
-        </button>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '1rem' }}>
-        {visible.map(item => (
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px,1fr))', gap: '1rem' }}>
+        {visible.map(card => (
           <button
-            key={item.path}
-            onClick={() => navigate(item.path)}
+            key={card.path}
+            onClick={() => navigate(card.path)}
             style={{
-              background: '#1e293b',
-              border: '1px solid #334155',
-              borderRadius: '10px',
+              background: 'var(--surface)',
+              border: '1px solid var(--border)',
+              borderRadius: 'var(--r)',
               padding: '1.25rem',
-              color: '#f1f5f9',
-              cursor: 'pointer',
               textAlign: 'left',
-              transition: 'border-color 0.15s',
+              cursor: 'pointer',
+              transition: 'border-color .15s, background .15s',
             }}
-            onMouseEnter={e => (e.currentTarget.style.borderColor = '#e76327')}
-            onMouseLeave={e => (e.currentTarget.style.borderColor = '#334155')}
+            onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--accent)'; e.currentTarget.style.background = 'var(--surface-2)'; }}
+            onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.background = 'var(--surface)'; }}
           >
-            <div style={{ fontWeight: 600, fontSize: '1rem', marginBottom: '0.4rem' }}>{item.label}</div>
-            <div style={{ color: '#64748b', fontSize: '0.8rem' }}>{item.desc}</div>
+            <div style={{ fontFamily: 'var(--font-ui)', fontSize: '.95rem', fontWeight: 700, color: 'var(--text)', marginBottom: '.35rem', letterSpacing: '-.015em' }}>
+              {card.label}
+            </div>
+            <div style={{ fontSize: '.75rem', color: 'var(--text-3)' }}>{card.desc}</div>
           </button>
         ))}
       </div>
-    </main>
+    </div>
   );
 }

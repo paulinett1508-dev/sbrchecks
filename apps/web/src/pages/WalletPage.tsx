@@ -1,16 +1,10 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useApi } from '../hooks/useApi';
 import { db } from '../db';
 import type { WalletItemDto } from '@sbrchecks/shared';
 
-function badge(color: string, text: string) {
-  return <span style={{ padding: '0.15rem 0.5rem', background: color + '22', color, borderRadius: '4px', fontSize: '0.75rem', fontWeight: 600 }}>{text}</span>;
-}
-
 export function WalletPage() {
   const { request } = useApi();
-  const navigate = useNavigate();
   const [wallet, setWallet] = useState<WalletItemDto[]>([]);
   const [online, setOnline] = useState(navigator.onLine);
   const [syncing, setSyncing] = useState(false);
@@ -23,11 +17,6 @@ export function WalletPage() {
     window.addEventListener('offline', off);
     return () => { window.removeEventListener('online', on); window.removeEventListener('offline', off); };
   }, []);
-
-  const loadFromCache = async () => {
-    const cached = await db.wallet.toArray();
-    if (cached.length > 0) setWallet(cached);
-  };
 
   const sync = async () => {
     if (!online) return;
@@ -47,50 +36,49 @@ export function WalletPage() {
   };
 
   useEffect(() => {
-    loadFromCache();
+    db.wallet.toArray().then(c => { if (c.length) setWallet(c); });
     sync();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <div style={{ padding: '1rem 1rem 2rem', fontFamily: 'sans-serif', background: '#0f172a', minHeight: '100vh', color: '#f1f5f9', maxWidth: '480px', margin: '0 auto' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
-        <button
-          onClick={() => navigate('/')}
-          style={{ background: 'none', border: 'none', color: '#f1f5f9', fontSize: '1.25rem', cursor: 'pointer', padding: '0.25rem' }}
-        >←</button>
-        <h1 style={{ margin: 0, fontSize: '1.3rem', flex: 1 }}>Minha Carteira</h1>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-          <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: online ? '#22c55e' : '#ef4444', display: 'inline-block' }} />
-          <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>{online ? 'online' : 'offline'}</span>
+    <div className="page" style={{ maxWidth: '520px' }}>
+      <div className="page-header">
+        <div>
+          <h1 className="page-title">Minha Carteira</h1>
+          <p className="page-sub mono">{wallet.length} PDV{wallet.length !== 1 ? 's' : ''}</p>
+        </div>
+        <div className="row">
+          <span className="row" style={{ gap: '.4rem', fontSize: '.72rem', color: 'var(--text-3)', fontFamily: 'var(--font-mono)' }}>
+            <span className={`dot ${online ? 'dot-green' : 'dot-red'}`} />
+            {online ? 'online' : 'offline'}
+          </span>
+          <button className="btn btn-primary" onClick={sync} disabled={!online || syncing}>
+            {syncing ? 'Sync…' : 'Sincronizar'}
+          </button>
         </div>
       </div>
 
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-        <span style={{ color: '#64748b', fontSize: '0.8rem' }}>
-          {lastSync ? `Sincronizado ${lastSync.toLocaleTimeString()}` : 'Cache local'}
-        </span>
-        <button
-          onClick={sync}
-          disabled={!online || syncing}
-          style={{ padding: '0.4rem 0.75rem', background: online ? '#e76327' : '#334155', color: '#fff', border: 'none', borderRadius: '6px', cursor: online ? 'pointer' : 'default', fontSize: '0.8rem' }}
-        >
-          {syncing ? 'Sincronizando…' : 'Sincronizar'}
-        </button>
-      </div>
+      {lastSync && (
+        <p style={{ fontSize: '.68rem', color: 'var(--text-3)', fontFamily: 'var(--font-mono)', marginBottom: '1rem' }}>
+          Última sync {lastSync.toLocaleTimeString()}
+        </p>
+      )}
 
       {wallet.length === 0 && !syncing && (
-        <p style={{ color: '#64748b', textAlign: 'center', marginTop: '3rem' }}>
-          {online ? 'Sem PDVs na carteira.' : 'Sem dados em cache. Conecte à internet para sincronizar.'}
+        <p className="empty-state">
+          {online ? 'Nenhum PDV na carteira.' : 'Sem cache. Conecte-se para sincronizar.'}
         </p>
       )}
 
       {wallet.map(pdv => (
-        <div key={pdv.id} style={{ background: '#1e293b', border: '1px solid #334155', borderRadius: '10px', padding: '1rem', marginBottom: '0.75rem' }}>
-          <div style={{ fontWeight: 600, fontSize: '1rem', marginBottom: '0.25rem' }}>{pdv.name}</div>
-          {pdv.address && <div style={{ color: '#94a3b8', fontSize: '0.85rem', marginBottom: '0.4rem' }}>{pdv.address}</div>}
-          <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-            {pdv.latitude == null && badge('#e76327', 'sem coords')}
-            <span style={{ color: '#64748b', fontSize: '0.75rem' }}>raio {pdv.radiusM}m</span>
+        <div key={pdv.id} className="card">
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div className="card__title">{pdv.name}</div>
+            {pdv.address && <div className="card__sub" style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{pdv.address}</div>}
+            <div className="row" style={{ marginTop: '.35rem', gap: '.5rem' }}>
+              {pdv.latitude == null && <span className="badge badge-orange">sem coords</span>}
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '.62rem', color: 'var(--text-3)' }}>{pdv.radiusM}m</span>
+            </div>
           </div>
         </div>
       ))}
