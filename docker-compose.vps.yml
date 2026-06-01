@@ -18,3 +18,5 @@ services:
   api:
     ports:
       - "127.0.0.1:3002:3000"
+    volumes:
+      - ./import_MINHAVISITA:/app/import_MINHAVISITA:ro

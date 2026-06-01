@@ -31,6 +31,7 @@ COPY --from=builder /app/apps/api/dist ./dist
 COPY --from=builder /app/db/prisma ./db/prisma
 # packages/shared é referenciado via symlink em node_modules — precisa existir
 COPY --from=builder /app/packages ./packages
+COPY apps/api/scripts ./scripts
 
 USER app
 EXPOSE 3000
