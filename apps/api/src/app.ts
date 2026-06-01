@@ -4,6 +4,8 @@ import cors from '@fastify/cors';
 import './types.js';
 import { authRoutes } from './routes/auth.js';
 import { usersRoutes } from './routes/users.js';
+import { pdvsRoutes } from './routes/pdvs.js';
+import { meRoutes } from './routes/me.js';
 
 // CORS_ORIGIN pode ser uma lista separada por vírgula no .env
 const ALLOWED_ORIGINS = process.env.CORS_ORIGIN
@@ -27,6 +29,8 @@ export async function createApp(): Promise<FastifyInstance> {
   app.get('/health', async () => ({ status: 'ok' }));
   await app.register(authRoutes, { prefix: '/auth' });
   await app.register(usersRoutes, { prefix: '/users' });
+  await app.register(pdvsRoutes, { prefix: '/pdvs' });
+  await app.register(meRoutes, { prefix: '/me' });
 
   return app;
 }

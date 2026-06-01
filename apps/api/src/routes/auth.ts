@@ -42,25 +42,25 @@ export async function authRoutes(app: FastifyInstance) {
       where: { googleId: googleUser.googleId },
     });
 
-    if (!user) {
-      const isAdmin = googleUser.email === process.env.SEED_ADMIN_EMAIL;
-      user = await prisma.user.create({
-        data: {
-          googleId: googleUser.googleId,
-          email: googleUser.email,
-          name: googleUser.name,
-          role: isAdmin ? 'ADMIN' : 'GDD',
-        },
-      });
+    if (user) {
+      if (!user.active) return reply.code(403).send({ error: 'Usuário desativado' });
+      user = await prisma.user.update({ where: { id: user.id }, data: { name: googleUser.name } });
     } else {
-      user = await prisma.user.update({
-        where: { id: user.id },
-        data: { name: googleUser.name },
-      });
-    }
-
-    if (!user.active) {
-      return reply.code(403).send({ error: 'Usuário desativado' });
+      const byEmail = await prisma.user.findUnique({ where: { email: googleUser.email } });
+      if (byEmail) {
+        // pré-cadastrado: vincula googleId e ativa
+        user = await prisma.user.update({
+          where: { id: byEmail.id },
+          data: { googleId: googleUser.googleId, name: googleUser.name, active: true },
+        });
+      } else if (googleUser.email === process.env.SEED_ADMIN_EMAIL) {
+        // bootstrap do primeiro admin
+        user = await prisma.user.create({
+          data: { googleId: googleUser.googleId, email: googleUser.email, name: googleUser.name, role: 'ADMIN' },
+        });
+      } else {
+        return reply.code(403).send({ error: 'Conta não autorizada. Solicite acesso ao administrador.' });
+      }
     }
 
     const accessToken = signAccessToken({ sub: user.id, role: user.role });
