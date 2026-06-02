@@ -13,13 +13,14 @@ function StatCard({ value, label, sub, accent }: { value: number | string; label
   return (
     <div style={{
       background: 'var(--surface)',
-      border: `1px solid ${accent ? 'var(--accent)' : 'var(--border)'}`,
+      border: `1px solid ${accent ? 'rgba(231,99,39,.3)' : 'var(--border)'}`,
       borderRadius: 'var(--r)',
       padding: '1.1rem 1.25rem',
+      boxShadow: 'var(--shadow-sm)',
     }}>
       <div style={{
         fontFamily: 'var(--font-mono)',
-        fontSize: '1.75rem',
+        fontSize: '1.6rem',
         fontWeight: 500,
         color: accent ? 'var(--accent)' : 'var(--text)',
         lineHeight: 1,
@@ -27,8 +28,8 @@ function StatCard({ value, label, sub, accent }: { value: number | string; label
       }}>
         {typeof value === 'number' ? value.toLocaleString('pt-BR') : value}
       </div>
-      <div style={{ fontSize: '.82rem', color: 'var(--text-2)', fontWeight: 500 }}>{label}</div>
-      {sub && <div style={{ fontSize: '.72rem', color: 'var(--text-3)', marginTop: '.2rem', fontFamily: 'var(--font-mono)' }}>{sub}</div>}
+      <div style={{ fontSize: '.84rem', color: 'var(--text-2)', fontWeight: 500 }}>{label}</div>
+      {sub && <div style={{ fontSize: '.72rem', color: 'var(--text-3)', marginTop: '.25rem' }}>{sub}</div>}
     </div>
   );
 }
