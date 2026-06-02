@@ -114,20 +114,21 @@ h1, h2, h3, h4 {
   gap: .6rem;
   padding: .5rem .8rem;
   border-radius: var(--r-sm);
-  font-family: var(--font-ui);
-  font-size: .8rem;
-  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: .82rem;
+  font-weight: 500;
   color: var(--text-3);
   text-decoration: none;
   border-left: 2px solid transparent;
   transition: color .15s, background .15s, border-color .15s;
-  letter-spacing: .01em;
+  letter-spacing: 0;
 }
 .nav-item:hover { color: var(--text-2); background: var(--surface-2); }
 .nav-item.active {
   color: var(--text);
   background: var(--surface-3);
   border-left-color: var(--accent);
+  font-weight: 600;
 }
 
 .sidebar__section-label {
@@ -144,9 +145,9 @@ h1, h2, h3, h4 {
   border-top: 1px solid var(--border);
 }
 .sidebar__user-name {
-  font-family: var(--font-ui);
-  font-size: .8rem;
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-size: .82rem;
+  font-weight: 500;
   color: var(--text);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -245,11 +246,10 @@ h1, h2, h3, h4 {
   display: inline-flex; align-items: center; gap: .4rem;
   padding: .42rem .9rem;
   border-radius: var(--r-sm);
-  font-family: var(--font-ui);
-  font-size: .72rem;
-  font-weight: 700;
-  letter-spacing: .04em;
-  text-transform: uppercase;
+  font-family: var(--font-body);
+  font-size: .82rem;
+  font-weight: 500;
+  letter-spacing: 0;
   border: none;
   cursor: pointer;
   white-space: nowrap;
@@ -318,11 +318,10 @@ thead tr { border-bottom: 1px solid var(--border); }
 thead th {
   padding: .55rem .75rem;
   text-align: left;
-  font-family: var(--font-mono);
-  font-size: .62rem;
+  font-family: var(--font-body);
+  font-size: .75rem;
   font-weight: 500;
-  letter-spacing: .07em;
-  text-transform: uppercase;
+  letter-spacing: 0;
   color: var(--text-3);
   white-space: nowrap;
 }

@@ -6,6 +6,7 @@ import { authRoutes } from './routes/auth.js';
 import { usersRoutes } from './routes/users.js';
 import { pdvsRoutes } from './routes/pdvs.js';
 import { meRoutes } from './routes/me.js';
+import { statsRoutes } from './routes/stats.js';
 
 // CORS_ORIGIN pode ser uma lista separada por vírgula no .env
 const ALLOWED_ORIGINS = process.env.CORS_ORIGIN
@@ -31,6 +32,7 @@ export async function createApp(): Promise<FastifyInstance> {
   await app.register(usersRoutes, { prefix: '/users' });
   await app.register(pdvsRoutes, { prefix: '/pdvs' });
   await app.register(meRoutes, { prefix: '/me' });
+  await app.register(statsRoutes, { prefix: '/stats' });
 
   return app;
 }
